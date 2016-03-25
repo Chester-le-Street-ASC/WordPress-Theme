@@ -1,0 +1,333 @@
+/*
+=== Theme Chester le Street ASC ===
+Theme Name: Chester le Street ASC (Bootstrap for Wordpress)	
+Theme URI: http://www.heppellit.com/wordpress
+Author: Chris Heppell
+Author URI: http://www.heppellit.com
+Description: Chester le Street ASC (Bootstrap for Wordpress)
+Tags: responsive-layout, one/two-columns, white, custom-menu, right-sidebar, optional-sidebar, threaded-comments, red
+Version: 20.1 (DEV)
+Text Domain: chester
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Features:
+1/2 Column Responsive layout
+Supports Post Thumbnails (use 617px wide images)
+Threaded Comments
+Custom Menus (Top & Second Level)
+Widgets Ready Sidebar
+
+Theme uses Bootstrap.
+Theme uses TGM Plugin Activation, and is licensed under GPL
+Chester le Street ASC (Bootstrap for Wordpress) theme is a WordPress version of http://getbootstrap.com/examples/blog/ (c) getbootsrap.com and twitter.com/mdo
+
+Chester le Street ASC (Bootstrap for Wordpress)
+Theme not for licensing.
+More information: http://codex.wordpress.org/Theme_Review#Licensing
+*/
+
+/* Essential Margins */
+.marginTop {margin-top:15px;}
+.marginBottom {margin-bottom:15px;}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Image Alignment
+----------------------------------------------*/
+
+.post img {max-width:100%; height:auto;}
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin: 0.3em 0.9em 0.5em 0;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin: 0.3em 0 0.5em 0.9em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto 0.625em;
+}
+.wp-caption {
+	background: #fff;	
+	border: 1px solid #e8e8e8;
+	margin-bottom: 0.625em;
+	max-width: 100%;
+	padding: 0.25em;
+}
+.wp-caption img {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}	
+.wp-caption-text {
+	color: #aaa;	
+	font-size: 13px;
+	font-size: 1.3rem;
+	text-align: left;
+}	
+.wp-caption .wp-caption-text {
+	margin: 7px;
+}
+
+/*
+ * Main column and sidebar layout
+ */
+
+.post-thumb {
+    margin: 0.4em 0 1em;
+}
+
+/* Sidebar modules for boxing content */
+.widget_text {
+}
+.widget_text p:last-child,
+.widget_text ul:last-child,
+.widget_text ol:last-child {
+  margin-bottom: 15px;
+}
+
+.widget img, .widget select {max-width:100%;}
+.widget ul {
+    padding: 0;
+    margin: 0 0 0 1.2em;
+}
+.widget ul li {
+    padding: 0.2em 0 .2em;
+}
+label.screen-reader-text {
+    display: none;
+}
+
+#wp-calendar caption {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Pagination */
+.pager {
+  text-align: left;
+  margin: 2em 0 3em;
+}
+.pager li {
+    max-width: 49%;
+    display: inline-block;
+}
+.pager > li > a {
+  width: auto;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.archive-title {
+	border: 1px solid #e8e8e8;
+	padding: 0.5em;
+	margin-bottom: 1.3em;
+	background: #fbfbfb;
+	font-size: 25px;
+}
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+}
+.blog-post-title {
+	    margin-top: 0px;
+  		margin-bottom: 5px;
+}
+h1.blog-post-title {
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+.p-tags { margin: 1em 0;}
+
+.nocomments {margin-top: 2em;}
+/*
+ * Footer
+ */
+
+.blog-footer {
+  color:#2E2E2E;
+}
+
+/* Comments */
+
+ol#commentlist {
+    margin: 0;
+    padding: 0;
+}
+li.comment { 
+	list-style:none;
+	margin: 2em 0;
+	padding: 1em;
+	border: 1px solid #e8e8e8;
+}
+img.avatar {
+    float: right;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+cite.fn {
+    font-size: 24px;
+}
+span.says {
+    display: none;
+}
+.comment-meta {
+    font-size: small;
+    margin: 0 0 1em;
+    display: block;
+}
+
+h3#reply-title {
+    margin-top: 1em;
+}
+
+input#author, input#email, input#url, .comment-form textarea {
+    display: block;
+    border: 1px solid #ddd;
+    margin: 0.1em 0 1.1em;
+}
+ .comment-form textarea { max-width: 100%;}
+.comment-form label {
+    font-size: 13px;
+}
+
+input#searchsubmit, input#submit {
+	color: #ffffff;
+	background-color: #bd0000;
+	border-radius: 0px;
+	border: 1px solid #a40000;
+	font-size:14px;
+	padding: 0.3em .6em 0.2em;
+	letter-spacing: 0.02em;
+	}
+
+input#searchsubmit:hover, input#submit:hover {
+    color: #ffffff;
+    background-color: #a40000;
+	border: 1px solid #bd0000;
+
+}
+
+input#submit {
+    padding: .7em 1.6em;
+    display: block;
+    margin: 1em 0 0;
+}
+
+input#s {
+    border: 1px solid #ccc;
+    padding: 0.3em 0.3em 0.2em;
+}
+
+/* Bootsrap Overrides */
+
+.blog-description {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+
+/* CLS Specifics */
+	
+	.chesterRed {
+		color:#bd0000;
+	}
+	
+	h2.eo-event-title {
+		margin-top: 0px;
+		margin-bottom: 5px;
+	}
+	
+	.sponsor {
+		padding:10px;
+	}
