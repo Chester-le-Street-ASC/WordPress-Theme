@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=ae09a99a6052a47b6af0)
- * Config saved to config.json and https://gist.github.com/ae09a99a6052a47b6af0
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=3110b401c705bfc2da6f)
+ * Config saved to config.json and https://gist.github.com/3110b401c705bfc2da6f
  */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -4537,11 +4537,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #ffffff;
+  border-color: #8a0000;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #8a0000;
+  background-color: #bd0000;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ffffff;
@@ -5077,11 +5077,11 @@ a.thumbnail.active {
 }
 .alert-info {
   background-color: #6ccff6;
-  border-color: #4ae0f4;
+  border-color: #4ac4f4;
   color: #ffffff;
 }
 .alert-info hr {
-  border-top-color: #32dcf2;
+  border-top-color: #32bcf2;
 }
 .alert-info .alert-link {
   color: #e6e6e6;
@@ -5746,22 +5746,22 @@ button.list-group-item-danger.active:focus {
   border-bottom-color: #3c9a4f;
 }
 .panel-info {
-  border-color: #4ae0f4;
+  border-color: #4ac4f4;
 }
 .panel-info > .panel-heading {
   color: #ffffff;
   background-color: #6ccff6;
-  border-color: #4ae0f4;
+  border-color: #4ac4f4;
 }
 .panel-info > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #4ae0f4;
+  border-top-color: #4ac4f4;
 }
 .panel-info > .panel-heading .badge {
   color: #6ccff6;
   background-color: #ffffff;
 }
 .panel-info > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #4ae0f4;
+  border-bottom-color: #4ac4f4;
 }
 .panel-warning {
   border-color: #f6762b;

@@ -331,3 +331,6 @@ input#s {
 	.sponsor {
 		padding:10px;
 	}
+	.alert-link {
+		color:#FFF !important;
+	}
