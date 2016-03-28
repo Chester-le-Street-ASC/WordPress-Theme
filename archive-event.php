@@ -2,6 +2,13 @@
 /**
  * The template for displaying lists of events
  *
+ ***************** NOTICE: *****************
+ *  Do not make changes to this file. Any changes made to this file
+ * will be overwritten if the plug-in is updated.
+ *
+ * To overwrite this template with your own, make a copy of it (with the same name)
+ * in your theme directory. See http://docs.wp-event-organiser.com/theme-integration for more information
+ *
  * WordPress will automatically prioritise the template in your theme directory.
  ***************** NOTICE: *****************
  *
@@ -11,6 +18,7 @@
 
 //Call the template header
 get_header(); ?>
+<?php get_template_part( 'pageheader' ); ?>
 
 <div class="container">
     <div class="row">
@@ -35,7 +43,7 @@ get_header(); ?>
                     }
                     ?>
                     </h1>
-            
+                    
 					<?php eo_get_template_part( 'eo-loop-events' ); //Lists the events ?>
             
             </div><!-- #primary -->

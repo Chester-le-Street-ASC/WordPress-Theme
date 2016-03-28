@@ -1,4 +1,5 @@
 	<?php get_header(); ?>
+    <?php get_template_part( 'pageheader' ); ?>
     <div class="container">
       <div class="row">
 
@@ -28,8 +29,8 @@
 ?>
             
 				<ul class="pager clearfix">
-					<li class="pull-left"><?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'wpboot' ) . ' %title' ); ?></li>
-					<li class="pull-right"><?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'wpboot' ) . '' ); ?></li>
+					<li class="pull-left"><?php previous_post_link( '%link', '' . _x( '<i class="fa fa-chevron-left"></i>', 'Previous post link', 'wpboot' ) . ' %title' ); ?></li>
+					<li class="pull-right"><?php next_post_link( '%link', '%title ' . _x( '<i class="fa fa-chevron-right"></i>', 'Next post link', 'wpboot' ) . '' ); ?></li>
 				</ul>
 				
 		  		<?php comments_template(); ?>

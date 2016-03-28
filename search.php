@@ -1,18 +1,21 @@
 	<?php get_header(); ?>
+    <?php get_template_part( 'pageheader' ); ?>
+    
     <div class="container">
       <div class="row">
 
         <div class="col-md-8">
-
+        
 		<h1 class="chesterRed"><?php _e( 'Search Results', 'wpboot' ); ?></h1>
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-         		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
+         		<div class="well">
+                <div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
             			<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 				<?php the_excerpt(); ?>
-			</div>
+			</div> </div>
 	  <?php endwhile; else: ?>
 		
 	  <p><?php _e( 'Sorry, no posts matched your criteria. Please try another keyword.', 'wpboot' ); ?></p>

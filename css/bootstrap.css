@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=3110b401c705bfc2da6f)
- * Config saved to config.json and https://gist.github.com/3110b401c705bfc2da6f
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=fab76942e8f30a491412)
+ * Config saved to config.json and https://gist.github.com/fab76942e8f30a491412
  */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -6331,7 +6331,7 @@ button.close {
   font-size: 20px;
   color: #ffffff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   background-color: rgba(0, 0, 0, 0);
 }
 .carousel-control.left {
@@ -6420,7 +6420,7 @@ button.close {
   margin: 0;
   width: 12px;
   height: 12px;
-  background-color: #ffffff;
+  background-color: #bd0000;
 }
 .carousel-caption {
   position: absolute;
@@ -6432,7 +6432,7 @@ button.close {
   padding-bottom: 20px;
   color: #ffffff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 .carousel-caption .btn {
   text-shadow: none;

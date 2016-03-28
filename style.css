@@ -199,14 +199,6 @@ label.screen-reader-text {
   border-radius: 30px;
 }
 
-.archive-title {
-	border: 1px solid #e8e8e8;
-	padding: 0.5em;
-	margin-bottom: 1.3em;
-	background: #fbfbfb;
-	font-size: 25px;
-}
-
 /*
  * Blog posts
  */
@@ -215,18 +207,8 @@ label.screen-reader-text {
 }
 .blog-post-title {
 	    margin-top: 0px;
-  		margin-bottom: 5px;
+  		/*margin-bottom: 5px;*/
 }
-h1.blog-post-title {
-}
-.blog-post-meta {
-  margin-bottom: 20px;
-  color: #999;
-}
-
-.p-tags { margin: 1em 0;}
-
-.nocomments {margin-top: 2em;}
 /*
  * Footer
  */
@@ -278,34 +260,6 @@ input#author, input#email, input#url, .comment-form textarea {
     font-size: 13px;
 }
 
-input#searchsubmit, input#submit {
-	color: #ffffff;
-	background-color: #bd0000;
-	border-radius: 0px;
-	border: 1px solid #a40000;
-	font-size:14px;
-	padding: 0.3em .6em 0.2em;
-	letter-spacing: 0.02em;
-	}
-
-input#searchsubmit:hover, input#submit:hover {
-    color: #ffffff;
-    background-color: #a40000;
-	border: 1px solid #bd0000;
-
-}
-
-input#submit {
-    padding: .7em 1.6em;
-    display: block;
-    margin: 1em 0 0;
-}
-
-input#s {
-    border: 1px solid #ccc;
-    padding: 0.3em 0.3em 0.2em;
-}
-
 /* Bootsrap Overrides */
 
 .blog-description {
@@ -326,11 +280,28 @@ input#s {
 	h2.eo-event-title {
 		margin-top: 0px;
 		margin-bottom: 5px;
+		font-size: 25px;
 	}
 	
+		
 	.sponsor {
-		padding:10px;
+		padding: 5px 0 5px 0;
 	}
 	.alert-link {
 		color:#FFF !important;
+	}
+	.img-center {
+    margin: 0 auto;
+	}
+	
+	p.blockquote {
+		font-style: italic;
+    	font-weight: lighter;
+   	 	font-family: Georgia, "Times New Roman", Times, serif;
+	}
+
+	.blockquote-reverse p {
+		font-style: italic;
+    	font-weight: lighter;
+   	 	font-family: Georgia, "Times New Roman", Times, serif;
 	}

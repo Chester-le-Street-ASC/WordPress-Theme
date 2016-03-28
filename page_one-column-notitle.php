@@ -1,6 +1,7 @@
 <?php /* Template Name: Single Column Page Template without Title */ ?>
 
 	<?php get_header(); ?>
+    <?php get_template_part( 'pageheader' ); ?>
       
       <!-- Page Content -->
       <div class="container">
