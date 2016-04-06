@@ -34,8 +34,8 @@
 						?> </p>
                         <?php 
 							$dbhost = 'localhost:3306';
-						   $dbuser = 'bn_wordpress';
-						   $dbpass = 'f799229c46';
+						   $dbuser = 'USERNAME';
+						   $dbpass = 'PASSWORD';
 						   
 						   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
 						
