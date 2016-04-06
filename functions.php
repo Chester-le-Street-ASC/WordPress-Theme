@@ -128,13 +128,13 @@ function wpboot_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'wpboot_wp_title', 10, 2 );
 
 function wpboot_excerpt_length( $length ) {
-	return 40;
+	return 80;
 }
 add_filter( 'excerpt_length', 'wpboot_excerpt_length', 999 );
 
 function wpboot_excerpt_more($more) {
        global $post;
-	return '... <span class="read-more"><a href="'. get_permalink($post->ID) . '">Continue Reading &rarr;</a></span>';
+	return '...</p><a class="btn btn-primary" href="'. get_permalink($post->ID) . '">Read More</a>';
 }
 add_filter('excerpt_more', 'wpboot_excerpt_more');
 
@@ -240,3 +240,86 @@ function mbe_wp_head(){
     echo 'body.logged-in .navbar-fixed-top{ top: 28px !important; }'.PHP_EOL;
     echo '</style>'.PHP_EOL;
 }
+
+// Accelerated Mobile Pages
+
+		// Head for Web-fonts
+		add_action( 'amp_post_template_head', 'xyz_amp_add_pixel' );
+		
+		function xyz_amp_add_pixel( $amp_template ) {
+			$post_id = $amp_template->get( 'post_id' );
+			?>
+			<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+			<?php
+		}
+
+		// Custom AMP CSS
+		add_action( 'amp_post_template_css', 'xyz_amp_additional_css_styles' );
+
+		function xyz_amp_additional_css_styles( $amp_template ) {
+			// only CSS here please...
+			?>
+            
+            body {
+            font-family:'Open Sans', sans-serif;
+            font-size:16px;
+            line-height:1.428571429;
+            background:#fff;
+            color:#000;
+            padding-bottom:100px;
+            }
+            
+            .amp-wp-content {
+            color: #000;
+            }
+            
+            .amp-wp-title {
+            margin: .67em 0 0 0;
+            font-size: 2em;
+            line-height:1.1;
+            font-weight:500;
+            color:#bd0000;
+            }
+            
+            .amp-wp-meta {
+            color: #000;
+            font-family: inherit;
+            font-size: 15px
+            }
+            
+            .amp-wp-meta a {
+            color:#bd0000;
+            text-decoration:none;
+            }
+            
+            .amp-wp-content a {
+            color:#bd0000;
+            text-decoration:none;
+            }
+            
+			nav.amp-wp-title-bar {
+				padding: 12px 0;
+				background: #bd0000;
+			}
+			nav.amp-wp-title-bar a {
+				background-image: url( '<?php echo get_bloginfo('template_directory');?>/img/chesterLogoAMP.png' );
+				background-repeat: no-repeat;
+				background-size: contain;
+				display: block;
+				background-position: center;
+				height: 50px;
+				margin: 0 auto;
+				text-indent: -9999px;
+			}
+			<?php
+		}
+
+		// Hides Author Name in AMP Pages
+		add_filter( 'amp_post_template_meta_parts', 'xyz_amp_remove_author_meta' );
+		
+		function xyz_amp_remove_author_meta( $meta_parts ) {
+			foreach ( array_keys( $meta_parts, 'meta-author', true ) as $key ) {
+				unset( $meta_parts[ $key ] );
+			}
+			return $meta_parts;
+		}

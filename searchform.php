@@ -1,12 +1,11 @@
-<div class="input-group">
-<form action="<?php echo home_url( '/' ); ?>" method="get" class="form-inline">
-                        <fieldset>
-                            <div class="input-group">
-                                <input type="text" name="s" id="search" placeholder="<?php _e("Search","wpbootstrap"); ?>" value="<?php the_search_query(); ?>" class="form-control" />
-                                <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-primary"><?php _e("Search","wpbootstrap"); ?></button>
-                                </span>
-                            </div>
-                        </fieldset>
-                    </form>
-                    </div>
+<?php $search_terms = htmlspecialchars( $_GET["s"] ); ?>
+
+<form role="form" action="<?php bloginfo('siteurl'); ?>/" id="searchform" method="get">
+    <label for="s" class="sr-only">Search</label>
+    <div class="input-group">
+        <input type="text" class="form-control" id="s" name="s" placeholder="Search"<?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
+        <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </span>
+    </div> <!-- .input-group -->
+</form>

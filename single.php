@@ -9,7 +9,7 @@
         
          		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
             			<h1 class="chesterRed"><?php the_title(); ?></h1>
-           			 <p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
+           			 	<p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
 
 			<?php if ( has_post_thumbnail()) : ?>
 				<div class="post-thumb">
