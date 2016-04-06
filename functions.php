@@ -265,12 +265,12 @@ function mbe_wp_head(){
             font-size:16px;
             line-height:1.428571429;
             background:#fff;
-            color:#000;
+            color:#333;
             padding-bottom:100px;
             }
             
             .amp-wp-content {
-            color: #000;
+            color: #333;
             }
             
             .amp-wp-title {
@@ -292,6 +292,11 @@ function mbe_wp_head(){
             text-decoration:none;
             }
             
+            .amp-wp-content a:hover, a:focus {
+                color: #a40000;
+                text-decoration: underline
+            }
+            
             .amp-wp-content a {
             color:#bd0000;
             text-decoration:none;
@@ -311,6 +316,17 @@ function mbe_wp_head(){
 				margin: 0 auto;
 				text-indent: -9999px;
 			}
+            
+            p, ol, ul, figure {
+                margin:0 0 10px 0;
+                color: #333;
+            }
+            
+            ul.amp-wp-meta {
+                padding: 0 0 0 0;
+                margin: 0.67em 0 0.67em 0;
+            }
+
 			<?php
 		}
 
