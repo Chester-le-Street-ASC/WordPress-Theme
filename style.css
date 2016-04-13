@@ -5,7 +5,7 @@ Theme URI: http://www.heppellit.com/wordpress
 Author: Chris Heppell
 Author URI: http://www.heppellit.com
 Description: Chester le Street ASC (Bootstrap for Wordpress)
-Tags: responsive-layout, one/two-columns, white, custom-menu, right-sidebar, optional-sidebar, threaded-comments, red
+Tags: responsive-layout, white, custom-menu, right-sidebar, threaded-comments, red
 Version: 20.1 (DEV)
 Text Domain: chester
 
@@ -277,6 +277,11 @@ input#author, input#email, input#url, .comment-form textarea {
 		color:#bd0000;
 	}
 	
+	/* Chester Red Selection
+	::selection {
+    background:rgba(189,0,0,0.2);
+	}*/
+	
 	h2.eo-event-title {
 		margin-top: 0px;
 		margin-bottom: 5px;
@@ -292,16 +297,4 @@ input#author, input#email, input#url, .comment-form textarea {
 	}
 	.img-center {
     margin: 0 auto;
-	}
-	
-	p.blockquote {
-		font-style: italic;
-    	font-weight: lighter;
-   	 	font-family: Georgia, "Times New Roman", Times, serif;
-	}
-
-	.blockquote-reverse p {
-		font-style: italic;
-    	font-weight: lighter;
-   	 	font-family: Georgia, "Times New Roman", Times, serif;
 	}

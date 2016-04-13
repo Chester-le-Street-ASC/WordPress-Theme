@@ -1,4 +1,3 @@
-<?php /* Template Name: Gala Venue*/ ?>
 <?php
 /**
  * The template for displaying the venue page

@@ -28,7 +28,7 @@
     wp_bootstrap_pagination();
 ?>
             
-				<ul class="pager clearfix">
+				<ul class="pager clearfix hidden-print">
 					<li class="pull-left"><?php previous_post_link( '%link', '' . _x( '<i class="fa fa-chevron-left"></i>', 'Previous post link', 'wpboot' ) . ' %title' ); ?></li>
 					<li class="pull-right"><?php next_post_link( '%link', '%title ' . _x( '<i class="fa fa-chevron-right"></i>', 'Next post link', 'wpboot' ) . '' ); ?></li>
 				</ul>

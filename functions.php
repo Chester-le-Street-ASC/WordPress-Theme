@@ -128,15 +128,20 @@ function wpboot_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'wpboot_wp_title', 10, 2 );
 
 function wpboot_excerpt_length( $length ) {
-	return 80;
+	return 50;
 }
 add_filter( 'excerpt_length', 'wpboot_excerpt_length', 999 );
 
 function wpboot_excerpt_more($more) {
        global $post;
-	return '...</p><a class="btn btn-primary" href="'. get_permalink($post->ID) . '">Read More</a>';
+	return '...</p>';
 }
 add_filter('excerpt_more', 'wpboot_excerpt_more');
+
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
+function modify_read_more_link() {
+return '<a class="btn btn-primary" href="' . get_permalink() . '">Read More</a>';
+}
 
 	
 /**
@@ -266,7 +271,7 @@ function mbe_wp_head(){
             line-height:1.428571429;
             background:#fff;
             color:#333;
-            padding-bottom:100px;
+            padding-bottom:20px;
             }
             
             .amp-wp-content {
@@ -307,7 +312,7 @@ function mbe_wp_head(){
 				background: #bd0000;
 			}
 			nav.amp-wp-title-bar a {
-				background-image: url( '<?php echo get_bloginfo('template_directory');?>/img/chesterLogoAMP.png' );
+				background-image: url( '<?php echo get_template_directory_uri();?>/img/chesterLogoAMP.png' );
 				background-repeat: no-repeat;
 				background-size: contain;
 				display: block;
@@ -326,6 +331,15 @@ function mbe_wp_head(){
                 padding: 0 0 0 0;
                 margin: 0.67em 0 0.67em 0;
             }
+            
+            blockquote {
+                padding: 10px 20px;
+                margin: 0 0 20px;
+                font-size: 17.5px;
+                border-left: 5px solid #bd0000;
+                color: #333;
+                background: #FFF;
+            }
 
 			<?php
 		}
@@ -338,4 +352,37 @@ function mbe_wp_head(){
 				unset( $meta_parts[ $key ] );
 			}
 			return $meta_parts;
+		}
+		
+		// Deals with metadata for Search Engines
+		
+		// Logo/Content Type
+		add_filter( 'amp_post_template_metadata', 'xyz_amp_modify_json_metadata', 10, 2 );
+		
+		function xyz_amp_modify_json_metadata( $metadata, $post ) {
+			$metadata['@type'] = 'NewsArticle';
+		
+			$metadata['publisher']['logo'] = array(
+				'@type' => 'ImageObject',
+				'url' => get_template_directory_uri() . '/img/ampsearchlogo.png',
+				'height' => 60,
+				'width' => 338,
+			);
+		
+			return $metadata;
+		}
+		
+		// Add Featured image for Search Engines	
+		add_action( 'pre_amp_render_post', 'xyz_amp_add_custom_actions' );
+		function xyz_amp_add_custom_actions() {
+			add_filter( 'the_content', 'xyz_amp_add_featured_image' );
+		}
+		
+		function xyz_amp_add_featured_image( $content ) {
+			if ( has_post_thumbnail() ) {
+				// Just add the raw <img /> tag; our sanitizer will take care of it later.
+				$image = sprintf( '<p class="xyz-featured-image">%s</p>', get_the_post_thumbnail() );
+				$content = $image . $content;
+			}
+			return $content;
 		}

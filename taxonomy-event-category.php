@@ -1,4 +1,3 @@
-<?php /* Template Name: Gala Category*/ ?>
 <?php
 /**
  * The template for displaying an event-category page

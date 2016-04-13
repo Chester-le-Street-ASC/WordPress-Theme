@@ -52,23 +52,6 @@ get_header(); ?>
 			</div><!-- .entry-content -->
 
 			<footer class="entry-meta">
-			<?php
-			//Events have their own 'event-category' taxonomy. Get list of categories this event is in.
-			$categories_list = get_the_term_list( get_the_ID(), 'event-category', '', ', ','' );
-
-			if ( '' != $categories_list ) {
-				$utility_text = __( 'Bookmark this <a href="%2$s" title="Permalink to %3$s" rel="bookmark">page</a>.', 'eventorganiser' );
-			} else {
-				$utility_text = __( 'Bookmark this <a href="%2$s" title="page to %3$s" rel="bookmark">page</a>.', 'eventorganiser' );
-			}
-			printf($utility_text,
-				$categories_list,
-				esc_url( get_permalink() ),
-				the_title_attribute( 'echo=0' ),
-				get_the_author(),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
-			);
-			?>
 
 			<?php edit_post_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer><!-- .entry-meta -->

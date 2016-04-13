@@ -1,10 +1,8 @@
 </div></div><!-- /.container -->
-
-	<div class="blog-footer">
+	<div class="blog-footer hidden-print">
     <hr>
 	<div class="container">
-    
-    <div class="row noprint">
+    <div class="row hidden-print">
         <div class="col-sm-3 text-center">
             <h3>Contact</h3>
             <address>
@@ -42,10 +40,8 @@
             </p>
         </div>
     </div>   
-
     <hr>
-    
-    <div class="row noprint">
+    <div class="row hidden-print">
     		<div class="col-md-12 text-center">
             <h3 class="chesterRed">Our Sponsors</h3>
             </div>
@@ -54,52 +50,41 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.gblf.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_bloginfo('template_directory');?>/img/sponsors/gblf.png"  alt="GBLF" /></a>
+                        <a href="http://www.gblf.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/gblf.png"  alt="GBLF" /></a>
                         </div>
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.ukmail.com" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_bloginfo('template_directory');?>/img/sponsors/ukmail.png"  alt="UK Mail" /></a>
+                        <a href="http://www.ukmail.com" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/ukmail.png"  alt="UK Mail" /></a>
                         </div>
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.wssrecruitment.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_bloginfo('template_directory');?>/img/sponsors/wss.png"  alt="WSS Recruitment" /></a>
+                        <a href="http://www.wssrecruitment.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/wss.png"  alt="WSS Recruitment" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                 	<div class="row">
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.nessswimwear.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_bloginfo('template_directory');?>/img/sponsors/ness.png"  alt="NESS Swimwear" /></a>
+                        <a href="http://www.nessswimwear.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/ness.png"  alt="NESS Swimwear" /></a>
                         </div>
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.michaelenglishroofing.com" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_bloginfo('template_directory');?>/img/sponsors/menglish.png"  alt="GBLF" /></a>
+                        <a href="http://www.michaelenglishroofing.com" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/menglish.png"  alt="GBLF" /></a>
                         </div>
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.harlandsaccountants.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_bloginfo('template_directory');?>/img/sponsors/harlands.png"  alt="GBLF" /></a>
+                        <a href="http://www.harlandsaccountants.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/harlands.png"  alt="GBLF" /></a>
                         </div>
                     </div>
     			</div>
           </div>
           </div>
     </div>
-    
     <hr>
-    
     <div class="row text-center">
-    
-        <?php wp_footer(); ?>
-    
-          <p>&copy; <?php echo date( 'Y' ); ?> Chester&#8209;le&#8209;Street ASC</p>
-    
-          <p><a href="#"><?php _e( 'Back to top', 'wpboot' ); ?></a></p>
-          
-          <p class="chesterRed"><strong>CLS Dev</strong><br>
-          Page Template: <?php $page_id = $wp_query->get_queried_object_id();
-echo get_post_meta( $page_id, '_wp_page_template', true ); ?></p>
+    	  <div class="col-md-12">
+			  <?php wp_footer(); ?>
+              <p>&copy; <?php echo date( 'Y' ); ?> Chester&#8209;le&#8209;Street ASC</p>
+              <p class="hidden-print"><a href="#"><?php _e( 'Back to top', 'wpboot' ); ?></a></p>
+       	  </div>
         </div> </div> </div> <!-- /.container -->
-    
         <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="<?php echo get_bloginfo('template_directory');?>/js/bootstrap.min.js"></script>
-        
-
+        <script src="<?php echo get_template_directory_uri();?>/js/bootstrap.min.js"></script>
   </body>
-
 </html>

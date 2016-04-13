@@ -1,4 +1,4 @@
-	<?php /* Template Name: Default Template No Title*/ ?>
+	<?php /* Template Name: Two Column No Title*/ ?>
 	<?php get_header(); ?>
     <?php get_template_part( 'pageheader' ); ?>
     <div class="container">

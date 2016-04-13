@@ -1,5 +1,5 @@
 <div class="col-md-4 blog-sidebar">
-	<div class="well hidden-xs">
+	<div class="well hidden-xs hidden-print">
 	<?php if ( ! dynamic_sidebar( 'primary' ) ) : ?>
 
 		<div id="search" class="sidebar-module">

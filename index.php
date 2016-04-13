@@ -18,8 +18,10 @@
 					   </a>
 				</div>
 			 <?php endif; ?>
+             
+            <?php the_content( $more_link_text , $strip_teaser ); ?> 
 
-				<?php the_excerpt(); ?>
+				
 			</div> </div>
 	<?php endwhile; endif; ?>
 

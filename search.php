@@ -18,7 +18,7 @@
 			</div> </div>
 	  <?php endwhile; else: ?>
 		
-	  <p><?php _e( 'Sorry, no posts matched your criteria. Please try another keyword.', 'wpboot' ); ?></p>
+	  <p><?php _e( 'Sorry. We didn&#39;t find anything.<br>Please try another keyword.', 'wpboot' ); ?></p>
 
 	  <?php endif; ?>
 
@@ -27,7 +27,7 @@
 		<li class="pull-right"><?php previous_posts_link( __( 'Newer Posts &rarr;', 'wpboot' ) ); ?></li>
 	</ul>
 
-        </div><!-- /.blog-main -->
+        </div><!-- /.blog-main -->	
 
 	<?php get_sidebar(); ?>
 </div>

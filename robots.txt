@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /wp-admin
+Disallow: /phpmyadmin
+
+User-agent: *
+Disallow: /wp-admin
+Disallow: /phpmyadmin
