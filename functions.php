@@ -79,9 +79,9 @@ function wpboot_register_sidebars() {
 			'id' => 'primary',
 			'name' => __( 'Primary Sidebar', 'wpboot' ),
 			'description' => __( 'The following widgets will appear in the main sidebar div.', 'wpboot' ),
-			'before_widget' => '<div id="%1$s" class="sidebar-module widget %2$s">',
+			'before_widget' => '<div id="%1$s" class="sidebar-module widget %2$s well">',
 			'after_widget' => '</div>',
-			'before_title' => '<h4>',
+			'before_title' => '<h4 class="sidebar-module-title">',
 			'after_title' => '</h4>'
 		)
 	);
