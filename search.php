@@ -30,6 +30,16 @@
         </div><!-- /.blog-main -->	
 
 	<?php get_sidebar(); ?>
-</div>
-</div>
+    </div>
+    <div class="row">
+    	<div class="col-xs-12 hidden-sm hidden-md hidden-lg" id="search">
+        <hr>
+            <div class="row hidden-print hidden-sm hidden-md hidden-lg marginTop">
+                <div class="col-xs-12" id="search">
+                    <?php get_search_form(); ?>
+                </div>	
+            </div>
+		</div>
+    </div>
+    </div>
 	<?php get_footer(); ?>

@@ -21,7 +21,7 @@ Widgets Ready Sidebar
 
 Theme uses Bootstrap.
 Theme uses TGM Plugin Activation, and is licensed under GPL
-Chester le Street ASC (Bootstrap for Wordpress) theme is a WordPress version of http://getbootstrap.com/examples/blog/ (c) getbootsrap.com and twitter.com/mdo
+Chester le Street ASC (Bootstrap for Wordpress) theme is a WordPress version of http://getbootstrap.com/examples/blog/ (c) getbootstrap.com and twitter.com/mdo
 
 Chester le Street ASC (Bootstrap for Wordpress)
 Theme not for licensing.
@@ -298,3 +298,51 @@ input#author, input#email, input#url, .comment-form textarea {
 	.img-center {
     margin: 0 auto;
 	}
+
+/* Bordered Alerts */
+	
+	
+	.alert-box {
+	background: #f7f7f7;
+	color: #333;
+	border: none;
+	border-left: 6px solid #bd0000;
+	box-shadow: 0 5px 8px -6px rgba(0, 0, 0, 0.2);
+	display: block;
+	margin-bottom: 1.25rem;
+	padding: 0.875rem 1.5rem 0.875rem 0.875rem;
+	position: relative;
+	transition: opacity 300ms ease-out;
+	background-color: #008CBA;
+	border-color: #0078a0; }
+  .alert-box.success {
+	background: #F7F7F7;
+	border-color: #43ac6a;
+    color: #333; }
+  .alert-box.warning {
+    background: #f7f7f7;
+	border-color: #f7a443;
+    color: #333; }
+  .alert-box.info {
+    background: #f7f7f7;
+	border-color: #6ccff6;
+    color: #333; }
+  .alert-box.danger {
+    background: #f7f7f7;
+	border-color: #d9534f;
+    color: #333; }
+  .alert-box.small {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem; }
+    .alert-box.small .close {
+      font-size: 1.5rem; }
+  .alert-box.large {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 2rem; }
+    .alert-box.large .close {
+      font-size: 3rem; }
+  .alert-box .close {
+    font-size: 2rem;
+    line-height: 1.25rem; }
