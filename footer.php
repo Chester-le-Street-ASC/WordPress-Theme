@@ -27,8 +27,8 @@
             <h3>Downloads</h3>
             <p>
                <i class="fa fa-file-text chesterRed"></i> <a title="Link to Page" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2014/04/GalaEntryForm2012.doc">Gala Entry Form</a><br>
-                <!--<a title="Link to Page" target="_blank" href="<?php echo home_url(); ?>">Kit Order Form</a><br>
-                <a title="Link to Page" target="_blank" href="<?php echo home_url(); ?>">Link</a><br>-->
+                <i class="fa fa-file-text chesterRed"></i> <a title="Link to Page" target="_blank" href="<?php echo home_url(); ?>">Kit Order Form</a><br>
+                <!--<i class="fa fa-file-text chesterRed"></i> <a title="Link to Page" target="_blank" href="<?php echo home_url(); ?>">Link</a><br>-->
             </p>
         </div>
         <div class="col-sm-3 text-center">         
@@ -44,7 +44,7 @@
     <hr>
     <div class="row hidden-print">
     		<div class="col-md-12 text-center">
-            <h3 class="chesterRed">Our Sponsors</h3>
+            <h3 class="chesterRed" style="margin-top:0px;margin-bottom:20px;">Our Sponsors</h3>
             </div>
             <div class="col-md-12">
             <div class="row">
@@ -78,11 +78,13 @@
           </div>
     </div>
     <hr>
-    <div class="row text-center">
-    	  <div class="col-md-12">
+    <div class="row marginBottom">
+    	  <div class="col-sm-6">
 			  <?php wp_footer(); ?>
               <p>&copy; <?php echo date( 'Y' ); ?> Chester&#8209;le&#8209;Street ASC</p>
-              <p class="hidden-print"><a href="#"><?php _e( 'Back to top', 'wpboot' ); ?></a></p>
+          </div>
+          <div class="col-sm-6">
+              <p class="hidden-print hidden-xs text-right"><a href="#">Back to Top</a></p>
        	  </div>
         </div> </div> </div> <!-- /.container -->
         <script src="http://code.jquery.com/jquery.js"></script>
