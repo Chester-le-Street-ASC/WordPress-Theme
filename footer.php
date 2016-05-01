@@ -1,5 +1,5 @@
 </div></div><!-- /.container -->
-	<div class="blog-footer hidden-print">
+	<div class="hidden-print">
     <hr>
 	<div class="container">
 
@@ -79,14 +79,11 @@
     </div>
     <hr>
     <div class="row marginBottom">
-    	  <div class="col-sm-6">
-			  <?php wp_footer(); ?>
+    	  <div class="col-xs-12 text-center">
               <p>&copy; <?php echo date( 'Y' ); ?> Chester&#8209;le&#8209;Street ASC</p>
           </div>
-          <div class="col-sm-6">
-              <p class="hidden-print hidden-xs text-right"><a href="#">Back to Top</a></p>
-       	  </div>
         </div> </div> </div> <!-- /.container -->
+        <?php wp_footer(); ?>
         <script src="http://code.jquery.com/jquery.js"></script>
         <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
         <script src="<?php echo get_template_directory_uri();?>/js/bootstrap.min.js"></script>
