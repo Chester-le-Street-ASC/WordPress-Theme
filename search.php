@@ -14,7 +14,7 @@
 
          		<a href="<?php the_permalink() ?>" rel="bookmark" class="list-group-item">
                 <div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
-            			<h2 class="search10"><?php the_title(); ?></h2>
+            			<h3 class="search10"><?php the_title(); ?></h3>
 						<?php the_excerpt(); ?>
                         
 				</div> </a>
