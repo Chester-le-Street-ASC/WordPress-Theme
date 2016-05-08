@@ -3,7 +3,7 @@
 		<div class="col-sm-8"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="img-responsive" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/chesterLogo.png"  alt="Chester-le-Street ASC Logo" /></a>
 	  </div>
         <div class="col-sm-4 hidden-print hidden-xs">
-		    <p class="lead" style="margin-bottom:0px;"><?php bloginfo( 'description' ); ?></p>
+		    <p class="lead text-right" style="margin-bottom:0px;"><?php bloginfo( 'description' ); ?></p>
         </div>
 
         

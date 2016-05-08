@@ -29,9 +29,11 @@ get_header(); ?>
                 
                 <?php $venue_id = get_queried_object_id(); ?>
                 
-                <h1 class="chesterRed">
+                <h1 class="chesterRed entry">
                     <?php printf( __( 'Galas at: %s', 'eventorganiser' ), '<span>' .eo_get_venue_name( $venue_id ). '</span>' );?>
                 </h1>
+                
+                <hr>
             
                 <?php
                 if ( $venue_description = eo_get_venue_description( $venue_id ) ) {
@@ -45,13 +47,13 @@ get_header(); ?>
                     echo eo_get_venue_map( $venue_id, array( 'width' => '100%' ) );
                 }
                 ?>
-            
-            <div class="marginTop">               
+                
+                <hr>
+                             
             <?php eo_get_template_part( 'eo-loop-events' ); //Lists the events ?>
             </div>
         
         </div><!-- #primary -->
-        </div>
         
         <!-- Call template sidebar and footer -->
         <?php get_sidebar(); ?>

@@ -8,7 +8,7 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         
          		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
-            			<h1 class="chesterRed"><?php the_title(); ?></h1>
+            			<h1 class="chesterRed entry"><?php the_title(); ?></h1>
            			 	<p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
 
 			<?php if ( has_post_thumbnail()) : ?>

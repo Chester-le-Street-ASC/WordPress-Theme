@@ -200,6 +200,10 @@ input#author, input#email, input#url, .comment-form textarea {
 .gallery-caption {}
 .bypostauthor {}
 
+.search10 {
+	margin-top:10px;
+}
+
 /* CLS Specifics */
 	
 	.chesterRed {
@@ -229,6 +233,9 @@ input#author, input#email, input#url, .comment-form textarea {
 	}
 	
 	.entry h1 {
+		margin-top:0px;
+	}
+	.entry {
 		margin-top:0px;
 	}
 	

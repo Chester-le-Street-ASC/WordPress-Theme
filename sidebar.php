@@ -1,4 +1,6 @@
-<div class="col-md-4 blog-sidebar hidden-xs hidden-print">
+<div class="col-md-4 blog-sidebar hidden-print">
+
+	<hr class="hidden-md hidden-lg">
 	
 	<?php if ( ! dynamic_sidebar( 'primary' ) ) : ?>
 
