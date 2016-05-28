@@ -100,7 +100,7 @@ function wpboot_scripts() {
 add_action( 'wp_enqueue_scripts', 'wpboot_scripts' );
 
 register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'THEMENAME' ),
+    'primary' => __( 'Primary Menu', 'wpboot' ),
 ) );
 
 //Set up title if SEO plugin is not used.

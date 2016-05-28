@@ -48,7 +48,7 @@
 	</div><!-- .event-entry-meta -->
 
 	<!-- Show Event text as 'the_excerpt' or 'the_content' -->
-	<div class="eo-event-content" itemprop="description"><?php the_content( $more_link_text , $strip_teaser ); ?></div>
+	<div class="eo-event-content" itemprop="description"><?php the_excerpt(); ?></div>
     			
 	<div style="clear:both;"></div>
 

@@ -29,9 +29,9 @@ get_header(); ?>
                 
                 <?php $venue_id = get_queried_object_id(); ?>
                 
-                <h1 class="chesterRed entry">
-                    <?php printf( __( 'Galas at: %s', 'eventorganiser' ), '<span>' .eo_get_venue_name( $venue_id ). '</span>' );?>
-                </h1>
+                <h2 class="chesterRed entry">
+                    <?php printf( __( 'Galas at %s', 'eventorganiser' ), '<span>' .eo_get_venue_name( $venue_id ). '</span>' );?>
+                </h2>
                 
                 <hr>
             

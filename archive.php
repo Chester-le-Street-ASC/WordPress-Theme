@@ -7,7 +7,7 @@
 
 	<?php if (have_posts()) : ?>
 
-		<h1 class="chesterRed">
+		<h2 class="chesterRed entry">
 	
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		
@@ -37,23 +37,23 @@
 			
 		<?php } ?>
 
-			</h1>
+			</h2>
+            <hr>
 
 	<?php while (have_posts()) : the_post(); ?>
                 
                 <div class="well">
-                <div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
             			<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
            			 <p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
 
 				<?php the_excerpt(); ?>
-			</div> </div>
+			</div>
 	<?php endwhile; endif; ?>
-
-	<ul class="pager clearfix">
-		<li class="pull-left"><?php next_posts_link( __( '&larr; Older Posts', 'wpboot' ) ); ?></li>
-		<li class="pull-right"><?php previous_posts_link( __( 'Newer Posts &rarr;', 'wpboot' ) ); ?></li>
-	</ul>
+    
+    <?php
+	  if ( function_exists('wp_bootstrap_pagination') )
+		wp_bootstrap_pagination();
+	?>
 
         </div><!-- /.blog-main -->
 

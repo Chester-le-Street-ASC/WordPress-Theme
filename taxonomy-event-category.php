@@ -27,9 +27,9 @@ get_header(); ?>
 <div id="primary" role="main" class="content-area">
 
 	<!-- Page header, display category title-->
-		<h1 class="chesterRed entry">
+		<h2 class="chesterRed entry">
 			<?php printf( __( 'Gala Category: %s', 'eventorganiser' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
-		</h1>
+		</h2>
         
         <hr>
 

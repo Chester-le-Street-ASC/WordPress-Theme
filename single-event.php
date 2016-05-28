@@ -41,7 +41,7 @@ get_header(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<!-- Display event title -->
-				<h1 class="chesterRed entry"><?php the_title(); ?></h1>
+				<h2 class="chesterRed entry"><?php the_title(); ?></h2>
 	
 			<div class="entry-content">
 				<!-- Get event information, see template: event-meta-event-single.php -->

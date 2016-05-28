@@ -38,6 +38,10 @@ More information: http://codex.wordpress.org/Theme_Review#Licensing
 
 .post img {max-width:100%; height:auto;}
 
+img {
+    max-width: 100%;
+}
+
 .alignleft {
 	display: inline;
 	float: left;
@@ -242,6 +246,18 @@ input#author, input#email, input#url, .comment-form textarea {
 	.well h1 h2 h3 h4 h5 h6 p {
 		margin-top:0px;
 	}
+	
+	.vertical-align {
+		display: flex;
+		align-items: center;
+	}
+	
+	.slogan {
+		text-align: right;
+		font-size: 21px;
+		font-weight:400;
+		margin:0px;
+	}
 
 /* Bordered Alerts */
 	
@@ -290,3 +306,30 @@ input#author, input#email, input#url, .comment-form textarea {
   .alert-box .close {
     font-size: 2rem;
     line-height: 1.25rem; }
+
+/* Masthead */
+.masthead {
+	position: relative;
+	padding: 60px 0;
+	color: #FFF;
+	text-align: left;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+	background-color: #bd0000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#a40000), to(#bd0000));
+	background-image: -webkit-linear-gradient(top, #a40000 0, #bd0000 100%);
+	background-image: -o-linear-gradient(top, #a40000 0, #bd0000 100%);
+	background-image: linear-gradient(to bottom, #a40000 0, #bd0000 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a40000', endColorstr='#bd0000', GradientType=0);
+	background-repeat: repeat-x;
+	margin-bottom:25px;
+	margin-top:-19px;
+}
+.masthead a { 
+color:#FFF;}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}

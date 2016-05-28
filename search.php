@@ -6,31 +6,27 @@
 
         <div class="col-md-8">
         		
-        <div class="panel panel-default">
-        <div class="panel-heading"><h1 class="chesterRed search10"><?php _e( 'Search Results', 'wpboot' ); ?></h1></div>
-        <ul class="list-group">
+        <h2 class="chesterRed entry"><?php _e( 'Search Results', 'wpboot' ); ?></h2>
+        
+        <hr>
         
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-         		<a href="<?php the_permalink() ?>" rel="bookmark" class="list-group-item">
-                <div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
-            			<h3 class="search10"><?php the_title(); ?></h3>
+         		<a href="<?php the_permalink() ?>" rel="bookmark">
+            			<h3 class="search10"><?php the_title(); ?></h3></a>
 						<?php the_excerpt(); ?>
-                        
-				</div> </a>
+                <hr>
+                
 	  <?php endwhile; else: ?>
 		
-	  <li class="list-group-item lead"><?php _e( 'Sorry. We didn&#39;t find anything.<br>Please try another keyword.', 'wpboot' ); ?></li>
+	  <?php _e( '<p class="lead">Sorry. We didn&#39;t find anything.<br>Please try another keyword.</p>', 'wpboot' ); ?>
 
 	  <?php endif; ?>
       
-      </ul>
-      </div>
-
-	<ul class="pager clearfix">
-		<li class="pull-left"><?php next_posts_link( __( '&larr; Older Posts', 'wpboot' ) ); ?></li>
-		<li class="pull-right"><?php previous_posts_link( __( 'Newer Posts &rarr;', 'wpboot' ) ); ?></li>
-	</ul>
+      <?php
+		  if ( function_exists('wp_bootstrap_pagination') )
+			wp_bootstrap_pagination();
+		?>
 
         </div><!-- /.blog-main -->	
 
