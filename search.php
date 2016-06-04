@@ -20,6 +20,7 @@
 	  <?php endwhile; else: ?>
 		
 	  <?php _e( '<p class="lead">Sorry. We didn&#39;t find anything.<br>Please try another keyword.</p>', 'wpboot' ); ?>
+      <?php get_search_form(); ?>
 
 	  <?php endif; ?>
       

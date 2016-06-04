@@ -18,17 +18,17 @@
             <h3>Information</h3>
             <p>
                 <a title="About" target="_self" href="/about">About</a><br>
-                <a title="Committee" target="_self" href="/committee#executive">Committee Members</a><br>
-                <a title="Committee" target="_self" href="/committee#meetings">Committee Meetings</a><br>
+                <a title="Committee Members" target="_self" href="/committee#executive">Committee Members</a><br>
+                <a title="Committee Meetings" target="_self" href="/committee#meetings">Committee Meetings</a><br>
                 <a title="Policies" target="_self" href="/policies">Policies</a><br>
             </p>
         </div>
         <div class="col-sm-3 text-center">
             <h3>Downloads</h3>
             <p>
-               <i class="fa fa-file-text chesterRed"></i> <a title="Link to Page" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2014/04/GalaEntryForm2012.doc">Gala Entry Form</a><br>
-                <i class="fa fa-file-text chesterRed"></i> <a title="Link to Page" target="_blank" href="<?php echo home_url(); ?>">Kit Order Form</a><br>
-                <!--<i class="fa fa-file-text chesterRed"></i> <a title="Link to Page" target="_blank" href="<?php echo home_url(); ?>">Link</a><br>-->
+               <i class="fa fa-file-text chesterRed"></i> <a title="Entry Form" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2014/04/GalaEntryForm2012.doc">Gala Entry Form</a><br>
+                <i class="fa fa-file-text chesterRed"></i> <a title="Order Form" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2015/10/Children-Clothing-Order-Form.pdf">Children's Kit Order Form</a><br>
+                <i class="fa fa-file-text chesterRed"></i> <a title="Order Form" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2015/10/Youth-Adult-Clothing-Order-Form.pdf">Adult Kit Order Form</a><br>
             </p>
         </div>
         <div class="col-sm-3 text-center">         
