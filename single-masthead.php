@@ -37,11 +37,22 @@
                 				
 		  		<?php comments_template(); ?>
 			</div>
+            
+            <ul class="pager clearfix hidden-print">
+					<li class="pull-left"><?php previous_post_link( '%link', '' . _x( '<i class="fa fa-chevron-left"></i>', 'Previous post link', 'wpboot' ) . ' %title' ); ?></li>
+					<li class="pull-right"><?php next_post_link( '%link', '%title ' . _x( '<i class="fa fa-chevron-right"></i>', 'Next post link', 'wpboot' ) . '' ); ?></li>
+			</ul>
 	
 	  <?php endwhile; endif; ?>
 
 
         </div><!-- /.col -->
+        </div>
+        <div class="row">
+        <div class="col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1 text-center">
+        <hr>
+		<?php get_template_part( 'morecontent' ); ?>
+        </div>
         </div>
 
 </div>

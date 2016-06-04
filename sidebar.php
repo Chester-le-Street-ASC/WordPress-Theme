@@ -1,4 +1,5 @@
-<div class="col-md-4 blog-sidebar hidden-print">
+<div class="row">
+<div class="col-md-12 blog-sidebar hidden-print">
 
 	<hr class="hidden-md hidden-lg">
 	
@@ -27,4 +28,5 @@
 			</ul>
 		
 	<?php endif; ?>
+    </div>
     </div>

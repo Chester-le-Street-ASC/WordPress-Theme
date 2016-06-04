@@ -26,7 +26,7 @@ get_header(); ?>
             <!-- <div id="primary" role="main" class="content-area"> -->
             
                 	<!-- Page header-->
-                    <h1 class="chesterRed">
+                    <h2 class="chesterRed entry">
                     
                     <?php
                     if ( eo_is_event_archive( 'day' ) ) {
@@ -42,14 +42,16 @@ get_header(); ?>
                         _e( 'Galas', 'eventorganiser' );
                     }
                     ?>
-                    </h1>
+                    </h2>
+
+<hr>
                     
 					<?php eo_get_template_part( 'eo-loop-events' ); //Lists the events ?>
             
             </div><!-- #primary -->
     
     		<!-- Call template sidebar and footer -->
-			<?php get_sidebar(); ?>
+			<div class="col-md-4"><?php get_sidebar(); ?></div>
 		</div>
 </div>
 <?php get_footer();

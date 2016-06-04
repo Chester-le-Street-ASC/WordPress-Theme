@@ -10,7 +10,7 @@
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-            			<h1 class="entry">Guidance: <?php the_title(); ?></h1>
+            			<h1 class="entry"><?php the_title(); ?></h1>
            			 	<p class="blog-post-meta">Last updated - <?php the_modified_time( 'F j, Y' ); ?></p>
                         
                 </div>
@@ -40,6 +40,12 @@
 
 
         </div><!-- /.col -->
+        </div>
+        <div class="row">
+        <div class="col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1 text-center">
+        <hr>
+		<?php get_template_part( 'morecontent' ); ?>
+        </div>
         </div>
 
 </div>
