@@ -5,7 +5,7 @@
       <ol class="carousel-indicators">
         <li data-target="#carousel1" data-slide-to="0" class="active"></li>
         <li data-target="#carousel1" data-slide-to="1"></li>
-        <li data-target="#carousel1" data-slide-to="2"></li>
+        <!--<li data-target="#carousel1" data-slide-to="2"></li>-->
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active"><img src="<?php echo get_template_directory_uri();?>/img/slider/slider1.jpg" alt="First slide image" class="center-block">
@@ -14,16 +14,16 @@
             <p>with swimmers who have represented Great Britain</p>
           </div>
         </div>
-        <div class="item"><img src="https://placehold.it/1920x400.jpg" alt="Second slide image" class="center-block">
+        <!--<div class="item"><img src="<?php echo get_template_directory_uri();?>/img/slider/slider1.jpg" alt="Second slide image" class="center-block">
           <div class="carousel-caption">
             <h3>Second slide Heading</h3>
             <p>Second slide Caption</p>
           </div>
-        </div>
+        </div>-->
         <div class="item"><img src="<?php echo get_template_directory_uri();?>/img/slider/slider3.jpg" alt="Third slide image" class="center-block">
           <div class="carousel-caption">
             <h3>Join Us</h3>
-            <p>Third slide Caption</p>
+            <p>Our 2015 Junior League Team</p>
           </div>
         </div>
       </div>
