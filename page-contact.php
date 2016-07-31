@@ -28,8 +28,9 @@
 		$human = $_POST['message_human'];
 		 
 		//php mailer variables
-		$to = get_option('admin_email');
-		$subject = "Contact Form: ". $radioselect . " - From: " . $email . "\r\n";
+		$to = "chesterlestreetasc@gmail.com" . ', ';
+		$to .= $email;
+		$subject = "Contact: ". $radioselect . " - From: " . $email . "\r\n";
 		$headers = 'From: '. $email . "\r\n" .
 		  'Reply-To: ' . $email . "\r\n";
 		  
@@ -50,7 +51,7 @@
 			else //ready to go!
 			{
 			  
-			$sent = wp_mail($to, $subject, strip_tags($name . $message), $headers);
+			$sent = wp_mail($to, $subject, strip_tags($name . "\r\n" . $email . "\r\n" . $radioselect . "\r\n\r\n" . $message), $headers);
 			if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
 			else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
 
@@ -115,11 +116,11 @@
                             <div class="col-sm-10"><textarea type="text" class="form-control" name="message_text" placeholder="Go on and Talk" rows="6"><?php echo esc_textarea($_POST['message_text']); ?></textarea></div>
                             </div>
                             
-                            <div class="form-group">
+                            <div class="form-group hidden">
                             <label for="message_human" class="col-sm-2 control-label">Are you Human?</label>
                             <div class="col-sm-10">
                             <div class="input-group">
-                            <input type="text" class="form-control" name="message_human" placeholder="Hint - The Answer is 2"><span class="input-group-addon"> + 3 = 5</span>
+                            <input type="text hidden" class="form-control" name="message_human" placeholder="Hint - The Answer is 2" value="2"><span class="input-group-addon"> + 3 = 5</span>
                             </div>
                             </div>
                             </div>
@@ -128,7 +129,7 @@
                             
                             <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                            <button class="btn btn-default " type="submit">Submit</button>
+                            <button class="btn btn-success " type="submit">Submit</button>
                             </div>
                             </div>
                             

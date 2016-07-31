@@ -1,7 +1,12 @@
 	<?php /* Template Name: Guidance */ ?>
  
 	<?php get_header(); ?>
-    
+    <div class="row visible-print-block" style="margin-top:-50px">
+<div class=col-xs-12">
+<img class="img-responsive logo center-block" style="display: block;" src="<?php echo get_template_directory_uri();?>/img/chesterLogo.svg"  alt="Chester-le-Street ASC Logo" />
+</div>
+</div>
+
     <div class="masthead">
     	<div class="container">
       		<div class="row">
@@ -11,7 +16,7 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             			<h1 class="entry"><?php the_title(); ?></h1>
-           			 	<p class="blog-post-meta">Last updated - <?php the_modified_time( 'F j, Y' ); ?></p>
+           			 	<p class="blog-post-meta">Last updated - <?php the_modified_time( 'j F Y' ); ?></p>
                         
                 </div>
 

@@ -5,6 +5,7 @@
  * @package chesterlestreetasc
  */
 
+
 add_filter('body_class', 'mbe_body_class');
 
 add_action('wp_head', 'mbe_wp_head');
@@ -12,10 +13,10 @@ add_action('wp_head', 'mbe_wp_head');
 add_action( 'after_setup_theme', 'wpboot_theme_setup' );
 function wpboot_theme_setup() {
 
-	global $content_width;
+	//global $content_width;
 	/* Set the $content_width for things such as video embeds. */
-	if ( !isset( $content_width ) )
-	$content_width = 617;	
+	//if ( !isset( $content_width ) )
+	//$content_width = 617;	
 	
 	add_theme_support( 'title-tag' );
 	
@@ -89,7 +90,7 @@ function wpboot_register_sidebars() {
 
 function wpboot_scripts() {
 
- 		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', null, '3.0.0' );
+ 		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', null, '3.3.7' );
  
 		wp_enqueue_style( 'style', get_stylesheet_uri() );
 
@@ -143,6 +144,7 @@ function modify_read_more_link() {
 return '<a class="btn btn-primary" href="' . get_permalink() . '">Read More</a>';
 }
 
+
 	
 /**
  * Include the TGM_Plugin_Activation class.
@@ -176,7 +178,6 @@ function mbe_wp_head(){
 		function xyz_amp_add_pixel( $amp_template ) {
 			$post_id = $amp_template->get( 'post_id' );
 			?>
-			<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 			<?php
 		}
 
@@ -188,7 +189,7 @@ function mbe_wp_head(){
 			?>
             
             body {
-            font-family:'Open Sans', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
             font-size:16px;
             line-height:1.428571429;
             background:#fff;
@@ -262,6 +263,16 @@ function mbe_wp_head(){
                 color: #333;
                 background: #FFF;
             }
+			
+			.wp-caption-text {
+				color: #FFF;
+				font-size: 14px;
+				font-style: normal;
+				text-align: left;
+				background: black;
+				padding: 10px 12px 10px 12px;
+				margin: 0 0 15px 0;
+			}
 
 			<?php
 		}
@@ -304,7 +315,35 @@ function mbe_wp_head(){
 			if ( has_post_thumbnail() ) {
 				// Just add the raw <img /> tag; our sanitizer will take care of it later.
 				$image = sprintf( '<p class="xyz-featured-image">%s</p>', get_the_post_thumbnail() );
-				$content = $image . $content;
+				$content = $content;
 			}
 			return $content;
 		}
+		
+		//Remove inactive shortcodes
+		add_filter('the_content', 'mte_remove_unused_shortcode');
+		function mte_remove_unused_shortcode($content)
+		{	$pattern = mte_get_unused_shortcode_regex();
+			$content = preg_replace_callback( '/'. $pattern .'/s', 'strip_shortcode_tag', $content );
+			return $content;	
+		}
+		 
+		function mte_get_unused_shortcode_regex() {
+			global $shortcode_tags;
+			$tagnames = array_keys($shortcode_tags);
+			$tagregexp = join( '|', array_map('preg_quote', $tagnames) );
+			$regex = '\\[(\\[?)';
+			$regex .= "(?!$tagregexp)";
+			$regex .= '\\b([^\\]\\/]*(?:\\/(?!\\])[^\\]\\/]*)*?)(?:(\\/)\\]|\\](?:([^\\[]*+(?:\\[(?!\\/\\2\\])[^\\[]*+)*+)\\[\\/\\2\\])?)(\\]?)';
+			return $regex; 
+		}
+
+function remove_image_size_attributes( $html ) {
+    return preg_replace( '/(width|height)="\d*"/', '', $html );
+}
+ 
+// Remove image size attributes from post thumbnails
+add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
+ 
+// Remove image size attributes from images added to a WordPress post
+add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );

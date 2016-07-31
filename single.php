@@ -9,7 +9,7 @@
         
          		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
             			<h2 class="chesterRed entry"><?php the_title(); ?></h2>
-           			 	<p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
+           			 	<p class="blog-post-meta"><?php the_time( 'j F Y' ); ?> - <?php the_category(', ');?></p>
 
 			<?php if ( has_post_thumbnail()) : ?>
 				<div class="post-thumb">
@@ -19,7 +19,7 @@
 
 				<div class="entry clearfix"><?php the_content(); ?></div>
 
-				<?php wp_link_pages(); ?>
+				<div class="hidden-print"><?php wp_link_pages(); ?>
 
 				<p class="p-tags"><?php the_tags(); ?></p>
 			
@@ -34,7 +34,7 @@
 				</ul>
 				
 		  		<?php comments_template(); ?>
-			</div>
+			</div></div>
 	
 	  <?php endwhile; endif; ?>
 

@@ -1,3 +1,4 @@
+<div class="hidden-print">
         <h3>More from <?php bloginfo('name'); ?></h3>
         <p><a class="btn btn-default" data-parent="#collapse-more" role="button" data-toggle="collapse" href="#collapse-searchbox" aria-expanded="false" aria-controls="collapse-searchbox">
   Search
@@ -24,3 +25,4 @@
           </div>
         </div>
         </div>
+</div>

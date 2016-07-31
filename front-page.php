@@ -1,7 +1,7 @@
 	<?php get_header(); ?>
     
     <!-- USE 1920x400 px IMAGES FOR THE SLIDER -->
-    <div id="carousel1" class="carousel slide hidden-xs" data-ride="carousel" style="margin-top:-20px;">
+    <div id="carousel1" class="carousel slide carousel-fade hidden-xs" data-ride="carousel" style="margin-top:-20px;">
       <ol class="carousel-indicators">
         <li data-target="#carousel1" data-slide-to="0" class="active"></li>
         <li data-target="#carousel1" data-slide-to="1"></li>

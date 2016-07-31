@@ -7,7 +7,7 @@
         
         <?php if (have_posts()) : ?>
 
-		<h2 class="chesterRed">
+		<!--<h2 class="chesterRed">
 	
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		
@@ -37,13 +37,13 @@
 			
 		<?php } ?>
 
-			</h2>
-
+			</h2>-->
+            
 	<?php while (have_posts()) : the_post(); ?>
                 
                 <div class="well">
             			<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-           			 <p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
+           			 <p class="blog-post-meta"><?php the_time( 'j F Y' ); ?> - <?php the_category(', ');?></p>
 
 				<?php the_content( $more_link_text , $strip_teaser ); ?>
 			</div>
