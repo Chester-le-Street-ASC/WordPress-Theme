@@ -21,7 +21,7 @@
     <link rel="mask-icon" href="<?php echo get_template_directory_uri();?>/img/chesterIcon.svg" color="#bd0000">
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1">
     <meta name="apple-mobile-web-app-title" content="CLS ASC" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -42,6 +42,7 @@
     
   </head>
 
+<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 <header>
 
 <nav class="navbar navbar-default navbar-fixed-top">  
@@ -77,4 +78,4 @@
 
 </header>
 
-<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
+<!--<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>-->

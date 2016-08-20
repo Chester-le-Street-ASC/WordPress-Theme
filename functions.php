@@ -16,7 +16,7 @@ function wpboot_theme_setup() {
 	//global $content_width;
 	/* Set the $content_width for things such as video embeds. */
 	//if ( !isset( $content_width ) )
-	//$content_width = 617;	
+	//$content_width = 753;	
 	
 	add_theme_support( 'title-tag' );
 	
@@ -91,6 +91,8 @@ function wpboot_register_sidebars() {
 function wpboot_scripts() {
 
  		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', null, '3.3.7' );
+
+		wp_enqueue_style( 'chester', get_template_directory_uri() . '/chester.min.css', null, '1.12' );
  
 		wp_enqueue_style( 'style', get_stylesheet_uri() );
 
@@ -194,11 +196,13 @@ function mbe_wp_head(){
             line-height:1.428571429;
             background:#fff;
             color:#333;
-            padding-bottom:20px;
+            padding-bottom:5px;
             }
             
             .amp-wp-content {
             color: #333;
+	    max-width: 600px;
+	    padding: 0 10px 0 10px;
             }
             
             .amp-wp-title {
@@ -231,17 +235,17 @@ function mbe_wp_head(){
             }
             
 			nav.amp-wp-title-bar {
-				padding: 12px 0;
-				background: #bd0000;
+				padding:10px 0;
+				background:#bd0000;
+				border-bottom:1px solid #9c0000;
 			}
 			nav.amp-wp-title-bar a {
-				background-image: url( '<?php echo get_template_directory_uri();?>/img/chesterLogoAMP.png' );
+				background-image: url( '<?php echo get_template_directory_uri();?>/img/chesterLogoAMP.svg' );
 				background-repeat: no-repeat;
 				background-size: contain;
 				display: block;
 				background-position: center;
-				height: 50px;
-				margin: 0 auto;
+				height: 40px;
 				text-indent: -9999px;
 			}
             
@@ -258,7 +262,7 @@ function mbe_wp_head(){
             blockquote {
                 padding: 10px 20px;
                 margin: 0 0 20px;
-                font-size: 17.5px;
+                font-size: 18px;
                 border-left: 5px solid #bd0000;
                 color: #333;
                 background: #FFF;

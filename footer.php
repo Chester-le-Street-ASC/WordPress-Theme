@@ -1,4 +1,4 @@
-</div></div><!-- /.container -->
+<!--</div></div> /.container -->
 	<!-- THE HEPPELL FOOTER -->
 	<div class="hidden-print">
     <hr>
@@ -9,10 +9,10 @@
             <h3>Contact</h3>
             <address>
                 Burns Green Leisure Centre<br>
-				Chester-Le-Street<br>
+				Chester-le-Street<br>
 				DH3 3QH
             </address>
-            <p><i class="fa fa-phone chesterRed"></i>  <a href="tel:03000 266 444">03000 266 444</a><br>
+            <p><i class="fa fa-phone chesterRed"></i>  <a href="tel:03000266444">03000 266 444</a><br>
             <i class="fa fa-envelope chesterRed"></i> <a href="mailto:chesterlestreetasc@gmail.com" target="new">E-Mail</a></p>
         </div>
         <div class="col-sm-3 text-center">
@@ -49,33 +49,33 @@
     <hr>
     <div class="row hidden-print">
     		<div class="col-md-12 text-center">
-            <h3 class="chesterRed" style="margin-top:0px;margin-bottom:20px;">Our Sponsors</h3>
+            <!--<h3 class="chesterRed" style="margin-top:0px;margin-bottom:20px;">Our Sponsors</h3>-->
             </div>
             <div class="col-md-12">
             <div class="row vertical-center">
                 <div class="col-md-6">
                     <div class="row vertical-center">
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.gblf.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/gblf.svg"  alt="GBLF" /></a>
+                        <a href="http://www.gblf.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/gblf.svg" alt="GBLF" /></a>
                         </div>
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.ukmail.com" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/ukmail.png"  alt="UK Mail" /></a>
+                        <a href="http://www.ukmail.com" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/ukmail.png" srcset="<?php echo get_template_directory_uri();?>/img/sponsors/ukmail@2x.png 2x, <?php echo get_template_directory_uri();?>/img/sponsors/ukmail@3x.png 3x" alt="UK Mail" /></a>
                         </div>
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.wssrecruitment.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/wss.png"  alt="WSS Recruitment" /></a>
+                        <a href="http://www.wssrecruitment.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/wss.png" srcset="<?php echo get_template_directory_uri();?>/img/sponsors/wss@2x.png 2x, <?php echo get_template_directory_uri();?>/img/sponsors/wss@3x.png 3x" alt="WSS Recruitment" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                 	<div class="row vertical-center">
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.nessswimwear.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/ness.png"  alt="NESS Swimwear" /></a>
+                        <a href="http://www.nessswimwear.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/ness.png" srcset="<?php echo get_template_directory_uri();?>/img/sponsors/ness@2x.png 2x, <?php echo get_template_directory_uri();?>/img/sponsors/ness@3x.png 3x" alt="NESS Swimwear" /></a>
                         </div>
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.michaelenglishroofing.com" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/menglish.png"  alt="Michael English Roofing" /></a>
+                        <a href="http://www.michaelenglishroofing.com" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/menglish.png" srcset="<?php echo get_template_directory_uri();?>/img/sponsors/menglish@2x.png 2x, <?php echo get_template_directory_uri();?>/img/sponsors/menglish@3x.png 3x" alt="Michael English Roofing" /></a>
                         </div>
                         <div class="col-sm-4 text-center">
-                        <a href="http://www.harlandsaccountants.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/harlands.png"  alt="Harlands Accountants" /></a>
+                        <a href="http://www.harlandsaccountants.co.uk" target="_blank"><img class="img-responsive sponsor center-block" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/sponsors/harlands.png" srcset="<?php echo get_template_directory_uri();?>/img/sponsors/harlands@2x.png 2x, <?php echo get_template_directory_uri();?>/img/sponsors/harlands@3x.png 3x" alt="Harlands Accountants" /></a>
                         </div>
                     </div>
     			</div>
@@ -87,7 +87,7 @@
 	  <div class="col-xs-12">
 	  <div class="row visible-md visible-lg">
 	  <div class="col-md-12">
-	  <p><a target="_self" href="/policies/cookies/">Cookie Policy</a> - <a target="new" href="mailto:web@chesterlestreetasc.co.uk">Website Feedback</a> - <a target="_blank" href="http://www.swimming.org/asa/clubs-and-members/data-protection/">Data Protection</a> - <a target="_blank" href="/sitemap.xml">Sitemap</a> - <a target="_blank" href="https://apple.news/THCu6bTtSTAqMP9YsZf893g">Apple News</a> - <a target="_self" href="/contact/">Contact CLS ASC</a></p>
+	  <p><a target="_self" href="/policies/cookies/">Cookie Policy</a> - <a target="new" href="mailto:web@chesterlestreetasc.co.uk">Website Feedback</a> - <a target="_self" href="/support">Technical Support</a> - <a target="_blank" href="/sitemap.xml">Sitemap</a> - <a target="_blank" href="https://apple.news/THCu6bTtSTAqMP9YsZf893g">Apple News</a> - <a target="_self" href="/contact/">Contact CLS ASC</a></p>
 	  </div>
 	  </div>
 	  <div class="row visible-sm visible-xs">
@@ -98,7 +98,7 @@
 		<p><a target="new" href="mailto:web@chesterlestreetasc.co.uk">Website Feedback</a></p>
           </div>
 	  <div class="col-sm-4 col-md-2 col-xs-6">
-		<p><a target="_blank" href="http://www.swimming.org/asa/clubs-and-members/data-protection/">Data Protection</a></p>
+		<p><a target="_self" href="/support">Technical Support</a></p>
           </div>
 	  <div class="col-sm-4 col-md-2 col-xs-6">
 		<p><a target="_blank" href="/sitemap.xml">Sitemap</a></p>
@@ -117,7 +117,7 @@
 	  
         </div> </div> </div> <!-- /.container -->
         <?php wp_footer(); ?>
-        <script async src="<?php echo get_template_directory_uri();?>/js/jquery.min.js"></script>
+        <script src="<?php echo get_template_directory_uri();?>/js/jquery.min.js"></script>
         <!--[if lt IE 9]>
           <script async src="<?php echo get_template_directory_uri();?>/js/jqueryforltIE9.min.js"></script>
         <![endif]-->

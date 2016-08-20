@@ -1,44 +1,63 @@
-	<?php get_header(); ?>
-    
-    <!-- USE 1920x400 px IMAGES FOR THE SLIDER -->
-    <div id="carousel1" class="carousel slide carousel-fade hidden-xs" data-ride="carousel" style="margin-top:-20px;">
-      <ol class="carousel-indicators">
-        <li data-target="#carousel1" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel1" data-slide-to="1"></li>
-        <!--<li data-target="#carousel1" data-slide-to="2"></li>-->
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active"><img src="<?php echo get_template_directory_uri();?>/img/slider/slider1.jpg" alt="First slide image" class="center-block">
-          <div class="carousel-caption">
-            <h3>Chester-le-Street ASC</h3>
-            <p>with swimmers who have represented Great Britain</p>
-          </div>
+<?php get_header(); ?>
+<div class="container">
+  <div class="row hidden-print" style="margin-top:0px">
+		<div class="col-sm-8"> <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><!--<img class="img-responsive logo" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/chesterLogo.svg"  alt="Chester-le-Street ASC Logo" />--></a>
+	  </div>
+        <div class="col-sm-4 hidden-print hidden-xs">
+		    <p class="slogan" style="margin-bottom:0px;"><?php bloginfo( 'description' ); ?></p>
         </div>
-        <!--<div class="item"><img src="<?php echo get_template_directory_uri();?>/img/slider/slider1.jpg" alt="Second slide image" class="center-block">
-          <div class="carousel-caption">
-            <h3>Second slide Heading</h3>
-            <p>Second slide Caption</p>
-          </div>
-        </div>-->
-        <div class="item"><img src="<?php echo get_template_directory_uri();?>/img/slider/slider3.jpg" alt="Third slide image" class="center-block">
-          <div class="carousel-caption">
-            <h3>Join Us</h3>
-            <p>Our 2015 Junior League Team</p>
-          </div>
+
+        
         </div>
-      </div>
-      <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#carousel1" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>
-      
-          <div class="hidden-xs" style="margin-top:25px">
-		  <?php get_template_part( 'pageheader' ); ?>
-          </div>
-          
-          <div class="hidden-sm hidden-md hidden-lg">
-		  <?php get_template_part( 'pageheader' ); ?>
-          </div>
+<div class="row visible-print-block" style="margin-top:-50px">
+<div class="col-xs-12">
+<img class="img-responsive logo" style="display: inline;" src="<?php echo get_template_directory_uri();?>/img/chesterLogo.svg"  alt="Chester-le-Street ASC Logo">
+</div>
+</div>
+
+	<!--[if lt IE 9]>        
+	<div class="row">
+        <div class="col-md-12">
+        <hr>
+        <div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a class="alert-link" href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> or <a class="alert-link" href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">install Google Chrome</a> to better experience this site.</p></div><hr>
+        </div>
+        </div>
+	<![endif]-->
+        
+</div>
+
+    <div class="container-fluid">
+    <div class="row hidden-print" style="margin-top:20px;">
+    <img src="<?php echo get_template_directory_uri();?>/img/stylish/frontpageheader.jpg" alt="First slide image" class="center-block img-responsive">
+
+
+    <div class="visible-xs visible-sm">
+    <div class="floating_introduction_container content_wrap">
+    <div class="floating_introduction_content-mobile">
+    <div class="container">
+    <h3 class="entry">Welcome to Chester-le-Street ASC</h3>
+    <p>We're a local Amateur Swimming Club, offering the opportunity to participate in swimming as a competitive sport. Established in 1975, we've developed in size and stature over the years, boasting tremendously talented young athletes who have achieved significant success on the local, national and international level.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+
+    <div class="hidden-xs hidden-sm">
+    <div class="container">
+    <div class="floating_introduction_container content_wrap">
+    <div class="floating_introduction_content">
+    <h3 class="entry">Welcome to Chester-le-Street ASC</h3>
+    <p>We're a local Amateur Swimming Club, offering the opportunity to participate in swimming as a competitive sport. Established in 1975, we've developed in size and stature over the years, boasting tremendously talented young athletes who have achieved significant success on the local, national and international level.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+
+</div>
+</div>
 
     <div class="container">
-      <div class="row">
+      <div class="row front-page-content">
 
         <div class="col-md-8 blog-main">
         

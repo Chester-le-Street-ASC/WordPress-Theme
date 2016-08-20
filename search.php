@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-8">
+        <div class="col-md-8 blog-main">
         		
         <h2 class="chesterRed entry"><?php _e( 'Search Results', 'wpboot' ); ?></h2>
 
