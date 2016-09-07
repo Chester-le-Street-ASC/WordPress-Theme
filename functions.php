@@ -44,8 +44,8 @@ register_nav_menu('primary', __('Primary Menu'));
 require_once('wp_bootstrap_pagination.php');
 function customize_wp_bootstrap_pagination($args) {
 
-    $args['previous_string'] = 'previous';
-    $args['next_string'] = 'next';
+    $args['previous_string'] = 'Previous';
+    $args['next_string'] = 'Next';
 
     return $args;
 }
@@ -79,7 +79,7 @@ function wpboot_register_sidebars() {
 		array(
 			'id' => 'primary',
 			'name' => __( 'Primary Sidebar', 'wpboot' ),
-			'description' => __( 'The following widgets will appear in the main sidebar div.', 'wpboot' ),
+			'description' => __( 'The following widgets will appear in the Prmary Sidebar.', 'chester' ),
 			'before_widget' => '<div id="%1$s" class="sidebar-module widget %2$s well">',
 			'after_widget' => '</div>',
 			'before_title' => '<h4 class="sidebar-module-title">',
@@ -92,7 +92,7 @@ function wpboot_scripts() {
 
  		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', null, '3.3.7' );
 
-		wp_enqueue_style( 'chester', get_template_directory_uri() . '/chester.min.css', null, '1.12' );
+		wp_enqueue_style( 'chester', get_template_directory_uri() . '/chester.min.css', null, '1.13' );
  
 		wp_enqueue_style( 'style', get_stylesheet_uri() );
 
@@ -100,6 +100,12 @@ function wpboot_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
+function remove_devicepx() {
+    wp_dequeue_script( 'devicepx' );
+}
+add_action( 'wp_enqueue_scripts', 'remove_devicepx' );
+
 add_action( 'wp_enqueue_scripts', 'wpboot_scripts' );
 
 register_nav_menus( array(
@@ -133,7 +139,7 @@ add_filter( 'wp_title', 'wpboot_wp_title', 10, 2 );
 function wpboot_excerpt_length( $length ) {
 	return 50;
 }
-add_filter( 'excerpt_length', 'wpboot_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'wpboot_excerpt_length', 200 );
 
 function wpboot_excerpt_more($more) {
        global $post;

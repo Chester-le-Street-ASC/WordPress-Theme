@@ -113,7 +113,7 @@ label.screen-reader-text {
 
 #wp-calendar caption {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px;/Users/clheppell/Documents/github/cls_wp-theme/chester.css
 }
 
 /* Pagination */
@@ -455,19 +455,88 @@ font-size: 12px;
 @media (max-width: 991px) {.front-page-content{padding-top:20px}}
 @media (min-width: 992px) {.front-page-content{padding-top:80px}}
 
-a{-webkit-tap-highlight-color: rgba(189,0,0,0.3);}
+a{-webkit-tap-highlight-color:rgba(189,0,0,0.3)}
+.navbar a{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.list-group-item{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 
-    .dropdown-menu > li > a {
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-    }
-.list-group-item {
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-    }
+.blog-main a[href*="//"]:not([href*="chesterlestreetasc.co.uk"]):after{font-family:FontAwesome;content:"\00a0\f08e";font-size:15px}
 
-.blog-main a[href*="//"]:not([href*="chesterlestreetasc.co.uk"]):after { 
-    font-family: FontAwesome;
-    content: " \f08e";
-    /*padding-left: 5px;*/
+::selection{background:rgba(189,0,0,0.3)}
+::-moz-selection{background:rgba(189,0,0,0.3)}
+
+.row-flex, .row-flex > div[class*='col-'] {  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
 }
 
-::selection{background: rgba(189,0,0,0.3)}::-moz-selection{background: rgba(189,0,0,0.3)}
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+	 margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+	width:100%;
+}
+
+
+.flex-col {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1 100%;
+	flex-flow: column nowrap;
+}
+
+.flex-grow {
+	display: flex;
+    -webkit-flex: 2;
+    flex: 2;
+}
+
+.cell{min-height:20px;padding:15px;background-color:#f5f5f5;border-top:3px solid #bd0000;border-radius:0;margin:0 0 25px 0}
+
+.flex-panel{min-height:20px;border-radius:0;margin:0 0 25px 0}
+.flex-panel-image{margin:0;width:100%;height:auto}
+.flex-panel-body{padding:15px 15px 15px 15px;margin:0}
+.flex-panel-default{background-color:#f5f5f5}
+.flex-panel-primary{background-color:#bd0000;color:#FFF}
+.flex-panel-blue{background-color:#005fbd;color:#FFF}
+
+@keyframes imageFadeInOut {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+#fade img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+#fade img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+#fade img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+#fade img:nth-of-type(4) {
+  animation-delay: 0;
+}
