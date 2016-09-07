@@ -15,25 +15,25 @@
 			<?php echo single_cat_title(); ?>
 			
 		<?php } elseif( is_tag() ) { ?>
-			<?php _e( 'Posts Tagged:', 'wpboot' ); ?> <?php single_tag_title(); ?>
+			<?php _e( 'Posts Tagged:', 'chester' ); ?> <?php single_tag_title(); ?>
 			
 		<?php } elseif (is_day()) { ?>
-			<?php _e( 'Archive for', 'wpboot' ); ?> <?php echo get_the_date(); ?>
+			<?php _e( 'Archive for', 'chester' ); ?> <?php echo get_the_date(); ?>
 			
 		<?php } elseif (is_month()) { ?>
-			<?php _e( 'Archive for', 'wpboot' ); ?> <?php echo get_the_date( _x( 'F Y', 'monthly archives date format', 'wpboot' ) ) ?>
+			<?php _e( 'Archive for', 'chester' ); ?> <?php echo get_the_date( _x( 'F Y', 'monthly archives date format', 'wpboot' ) ) ?>
 			
 		<?php } elseif (is_year()) { ?>
-			<?php _e( 'Archive for', 'wpboot' ); ?> <?php echo get_the_date( _x( 'Y', 'yearly archives date format', 'wpboot' ) ) ?>
+			<?php _e( 'Archive for', 'chester' ); ?> <?php echo get_the_date( _x( 'Y', 'yearly archives date format', 'wpboot' ) ) ?>
 			
 		<?php } elseif (is_search()) { ?>
-			<?php _e( 'Search Results', 'wpboot' ); ?>
+			<?php _e( 'Search Results', 'chester' ); ?>
 			
 		<?php } elseif (is_author()) { ?>
-			<?php _e( 'Author Archive', 'wpboot' ); ?>
+			<?php _e( 'Author Archive', 'chester' ); ?>
 			
 		<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-			<?php _e( 'Blog Archives', 'wpboot' ); ?>
+			<?php _e( 'Blog Archives', 'chester' ); ?>
 			
 		<?php } ?>
 
@@ -41,12 +41,11 @@
             
 	<?php while (have_posts()) : the_post(); ?>
                 
-                <div class="well">
-            			<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-           			 <p class="blog-post-meta"><?php the_time( 'j F Y' ); ?> - <?php the_category(', ');?></p>
-
-				<?php the_content( $more_link_text , $strip_teaser ); ?>
-			</div>
+            		<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+           			<p class="blog-post-meta"><?php the_time( 'j F Y' ); ?> - <?php the_category(', ');?></p>
+					<?php the_content( $more_link_text , $strip_teaser ); ?>
+                    <hr>
+	
 	<?php endwhile; endif; ?>
 
 	<?php

@@ -1,0 +1,10 @@
+<?php get_header(); ?>
+<?php get_template_part( 'pageheader' ); ?>
+<!-- Gala Special Page Flagship Content -->
+<div class="flagship-content"><div class="container">
+  <div class="row"><div class="col-md-8"><div class="row vertical-align"><div class="col-xs-9 col-sm-6"><img src="https://chesterlestreetasc.co.uk/wp-content/uploads/2016/08/juniorMeetLogoWhite.svg" class="img-fluid" style="max-width:300px;height:auto"></div><div class="col-xs-3 col-sm-6"><a href="https://www.ukmail.com/" target="_blank"><img src="https://chesterlestreetasc.co.uk/wp-content/uploads/2016/09/UKMailGalaSponsor.png" srcset="https://chesterlestreetasc.co.uk/wp-content/uploads/2016/09/UKMailGalaSponsor@2x.png 2x, https://chesterlestreetasc.co.uk/wp-content/uploads/2016/09/UKMailGalaSponsor@3x.png 3x" class="img-fluid pull-right"></a></div></div><hr><p class="lead">Welcome to our 2016 Junior Meet</p></div>
+  <div class="col-md-4"><div class="list-group list-group-flagship-content"><a href="https://www.chesterlestreetasc.co.uk/competitions/galas/cls2016/" class="list-group-item">Junior Meet Homepage</a><a href="#" class="list-group-item">Gala Programme</a><a href="#" class="list-group-item">Live Results</a><a href="https://www.chesterlestreetasc.co.uk/wp-content/uploads/2016/06/CLS-Junior-Meet-Info-Pack-2016.pdf" class="list-group-item">Meet Information</a><a href="http://www.durham.gov.uk/clsleisurecentre" class="list-group-item">Pool Information <i class="fa fa-external-link" aria-hidden="true"></i></a></div></div></div>
+</div></div>
+<div class="container"><div class="row"><div class="col-xs-12"><hr></div></div></div>
+<!-- END OF Gala Special Page Flagship Content -->
+<div class="container"><div class="row"><div class="col-md-8 blog-main"><?php if (have_posts()) : while (have_posts()) : the_post(); ?><div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>><div class="entry clearfix"><?php the_content(); ?></div><?php comments_template(); ?></div><?php endwhile; endif; ?> </div><!-- /.blog-main --><div class="col-md-4"><?php get_sidebar(); ?></div></div></div><?php get_footer(); ?>

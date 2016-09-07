@@ -1,6 +1,6 @@
 <?php
 /**
- * wpboot functions and definitions
+ * chester functions and definitions
  *
  * @package chesterlestreetasc
  */
@@ -10,8 +10,8 @@ add_filter('body_class', 'mbe_body_class');
 
 add_action('wp_head', 'mbe_wp_head');
 
-add_action( 'after_setup_theme', 'wpboot_theme_setup' );
-function wpboot_theme_setup() {
+add_action( 'after_setup_theme', 'chester_theme_setup' );
+function chester_theme_setup() {
 
 	//global $content_width;
 	/* Set the $content_width for things such as video embeds. */
@@ -35,10 +35,10 @@ function wpboot_theme_setup() {
 register_nav_menu('primary', __('Primary Menu'));
 
 /* Add your nav menus function to the 'init' action hook. */
-   add_action( 'init', 'wpboot_register_menus' );
+   add_action( 'init', 'chester_register_menus' );
 
 /* Add custom actions. */
-   add_action( 'widgets_init', 'wpboot_register_sidebars' );
+   add_action( 'widgets_init', 'chester_register_sidebars' );
 
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_pagination.php');
@@ -52,7 +52,7 @@ function customize_wp_bootstrap_pagination($args) {
 add_filter('wp_bootstrap_pagination_defaults', 'customize_wp_bootstrap_pagination');
 
 // Add menu features 
-function wpboot_register_menus() {
+function chester_register_menus() {
 	register_nav_menus(array('primary'=>__( 'Primary Menu' ), ));
 }
 
@@ -60,38 +60,38 @@ function wpboot_register_menus() {
 require_once('wp_bootstrap_navwalker.php');
 
 // Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
-function wpboot_page_menu_args( $args ) {
+function chester_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'wpboot_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'chester_page_menu_args' );
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
-	function wpboot_render_title() {
+	function chester_render_title() {
 ?><title><?php wp_title( '|', true, 'right' ); ?></title>
 <?php
 	}
-	add_action( 'wp_head', 'wpboot_render_title' );
+	add_action( 'wp_head', 'chester_render_title' );
 }
 
-function wpboot_register_sidebars() {
+function chester_register_sidebars() {
 	register_sidebar(
 		array(
 			'id' => 'primary',
-			'name' => __( 'Primary Sidebar', 'wpboot' ),
+			'name' => __( 'Primary Sidebar', 'chester' ),
 			'description' => __( 'The following widgets will appear in the Prmary Sidebar.', 'chester' ),
-			'before_widget' => '<div id="%1$s" class="sidebar-module widget %2$s well">',
-			'after_widget' => '</div>',
-			'before_title' => '<h4 class="sidebar-module-title">',
+			'before_widget' => '<div id="%1$s" class="sidebar-module widget %2$s card"><div class="card-block">',
+			'after_widget' => '</div></div>',
+			'before_title' => '<h4 class="card-title">',
 			'after_title' => '</h4>'
 		)
 	);
 }
 
-function wpboot_scripts() {
+function chester_scripts() {
 
- 		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', null, '3.3.7' );
-
+ 		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', null, '4' );
+		
 		wp_enqueue_style( 'chester', get_template_directory_uri() . '/chester.min.css', null, '1.13' );
  
 		wp_enqueue_style( 'style', get_stylesheet_uri() );
@@ -106,15 +106,15 @@ function remove_devicepx() {
 }
 add_action( 'wp_enqueue_scripts', 'remove_devicepx' );
 
-add_action( 'wp_enqueue_scripts', 'wpboot_scripts' );
+add_action( 'wp_enqueue_scripts', 'chester_scripts' );
 
 register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'wpboot' ),
+    'primary' => __( 'Primary Menu', 'chester' ),
 ) );
 
 //Set up title if SEO plugin is not used.
 
-function wpboot_wp_title( $title, $sep ) {
+function chester_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() )
@@ -130,29 +130,27 @@ function wpboot_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'wpboot' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'chester' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'wpboot_wp_title', 10, 2 );
+add_filter( 'wp_title', 'chester_wp_title', 10, 2 );
 
-function wpboot_excerpt_length( $length ) {
-	return 50;
+function chester_excerpt_length( $length ) {
+	return 40;
 }
-add_filter( 'excerpt_length', 'wpboot_excerpt_length', 200 );
+add_filter( 'excerpt_length', 'chester_excerpt_length', 150 );
 
-function wpboot_excerpt_more($more) {
+function chester_excerpt_more($more) {
        global $post;
 	return '...</p>';
 }
-add_filter('excerpt_more', 'wpboot_excerpt_more');
+add_filter('excerpt_more', 'chester_excerpt_more');
 
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 function modify_read_more_link() {
 return '<a class="btn btn-primary" href="' . get_permalink() . '">Read More</a>';
 }
-
-
 	
 /**
  * Include the TGM_Plugin_Activation class.
@@ -357,3 +355,12 @@ add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
  
 // Remove image size attributes from images added to a WordPress post
 add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
+
+//Gets post cat slug and looks for single-[cat slug].php and applies it
+add_filter('single_template', create_function(
+	'$the_template',
+	'foreach( (array) get_the_category() as $cat ) {
+		if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") )
+		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
+	return $the_template;' )
+);

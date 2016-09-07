@@ -1,69 +1,51 @@
 	<?php
-	 
 	  //response generation function
 	  $response = "";
-	 
 	  //function to generate response
 	  function my_contact_form_generate_response($type, $message){
-	 
 		global $response;
-	 
 		if($type == "success") $response = "<div class='alert alert-success'>{$message}</div>";
 		else $response = "<div class='alert alert-warning'>{$message}</div>";
-	 
 	  }
 	  
-	  //response messages
-		$not_human       = "Someone can't add up. It wasn't us though.";
-		$missing_content = "Please fill out ALL of the boxes.";
-		$email_invalid   = "That is not  valid Email Address.";
-		$message_unsent  = "Your message was not sent due to an Error on our side. Please Try Again.<br>If the problem persists, please try again later.";
-		$message_sent    = "Great! Your message has been sent to the relevant person.";
-		 
+		//response messages
+		$not_human       = "Someone can't add up. It wasn't us though.";		$missing_content = "Please fill out ALL of the boxes.";		$email_invalid   = "Invalid email address.";		$message_unsent  = "Your message was not sent due to an Server Error on our side. Please Try Again.<br>If the problem persists, please try again later.";		$message_sent    = "Great! Your message has been sent to us.";		 
 		//user posted variables
 		$name = $_POST['message_name'];
 		$email = $_POST['message_email'];
 		$radioselect = $_POST['inlineRadioOptions'];
 		$message = $_POST['message_text'];
 		$human = $_POST['message_human'];
-		 
+		
 		//php mailer variables
 		$to = "chesterlestreetasc@gmail.com" . ', ';
 		$to .= $email;
-		$subject = "Contact: ". $radioselect . " - From: " . $email . "\r\n";
+		$subject = "Web Contact Form: ". $radioselect . " - From: " . $name . "\r\n";
 		$headers = 'From: '. $email . "\r\n" .
-		  'Reply-To: ' . $email . "\r\n";
+		'Reply-To: ' . $email . "\r\n";
 		  
 		if(!$human == 0){
 		  if($human != 2) my_contact_form_generate_response("error", $not_human); //not human!
 		  else {
-		 
 			//validate email
 			if(!filter_var($email, FILTER_VALIDATE_EMAIL))
 			  my_contact_form_generate_response("error", $email_invalid);
 			else //email is valid
 			{
-			
 			//validate presence of name and message
 			if(empty($name) || empty($radioselect) || empty($message)){
 			  my_contact_form_generate_response("error", $missing_content);
 			}
 			else //ready to go!
 			{
-			  
-			$sent = wp_mail($to, $subject, strip_tags($name . "\r\n" . $email . "\r\n" . $radioselect . "\r\n\r\n" . $message), $headers);
+			$sent = wp_mail($to, $subject, strip_tags("Name: " . $name . "\r\n" . "Email Address: " . $email . "\r\n" . "Subject: " . $radioselect . "\r\n\r\n" . "Message" . "\r\n" . $message) . "\r\n\r\n" . "Thanks for getting in touch with us. Your message has been passed to the right people and we will reply as soon as possible.", $headers);
 			if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
 			else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
-
 			}
-			
 			}
-
 		  }
 		}
 		else if ($_POST['submitted']) my_contact_form_generate_response("error", $missing_content);
-
-  
 	?>
 	<?php get_header(); ?>
     <?php get_template_part( 'pageheader' ); ?>

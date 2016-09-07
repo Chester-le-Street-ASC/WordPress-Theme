@@ -1,5 +1,3 @@
-<?php /* Template Name: Guidance */ ?>
- 
 <?php get_header(); ?>
 <div class="row visible-print-block" style="margin-top:-50px">
 <div class="col-xs-12">
@@ -13,7 +11,7 @@
         	<div class="offset-md-2 offset-sm-1 col-md-8 col-sm-10">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             			<h1 class="entry"><?php the_title(); ?></h1>
-           			 	<p class="blog-post-meta">Last updated - <?php the_modified_time( 'j F Y' ); ?></p>
+           			 	<p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
                 </div>
 			</div>
          </div>
@@ -30,6 +28,10 @@
 				<div class="entry"><?php the_content(); ?></div>
 				<?php wp_link_pages(); ?>
 		  		<?php comments_template(); ?>
+        <ul class="pager clearfix hidden-print">
+                <li class="pull-left"><?php previous_post_link( '%link', '' . _x( '<i class="fa fa-chevron-left"></i>', 'Previous post link', 'wpboot' ) . ' Previous' ); ?></li>
+                <li class="pull-right"><?php next_post_link( '%link', 'Next ' . _x( '<i class="fa fa-chevron-right"></i>', 'Next post link', 'wpboot' ) . '' ); ?></li>
+        </ul>
 			</div>
 	  <?php endwhile; endif; ?>
 
