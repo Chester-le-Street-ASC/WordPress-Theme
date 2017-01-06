@@ -7,7 +7,7 @@
 
 	<?php if (have_posts()) : ?>
 
-		<h2 class="chesterRed entry">
+		<h1 class="chesterRed entry entry-title">
 	
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		
@@ -15,39 +15,38 @@
 			<?php echo single_cat_title(); ?>
 			
 		<?php } elseif( is_tag() ) { ?>
-			<?php _e( 'Posts Tagged:', 'wpboot' ); ?> <?php single_tag_title(); ?>
+			<?php _e( 'Posts Tagged:', 'chester' ); ?> <?php single_tag_title(); ?>
 			
 		<?php } elseif (is_day()) { ?>
-			<?php _e( 'Archive for', 'wpboot' ); ?> <?php echo get_the_date(); ?>
+			<?php _e( 'Archive for', 'chester' ); ?> <?php echo get_the_date(); ?>
 			
 		<?php } elseif (is_month()) { ?>
-			<?php _e( 'Archive for', 'wpboot' ); ?> <?php echo get_the_date( _x( 'F Y', 'monthly archives date format', 'wpboot' ) ) ?>
+			<?php _e( 'Archive for', 'chester' ); ?> <?php echo get_the_date( _x( 'F Y', 'monthly archives date format', 'chester' ) ) ?>
 			
 		<?php } elseif (is_year()) { ?>
-			<?php _e( 'Archive for', 'wpboot' ); ?> <?php echo get_the_date( _x( 'Y', 'yearly archives date format', 'wpboot' ) ) ?>
+			<?php _e( 'Archive for', 'chester' ); ?> <?php echo get_the_date( _x( 'Y', 'yearly archives date format', 'chester' ) ) ?>
 			
 		<?php } elseif (is_search()) { ?>
-			<?php _e( 'Search Results', 'wpboot' ); ?>
+			<?php _e( 'Search Results', 'chester' ); ?>
 			
 		<?php } elseif (is_author()) { ?>
-			<?php _e( 'Author Archive', 'wpboot' ); ?>
+			<?php _e( 'Author Archive', 'chester' ); ?>
 			
 		<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-			<?php _e( 'Blog Archives', 'wpboot' ); ?>
+			<?php _e( 'Blog Archives', 'chester' ); ?>
 			
 		<?php } ?>
 
-			</h2>
+			</h1>
             <hr>
 
 	<?php while (have_posts()) : the_post(); ?>
-                
-                <div class="well">
-            			<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-           			 <p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
+                <div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-primary">
+            	<a href="<?php the_permalink() ?>" rel="bookmark"><h2 class="blog-post-title"><?php the_title(); ?></h2></a>
+           		<p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
 
 				<?php the_excerpt(); ?>
-			</div>
+				</div>
 	<?php endwhile; endif; ?>
     
     <?php

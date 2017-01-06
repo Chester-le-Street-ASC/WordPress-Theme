@@ -18,7 +18,7 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
          		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
-            			<h2 class="entry chesterRed">2<?php the_title(); ?></h2>
+            			<h1 class="entry chesterRed entry-title">2<?php the_title(); ?></h1>
 
 						<div class="entry clearfix"><?php the_content(); ?></div>
                         

@@ -1,41 +1,22 @@
 	<?php
-	 
-	  //Stripe Callin
-	  function stripe_payments(){
-		  \Stripe\Stripe::setApiKey("sk_test_BQokikJOvBiI2HlWgH4olfQ2");
-		  
-	  //Stripe Error Handling
-	  try {
-		  // Use Stripe's library to make requests...
+	  
+		/* // See your keys here: https://dashboard.stripe.com/account/apikeys
+		\Stripe\Stripe::setApiKey("sk_test_BQokikJOvBiI2HlWgH4olfQ2");
+		
+		// Get the credit card details submitted by the form
+		$token = $_POST['stripeToken'];
+		
+		// Create a charge: this will charge the user's card
+		try {
+		  $charge = \Stripe\Charge::create(array(
+			"amount" => $amount, // Amount in cents
+			"currency" => "gbp",
+			"source" => $token,
+			"description" => "Gala Payment"
+			));
 		} catch(\Stripe\Error\Card $e) {
-		  // Since it's a decline, \Stripe\Error\Card will be caught
-		  $body = $e->getJsonBody();
-		  $err  = $body['error'];
-		
-		  print('Status is:' . $e->getHttpStatus() . "\n");
-		  print('Type is:' . $err['type'] . "\n");
-		  print('Code is:' . $err['code'] . "\n");
-		  // param is '' in this case
-		  print('Param is:' . $err['param'] . "\n");
-		  print('Message is:' . $err['message'] . "\n");
-		} catch (\Stripe\Error\RateLimit $e) {
-		  // Too many requests made to the API too quickly
-		} catch (\Stripe\Error\InvalidRequest $e) {
-		  // Invalid parameters were supplied to Stripe's API
-		} catch (\Stripe\Error\Authentication $e) {
-		  // Authentication with Stripe's API failed
-		  // (maybe you changed API keys recently)
-		} catch (\Stripe\Error\ApiConnection $e) {
-		  // Network communication with Stripe failed
-		} catch (\Stripe\Error\Base $e) {
-		  // Display a very generic error to the user, and maybe send
-		  // yourself an email
-		} catch (Exception $e) {
-		  // Something else happened, completely unrelated to Stripe
-		}
-		
-		
-	  }
+		  // The card has been declined
+		} */
 	  
 	  //response generation function
 	  $response = "";
@@ -62,6 +43,8 @@
 		$birth = $_POST['date_birth'];
 		$email = $_POST['message_email'];
 		$gala = $_POST['gala_name'];
+		$parent = $_POST['parent_name'];
+		$amount = $_POST['amount_due'];
 		$selectedEvents  = 'None';
 			if(isset($_POST['events']) && is_array($_POST['events']) && count($_POST['events']) > 0){
 				$selectedEvents = implode(', ', $_POST['events']);
@@ -71,11 +54,8 @@
 		$human = $_POST['message_human'];
 		 
 		//php mailer variables
-		$to = "galaentries@chesterlestreetasc.co.uk" . ', ';
-		$to .= $email;
-		$subject = "Gala Entry:". $gala . " for " . $name . "\r\n";
-		$headers = 'From: '. $email . "\r\n" .
-		  'Reply-To: ' . $email . "\r\n";
+		$subject = "Gala Entry: ". $gala . " for " . $name . "\r\n";
+		$headers = array('From: Chester-le-Street ASC <noreply@chesterlestreetasc.co.uk>', 'To: Competition-Secretary <galaentries@chesterlestreetasc.co.uk>', 'CC: ' . $parent . ' <' . $email . '>', 'Reply-To: Online Gala Entries <galaentries@chesterlestreetasc.co.uk>');
 		  
 		if(!$human == 0){
 		  if($human != 2) my_contact_form_generate_response("error", $not_human); //not human!
@@ -94,7 +74,7 @@
 			else //ready to go!
 			{
 			  
-			$sent = wp_mail($to, $subject, strip_tags("<strong>Swimmer Name: </strong>" . $name . "\r\n" . "Gala Name: " . $gala . "\r\n" . "Date of Birth: " . $birth . "\r\n" . $message), $headers);
+			$sent = wp_mail($to, $subject, strip_tags("<strong>Swimmer Name: </strong>" . $name . "\r\n" . "Gala Name: " . $gala . "\r\n" . "Date of Birth: " . $birth . "\r\n". "Parent Name: " . $parent . "\r\n" . "Amount Due: " . $amount . "\r\n" . $message), $headers);
 			if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
 			else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
 
@@ -109,6 +89,7 @@
 	?>
     
 	<?php get_header(); ?>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <?php get_template_part( 'pageheader' ); ?>
       
       <!-- Page Content -->
@@ -120,7 +101,7 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
          		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
-            			<h2 class="entry chesterRed"><?php the_title(); ?></h2>
+            			<h1 class="entry chesterRed entry-title"><?php the_title(); ?></h1>
 
 						<div class="entry clearfix"><?php the_content(); ?></div>
                         
@@ -142,6 +123,11 @@
                             <div class="form-group">
                             <label for="message_email" class="col-sm-2 control-label">Email:</label>
                             <div class="col-sm-10"><input type="text" class="form-control" name="message_email" placeholder="Your Email Address" value="<?php echo esc_attr($_POST['message_email']); ?>"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">Parent/Guardian Name (If Applicable):</label>
+                            <div class="col-sm-10"><input type="text" class="form-control" name="parent_name" placeholder="Parent Name" value="<?php echo esc_attr($_POST['parent_title']); ?>"></div>
                             </div>
                             
                             <div class="form-group">
@@ -218,6 +204,12 @@
                             </label>
                             </div>
                             </div>
+                            
+                            <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">Amount Due:</label>
+                            <div class="col-sm-10"><div class="input-group"><div class="input-group-addon">&pound;</div><input type="text" class="form-control" name="amount_due" placeholder="Price" value="<?php echo esc_attr($_POST['amount_due']); ?>"></div></div>
+                            </div>
+                            
                             <div class="form-group hidden">
                             <label for="message_human" class="col-sm-2 control-label">Are you Human?</label>
                             <div class="col-sm-10">
@@ -236,9 +228,10 @@
                        </div>
                        <hr>
                        <p class="lead">Rest assured, your personal data is safe with us<br>
-                       <small>We use industry standard SHA-256 with RSA Encryption to keep your data secure.</small></p>
+                       <small>We use industry standard encryption to keep your data secure.</small></p>
                        <p>You will recieve a copy of your entry as proof your entry has been submitted. Please retain it for your records.<br>
                        Please however be aware that the Proof is not a receipt and does not guarantee entry to a gala. It is up to you to check the accepted entries for the gala, when they are released.</p>
+                       <p>We are currently unable to process online payments due to our server setup. We may be able to introduce this feature in the future.</p>
 
 				</div>
             

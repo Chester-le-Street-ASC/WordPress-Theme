@@ -26,7 +26,7 @@ get_header(); ?>
             <!-- <div id="primary" role="main" class="content-area"> -->
             
                 	<!-- Page header-->
-                    <h2 class="chesterRed entry">
+                    <h1 class="chesterRed entry entry-title">
                     
                     <?php
                     if ( eo_is_event_archive( 'day' ) ) {
@@ -42,7 +42,7 @@ get_header(); ?>
                         _e( 'Galas', 'eventorganiser' );
                     }
                     ?>
-                    </h2>
+                    </h1>
 
 <hr>
                     

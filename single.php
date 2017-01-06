@@ -7,19 +7,20 @@
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         
-         		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
-            			<h2 class="chesterRed entry"><?php the_title(); ?></h2>
-           			 	<p class="blog-post-meta"><?php the_time( 'j F Y' ); ?> - <?php the_category(', ');?></p>
-
+         		<article id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
+            			<h1 class="chesterRed entry entry-title"><?php the_title(); ?></h1>
+           			 	<p><time class="published blog-post-meta" datetime="<?php the_time( 'c' ); ?>"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time( 'j F Y' ); ?></time> - <?php the_category(', ');?></p>
+<hr>
 			<?php if ( has_post_thumbnail()) : ?>
 				<div class="post-thumb">
 					  <?php the_post_thumbnail('big-thumb'); ?>
 				</div>
 			 <?php endif; ?>
 
-				<div class="entry clearfix"><?php the_content(); ?></div>
+				<div class="entry entry-content clearfix"><?php the_content(); ?></div>
 
-				<div class="hidden-print"><?php wp_link_pages(); ?>
+				
+                <aside class="hidden-print"><?php wp_link_pages(); ?>
 
 				<p class="p-tags"><?php the_tags(); ?></p>
 			
@@ -34,7 +35,7 @@
 				</ul>
 				
 		  		<?php comments_template(); ?>
-			</div></div>
+			</aside></article>
 	
 	  <?php endwhile; endif; ?>
 

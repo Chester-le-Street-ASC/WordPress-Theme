@@ -17,7 +17,7 @@
  */
 ?>
 
-<div class="well">
+<div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-primary">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://data-vocabulary.org/Event">	
 		
 		<h2 class="eo-event-title">
