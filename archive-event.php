@@ -22,11 +22,11 @@ get_header(); ?>
 
 <div class="container">
     <div class="row">
-    	<div class="col-md-8">
+    	<div class="col-lg-8">
             <!-- <div id="primary" role="main" class="content-area"> -->
             
                 	<!-- Page header-->
-                    <h1 class="chesterRed entry entry-title">
+                    <h1 class="mb-0 entry-title">
                     
                     <?php
                     if ( eo_is_event_archive( 'day' ) ) {
@@ -51,7 +51,7 @@ get_header(); ?>
             </div><!-- #primary -->
     
     		<!-- Call template sidebar and footer -->
-			<div class="col-md-4"><?php get_sidebar(); ?></div>
+			<div class="col-lg-4"><?php get_sidebar(); ?></div>
 		</div>
 </div>
 <?php get_footer();

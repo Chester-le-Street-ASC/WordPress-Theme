@@ -18,39 +18,30 @@
 ?>
 
 <div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-primary">
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://data-vocabulary.org/Event">	
-		
-		<h2 class="eo-event-title">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://data-vocabulary.org/Event">		
+		<h2>
 			<a href="<?php the_permalink(); ?>" itemprop="url">
 				<span itemprop="summary"><?php the_title() ?></span>
 			</a>
 		</h2>
 
-		<div class="eo-event-date"> 
-			<?php
-				//Formats the start & end date of the event
-				echo eo_format_event_occurrence();
-			?>
-		</div>
-				
-	<div class="eo-event-details event-entry-meta">
-			
-		<?php
-		//If it has one, display the thumbnail
-		if ( has_post_thumbnail() ) {
-			the_post_thumbnail( 'thumbnail', array( 'class' => 'attachment-thumbnail eo-event-thumbnail' ) );
-		}
+		<ul class="mb-0"><li><strong>Date:</strong> <?php echo eo_format_event_occurrence(); ?></li></ul>
 
+		<?php
 		//A list of event details: venue, categories, tags.
 		echo eo_get_event_meta_list();
 		?>
-			
-	</div><!-- .event-entry-meta -->
 
-	<!-- Show Event text as 'the_excerpt' or 'the_content' -->
-	<div class="eo-event-content" itemprop="description"><?php the_excerpt(); ?></div>
-    			
-	<div style="clear:both;"></div>
+		<div class="row">
+			<div class="col">
+				<a class="btn btn-primary btn-block" href="<?php the_permalink(); ?>">More Information</a>
+			</div>
+			<div class="col d-none d-sm-block">
+				<?php $url = eo_get_add_to_google_link(); echo '<a class="btn btn-dark btn-block" href="'.esc_url($url).'" target="_blank"> Add to Google Calendar</a>'; ?>
+			</div>
+		</div>
 
-</article>
+		<!-- Show Event text as 'the_excerpt' or 'the_content' -->
+		<!--<?php the_excerpt(); ?>-->
+	</article>
 </div>

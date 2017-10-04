@@ -1,9 +1,9 @@
-<div class="hidden-print">
-        <h3>More from <?php bloginfo('name'); ?></h3>
-        <p><a class="btn btn-default" data-parent="#collapse-more" role="button" data-toggle="collapse" href="#collapse-searchbox" aria-expanded="false" aria-controls="collapse-searchbox">
+<div class="d-print-none">
+        <h3>More from Chester&#8209;le&#8209;Street&nbsp;ASC</h3>
+        <p><a class="btn btn-light" data-parent="#collapse-more" role="button" data-toggle="collapse" href="#collapse-searchbox" aria-expanded="false" aria-controls="collapse-searchbox">
   Search
 </a>
-<a class="btn btn-default" data-parent="#collapse-more" role="button" data-toggle="collapse" href="#collapse-recentposts" aria-expanded="false" aria-controls="collapse-recentposts">
+<a class="btn btn-light" data-parent="#collapse-more" role="button" data-toggle="collapse" href="#collapse-recentposts" aria-expanded="false" aria-controls="collapse-recentposts">
   Recent Posts
 </a></p>
 		<div id="collapse-more accordion-group">

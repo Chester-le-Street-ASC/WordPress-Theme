@@ -22,25 +22,25 @@ get_header(); ?>
 
 <div class="container">
 	<div class="row">
-    	<div class="col-md-8">
+    	<div class="col-lg-8">
         <div id="primary" role="main" class="content-area">
         
             <!-- Page header, display venue title-->
                 
                 <?php $venue_id = get_queried_object_id(); ?>
                 
-                <h2 class="chesterRed entry">
+                <h1>
                     <?php printf( __( 'Galas at %s', 'eventorganiser' ), '<span>' .eo_get_venue_name( $venue_id ). '</span>' );?>
-                </h2>
-                
-                <hr>
-            
-                <?php
+                </h1>
+
+				<?php
                 if ( $venue_description = eo_get_venue_description( $venue_id ) ) {
-                    echo '<div class="venue-archive-meta">'.$venue_description.'</div>';
+                    echo '<div class="lead mb-0">'.$venue_description.'</div>';
                 }
                 ?>
-        
+                
+                <hr>
+
                 <!-- Display the venue map. If you specify a class, ensure that class has height/width dimensions-->
                 <?php
                 if ( eo_venue_has_latlng( $venue_id ) ) {
@@ -56,7 +56,7 @@ get_header(); ?>
         </div><!-- #primary -->
         
         <!-- Call template sidebar and footer -->
-        <div class="col-md-4"><?php get_sidebar(); ?></div>
+        <div class="col-lg-4"><?php get_sidebar(); ?></div>
         </div>
         </div>
 <?php get_footer();

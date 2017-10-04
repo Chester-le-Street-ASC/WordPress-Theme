@@ -1,9 +1,15 @@
-<?php get_header(); ?><?php get_template_part( 'pageheader' ); ?><div class="container"><div class="row">
-<div class="col-md-8 blog-main">
-<h2 class="chesterRed entry"><?php _e( 'Oops... File or page not found.', 'wpboot' ); ?></h2>
-<p><?php _e( 'The page you are looking for either does not exist or might have been deleted or moved. Please', 'wpboot' ); ?> <a href="/"><?php _e( 'visit our home page instead', 'wpboot' ); ?></a>.</p>
-<p><?php _e( 'Sorry for any inconvenience', 'wpboot' ); ?>.</p>
+<?php get_header(); ?>
+<div class="container"><div class="row">
+<div class="col-lg-8 blog-main">
+<h1><?php _e( 'The page cannot be found', 'chester' ); ?></h1>
+<p class="lead">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
 <hr>
-<h3 class="chesterRed">Search for what you were looking for instead</h3>
+<p>Please try the following:</p>
+<ul><li>Make sure that the Web site address displayed in the address bar of your browser is spelled and formatted correctly.</li>
+<li>If you reached this page by clicking a link, contact the Web site administrator to alert them that the link is incorrectly formatted.</li>
+<li>Click the <a href="javascript:history.back(1)">Back</a> button to try another link.</li></ul>
+<p>HTTP Error 404 - File or directory not found.</p>
+<hr>
+<h3>Try searching instead</h3>
 <?php get_search_form(); ?>
-</div><!-- /.blog-main --><div class="col-md-4"><?php get_sidebar(); ?></div></div></div><?php get_footer(); ?>
+</div><!-- /.blog-main --><div class="col-lg-4"></div></div></div><?php get_footer(); ?>

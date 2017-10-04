@@ -5,7 +5,7 @@
       <div class="row">
 
 	<div class="col-md-8 blog-main">
-        <h2 class="chesterRed entry"><?php _e( 'Search Results', 'wpboot' ); ?></h2><hr>	
+        <h1 class="chesterRed entry"><?php _e( 'Search Results', 'wpboot' ); ?></h1><hr>	
         <div id="search"><?php get_search_form(); ?></div><hr>
         
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

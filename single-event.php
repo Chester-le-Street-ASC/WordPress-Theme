@@ -34,32 +34,34 @@ get_header(); ?>
 	<div id="content" role="main">-->
     
     <div class="row">
-    <div class="col-md-8">
+    <div class="col-lg-8">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<!-- Display event title -->
-				<h1 class="chesterRed entry entry-title"><?php the_title(); ?></h1>
+				<h1 class="mb-0 entry-title"><?php the_title(); ?></h1>
+
+				<hr>
 	
-			<div class="entry-content">
-				<!-- Get event information, see template: event-meta-event-single.php -->
-				<?php eo_get_template_part( 'event-meta', 'event-single' ); ?>
+				<div class="entry-content">
+					<!-- Get event information, see template: event-meta-event-single.php -->
+					<?php eo_get_template_part( 'event-meta', 'event-single' ); ?>
 
-				<!-- The content or the description of the event-->
-				<?php the_content(); ?>
-			</div><!-- .entry-content -->
+					<!-- The content or the description of the event-->
+					<?php the_content(); ?>
+				</div><!-- .entry-content -->
 
-			<footer class="entry-meta">
+				<footer class="entry-meta">
 
-			<?php edit_post_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
-			</footer><!-- .entry-meta -->
+				<?php edit_post_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+				</footer><!-- .entry-meta -->
 
-			</article><!-- #post-<?php the_ID(); ?> -->
+				</article><!-- #post-<?php the_ID(); ?> -->
 
-			<!-- If comments are enabled, show them -->
-			<div class="comments-template">
+				<!-- If comments are enabled, show them -->
+				<div class="comments-template">
 				<?php comments_template(); ?>
 			</div>				
 
@@ -67,7 +69,7 @@ get_header(); ?>
 
 		</div>
         
-        <div class="col-md-4"><?php get_sidebar(); ?></div>
+        <div class="col-lg-4"><?php get_sidebar(); ?></div>
         </div>
 	</div><!-- #content -->
 </div><!-- #primary -->

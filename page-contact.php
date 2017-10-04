@@ -18,8 +18,10 @@
 		$human = $_POST['message_human'];
 		
 		//php mailer variables
-		$subject = "Web Contact Form: ". $radioselect . " - From: " . $name . "\r\n";
-		$headers = array('From: Chester-le-Street ASC <noreply@chesterlestreetasc.co.uk>', 'To: Club Secretary <enquiries@chesterlestreetasc.co.uk>', 'CC: ' . $name . ' <' . $email . '>', 'Reply-To: CLS ASC Enquiries <enquiries@chesterlestreetasc.co.uk>');
+		$subject = $radioselect . " - From: " . $name . "\r\n";
+		if($radioselect == "Galas") $headers = array('From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'To: Gala Coordinator <galas@chesterlestreetasc.co.uk>', 'CC: ' . $name . ' <' . $email . '>', 'Reply-To:  ' . $name . ' <' . $email . '>');
+		if($radioselect == "Membership Enquiries") $headers = array('From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'To: Membership Secretary <membership@chesterlestreetasc.co.uk>', 'CC: ' . $name . ' <' . $email . '>', 'Reply-To:  ' . $name . ' <' . $email . '>');
+		if($radioselect == "Other Enquiries") $headers = array('From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'To: Enquiries <enquiries@chesterlestreetasc.co.uk>', 'CC: ' . $name . ' <' . $email . '>', 'Reply-To:  ' . $name . ' <' . $email . '>');
 		  
 		if(!$human == 0){
 		  if($human != 2) my_contact_form_generate_response("error", $not_human); //not human!
@@ -35,7 +37,7 @@
 			}
 			else //ready to go!
 			{
-			$sent = wp_mail($to, $subject, strip_tags("Name: " . $name . "\r\n" . "Email Address: " . $email . "\r\n" . "Subject: " . $radioselect . "\r\n\r\n" . "Message" . "\r\n" . $message) . "\r\n\r\n" . "Thanks for getting in touch with us. Your message has been passed to the right people and we will reply as soon as possible.", $headers);
+			$sent = wp_mail($to, $subject, strip_tags("Name: " . $name . "\r\n" . "Email Address: " . $email . "\r\n" . "Subject: " . $radioselect . "\r\n\r\n" . "Message" . "\r\n" . $message) . "\r\n\r\n", $headers);
 			if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
 			else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
 			}
@@ -51,75 +53,79 @@
       <div class="container">
       <div class="row">
 
-        <div class="col-md-12 blog-main">
+        <main class="col-md-12 blog-main">
         
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
          		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
-            			<h1 class="entry chesterRed  entry-title"><?php the_title(); ?></h1>
+            			<h1 class="entry  entry-title"><?php the_title(); ?></h1>
 
+						<div class="row">
+						<div class="col-lg-5">
 						<div class="entry clearfix"><?php the_content(); ?></div>
+						</div>
                         
-                        <hr>
-                        
-                        <div id="respond">
+						<div class="col-lg-7">
+                        <div class="well" id="respond">
 						  <?php echo $response; ?>
                           <form action="<?php the_permalink(); ?>" method="post" class="form-horizontal" id="contact-form-link">
                             <div class="form-group">
-                            <label for="name" class="col-sm-2 control-label">Name:</label>
-                            <div class="col-sm-10"><input type="text" class="form-control" name="message_name" placeholder="Your Name" value="<?php echo esc_attr($_POST['message_name']); ?>"></div>
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="message_name" placeholder="Your Name" value="<?php echo esc_attr($_POST['message_name']); ?>">
                             </div>
                             
                             <div class="form-group">
-                            <label for="message_email" class="col-sm-2 control-label">Email:</label>
-                            <div class="col-sm-10"><input type="text" class="form-control" name="message_email" placeholder="Your Email Address" value="<?php echo esc_attr($_POST['message_email']); ?>"></div>
+                            <label for="message_email">Email</label>
+                            <input type="text" class="form-control" name="message_email" placeholder="Your Email Address" value="<?php echo esc_attr($_POST['message_email']); ?>">
                             </div>
+                            
+                            <div class="custom-controls-stacked">
+							<label for="inlineRadioOptions">Subject</label>
+								<label class="custom-control custom-radio">
+									<input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Galas">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Galas</span>
+								</label>
+								<label class="custom-control custom-radio">
+									<input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Membership Enquiries">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Membership Enquiries</span>
+								</label>
+								<label class="custom-control custom-radio">
+									<input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Other Enquiries">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">Other Enquiries</span>
+								</label>
+							</div>
                             
                             <div class="form-group">
-                            <label for="radio-inline" class="col-sm-2 control-label">Subject:</label>
-                            <div class="col-md-10">
-                            <label class="radio-inline">
-                              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Galas"> Galas
-                            </label>
-                            <label class="radio-inline">
-                              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Membership Enquiries"> Membership
-                            </label>
-                            <label class="radio-inline">
-                              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Other Enquiries"> Other
-                            </label>
-                            </div>
+                            <label for="message_text">Message</label>
+                            <textarea type="text" class="form-control" name="message_text" placeholder="Go on and Talk" rows="6"><?php echo esc_textarea($_POST['message_text']); ?></textarea>
                             </div>
                             
-                            <div class="form-group">
-                            <label for="message_text" class="col-sm-2 control-label">Message:</label>
-                            <div class="col-sm-10"><textarea type="text" class="form-control" name="message_text" placeholder="Go on and Talk" rows="6"><?php echo esc_textarea($_POST['message_text']); ?></textarea></div>
-                            </div>
-                            
-                            <div class="form-group hidden">
-                            <label for="message_human" class="col-sm-2 control-label">Are you Human?</label>
-                            <div class="col-sm-10">
+                            <div class="form-group d-none">
+                            <label for="message_human">Are you Human?</label>
                             <div class="input-group">
                             <input type="text hidden" class="form-control" name="message_human" placeholder="Hint - The Answer is 2" value="2"><span class="input-group-addon"> + 3 = 5</span>
-                            </div>
                             </div>
                             </div>
                             
                             <input type="hidden" name="submitted" value="1">
                             
                             <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
                             <button class="btn btn-success " type="submit">Submit</button>
-                            </div>
                             </div>
                             
                           </form>
                        </div>
+					   </div>
+					   </div>
 
 				</div>
             
 	  <?php endwhile; endif; ?>
 
-        </div>
+        </main>
 
     </div>
     </div>

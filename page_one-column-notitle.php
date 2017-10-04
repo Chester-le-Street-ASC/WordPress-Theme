@@ -7,7 +7,7 @@
       <div class="container">
       <div class="row">
 
-        <div class="col-md-12">
+        <main class="col-md-12">
         
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -19,7 +19,7 @@
             
 	  <?php endwhile; endif; ?>
 
-        </div>
+        </main>
 
     </div>
     </div>

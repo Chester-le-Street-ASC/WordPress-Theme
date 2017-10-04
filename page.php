@@ -3,12 +3,12 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-8 blog-main">
+        <main class="col-lg-8 blog-main">
         
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
          		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
-            			<h1 class="chesterRed entry entry-title"><?php the_title(); ?></h1>
+            			<h1 class="m-t-0"><?php the_title(); ?></h1>
 
 				<div class="entry clearfix"><?php the_content(); ?></div>
 
@@ -18,9 +18,9 @@
             
 	  <?php endwhile; endif; ?>
 
-        </div><!-- /.blog-main -->
+        </main><!-- /.blog-main -->
 
-	<div class="col-md-4"><?php get_sidebar(); ?></div>
+	<div class="col-lg-4"><?php get_sidebar(); ?></div>
 
 </div>
 </div>

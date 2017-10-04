@@ -29,7 +29,7 @@ function chester_theme_setup() {
 
 	/* Add theme support for post thumbnails (featured images). */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'big-thumb', 617, 9999);
+	add_image_size( 'big-thumb', 753, 9999);
 }
 
 register_nav_menu('primary', __('Primary Menu'));
@@ -90,9 +90,9 @@ function chester_register_sidebars() {
 
 function chester_scripts() {
 
- 		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', null, '3.3.7' );
-		
-		wp_enqueue_style( 'chester', get_template_directory_uri() . '/chester.min.css', null, '1.16' );
+ 		//wp_enqueue_style( 'bootstrap', 'css/bootstrap.css', null, '4.0.0' );
+		//wp_enqueue_style( 'chester', 'chester.css', null, '0.0.1' );
+		//wp_enqueue_style( 'chester', 'https://static.chesterlestreetasc.co.uk/global/css/chester.min.css', null, '1.18' );
  
 		wp_enqueue_style( 'style', get_stylesheet_uri() );
 
@@ -143,13 +143,15 @@ add_filter( 'excerpt_length', 'chester_excerpt_length', 200 );
 
 function chester_excerpt_more($more) {
        global $post;
-	return '...</p>';
+	return '...</p><a class="btn btn-outline-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
+</a>';
 }
 add_filter('excerpt_more', 'chester_excerpt_more');
 
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 function modify_read_more_link() {
-return '<a href="' . get_permalink() . '">Read More</a>';
+return '<a class="btn btn-outline-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
+</a>';
 }
 	
 /**
@@ -166,15 +168,15 @@ function mbe_body_class($classes){
     return $classes;
 }
 
-/*function mbe_wp_head(){
+function mbe_wp_head(){
     echo '<style>'.PHP_EOL;
-    echo 'body{ padding-top: none !important; }'.PHP_EOL;
-     Using custom CSS class name.
-    echo '@media (min-width:784px){body.body-logged-in .navbar-fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .navbar-fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
+    echo 'body{ padding-top: 4.5rem !important; }'.PHP_EOL;
+  //   Using custom CSS class name.
+    echo '@media (min-width:784px){body.body-logged-in .fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
     // Using WordPress default CSS class name.
-    echo '@media (min-width:784px){body.body-logged-in .navbar-fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .navbar-fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
+    echo '@media (min-width:784px){body.body-logged-in .fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
     echo '</style>'.PHP_EOL;
-}*/
+}
 
 // Accelerated Mobile Pages
 
@@ -203,31 +205,61 @@ if ( function_exists( 'amp_backcompat_use_v03_templates' ) ) {
 
             body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-            font-size:16px;
-            line-height:1.428571429;
+            font-size:1rem;
             background:#fff;
-            color:#333;
-            padding-bottom:5px;
+            line-height: 1.5;
+			color: #212529;
+            padding-bottom:1rem;
             }
+			
+			h1 {
+				font-size: 2.5rem;
+			}
+			
+			h2 {
+				font-size: 2rem;
+			}
+			
+			h3 {
+				font-size: 1.75rem;
+			}
+			
+			h4 {
+				font-size: 1.5rem;
+			}
+			
+			h5 {
+				font-size: 1.25rem;
+			}
+			
+			h6 {
+				font-size: 1rem;
+			}
+			
+			h1, h2, h3, h4, h5, h6 {
+				font-weight: 600;
+				margin: 0 0 1rem 0;
+			}
             
             .amp-wp-content {
-            color: #333;
-	    max-width: 600px;
-	    padding: 0 10px 0 10px;
+            color: #212529;
+	    max-width: 800px;
+	    padding: 0 0 0 1rem;
             }
             
             .amp-wp-title {
-            margin: .67em 0 0 0;
-            font-size: 2em;
+            font-size: 2.5rem;
             line-height:1.1;
-            font-weight:500;
-            color:#bd0000;
+            font-weight:600;
+			margin-bottom:0;
+			color: #212529;
             }
             
             .amp-wp-meta {
             color: #000;
             font-family: inherit;
-            font-size: 15px
+            font-size: 1rem
+			margin: 0 0 1rem 0;
             }
             
             .amp-wp-meta a {
@@ -246,9 +278,9 @@ if ( function_exists( 'amp_backcompat_use_v03_templates' ) ) {
             }
             
 			nav.amp-wp-title-bar {
-				padding:10px 0;
+				padding:0.6rem 0;
 				background:#bd0000;
-				border-bottom:1px solid #9c0000;
+				margin: 0 0 1rem 0;
 			}
 			nav.amp-wp-title-bar a {
 				background-image: url( '<?php echo get_template_directory_uri();?>/img/chesterLogoAMP.svg' );
@@ -256,37 +288,38 @@ if ( function_exists( 'amp_backcompat_use_v03_templates' ) ) {
 				background-size: contain;
 				display: block;
 				background-position: center;
-				height: 40px;
+				height: 2rem;
 				text-indent: -9999px;
 			}
             
             p, ol, ul, figure {
-                margin:0 0 10px 0;
-                color: #333;
+                margin:0 0 1rem 0;
+                color: #212529;
             }
             
             ul.amp-wp-meta {
                 padding: 0 0 0 0;
-                margin: 0.67em 0 0.67em 0;
+				font-size: 1rem;
+                margin: 0 0 1rem 0;
             }
             
             blockquote {
-                padding: 10px 20px;
-                margin: 0 0 20px;
-                font-size: 18px;
+                padding: 1rem 1rem;
+                margin: 0 0 1rem;
+                font-size: 1.25rem;
                 border-left: 5px solid #bd0000;
-                color: #333;
+                color: #212529;
                 background: #FFF;
             }
 			
 			.wp-caption-text {
-				color: #FFF;
-				font-size: 14px;
+				color: #212529;
+				font-size: 1rem;
 				font-style: normal;
 				text-align: left;
-				background: black;
-				padding: 10px 12px 10px 12px;
-				margin: 0 0 15px 0;
+				background: #efefef;
+				padding: 1rem;
+				margin: 0 0 1rem 0;
 			}
 
 			<?php
@@ -371,3 +404,16 @@ add_filter('single_template', create_function(
 		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
 	return $the_template;' )
 );
+
+function wpb_tags() {
+$wpbtags =  get_tags();
+foreach ($wpbtags as $tag) {
+$string .= '<a class="btn btn-default" href="'. get_tag_link($tag->term_id) .'">'. $tag->name . '</a>';
+}
+return $string;
+}
+add_shortcode('wpbtags' , 'wpb_tags' );
+
+function first_paragraph($content){
+   return preg_replace('/<p([^>]+)?>/', '<p$1 class="lead">', $content, 1);
+ }

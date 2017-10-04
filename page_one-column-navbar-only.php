@@ -6,11 +6,12 @@
       <div class="container">
       <div class="row">
 
-        <div class="col-md-12">
+        <main class="col-md-12">
         
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
          		<div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
+				<h1 class="m-t-0"><?php the_title(); ?></h1>
 
 				<div class="entry clearfix"><?php the_content(); ?></div>
 
@@ -18,7 +19,7 @@
             
 	  <?php endwhile; endif; ?>
 
-        </div>
+        </main>
 
     </div>
     </div>

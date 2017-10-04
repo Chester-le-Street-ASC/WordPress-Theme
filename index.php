@@ -3,11 +3,11 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-8 blog-main">
+        <div class="col-lg-8 blog-main">
         
         <?php if (have_posts()) : ?>
 
-		<!--<h2 class="chesterRed">
+		<!--<h1>
 	
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		
@@ -37,7 +37,7 @@
 			
 		<?php } ?>
 
-			</h2>-->
+			</h1>-->
             
 	<?php while (have_posts()) : the_post(); ?>
                 
@@ -56,7 +56,7 @@
 
         </div><!-- /.blog-main -->
 
-	<div class="col-md-4"><?php get_sidebar(); ?></div>
+	<div class="col-lg-4"><?php get_sidebar(); ?></div>
 </div>
 </div>
 	<?php get_footer(); ?>

@@ -1,5 +1,5 @@
 === Theme Chester le Street ASC ===
-Theme Name: Chester le Street ASC (Bootstrap for Wordpress)	
+Theme Name: Chester le Street ASC (Bootstrap 4)	
 Theme URI: http://www.heppellit.com/wordpress
 Author: Chris Heppell
 Author URI: http://www.heppellit.com

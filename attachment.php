@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-8 blog-main">
+        <div class="col-lg-8 blog-main">
         
         <div class="well">
         <?php echo wp_get_attachment_image( get_the_ID(), 'large' ); ?>
@@ -35,7 +35,7 @@
 			</div>
             </div>
 
-	<div class="col-md-4"><?php get_sidebar(); ?></div>
+	<div class="col-lg-4"><?php get_sidebar(); ?></div>
 </div>
 </div>
 	<?php get_footer(); ?>
