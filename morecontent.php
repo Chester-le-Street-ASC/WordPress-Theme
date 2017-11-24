@@ -15,13 +15,30 @@
         <div class="collapse" id="collapse-recentposts">
           <div class="cell text-left">
           	<h3 class="sidebar-module-title">Recent News and Notices</h3>
-            <ul><?php
-	$args = array( 'numberposts' => '5' );
-	$recent_posts = wp_get_recent_posts( $args );
-	foreach( $recent_posts as $recent ){
-		echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-	}
-?></ul>
+            <ul class="mb-0">
+              <?php
+              $args = array(
+                'numberposts' => 5,
+                'offset' => 0,
+                'category' => 0,
+                'orderby' => 'post_date',
+                'order' => 'DESC',
+                'include' => '',
+                'exclude' => '',
+                'meta_key' => '',
+                'meta_value' =>'',
+                'post_type' => 'post',
+                'post_status' => 'publish, future, pending, private',
+                'suppress_filters' => true
+              );
+
+              $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+                foreach( $recent_posts as $recent ){
+                  echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+                }
+                wp_reset_query();
+              ?>
+            </ul>
           </div>
         </div>
         </div>

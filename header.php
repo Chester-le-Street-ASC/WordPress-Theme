@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 	Copyright Chris Heppell & Chester-le-Street ASC 2017. Bootstrap CSS and JavaScript is Copyright Twitter Inc, 2011-2017, jQuery v3.1.0 is Copyright jQuery Foundation 2016
-		Designed by Chris Heppell, www.heppellit.com 
+		Designed by Chris Heppell, www.heppellit.com
         Yes! We built this in house. Not many clubs do. We don't cheat.	-->
 <html <?php language_attributes(); ?>>
   <head>
@@ -16,10 +16,10 @@
       ga('create', 'UA-78812259-1', 'auto');
       ga('send', 'pageview');
     </script>
-	<script>var shiftWindow = function() { scrollBy(0, -50) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>
-    <link rel="stylesheet preload" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700">
-    <link rel="stylesheet preload" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/bootstrap.css">
-    <link rel="stylesheet preload" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/chester.css">
+    <script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700">
+    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/chester.css">
     <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/font-awesome/css/font-awesome.min.css">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="apple-touch-icon" href="<https://www.chesterlestreetasc.co.uk/apple-touch-icon.png">
@@ -28,33 +28,33 @@
     <link rel="apple-touch-icon" sizes="152x152" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon-ipad-retina.png">
     <link rel="mask-icon" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/chesterIcon.svg" color="#bd0000">
     <?php wp_head(); ?>
-    
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-  </head>
-<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary d-print-none justify-content-between" role="navigation">
-  <div class="container">
-    <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#chesterNavbar" aria-controls="chesterNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <?php
-      wp_nav_menu( array(
-        'menu'              => 'primary',
-        'theme_location'    => 'primary',
-        'depth'             => 2,
-        'container'         => 'div',
-        'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'chesterNavbar',
-        'menu_class'        => 'nav navbar-nav justify-content-end',
-        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-        'walker'            => new WP_Bootstrap_Navwalker())
-      );
-    ?>
-  </div>
-</nav>
+  </head>
+  <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary d-print-none justify-content-between" role="navigation">
+      <div class="container">
+        <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#chesterNavbar" aria-controls="chesterNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <?php
+          wp_nav_menu( array(
+            'menu'              => 'primary',
+            'theme_location'    => 'primary',
+            'depth'             => 2,
+            'container'         => 'div',
+            'container_class'   => 'collapse navbar-collapse',
+            'container_id'      => 'chesterNavbar',
+            'menu_class'        => 'nav navbar-nav justify-content-end',
+            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'            => new WP_Bootstrap_Navwalker())
+          );
+        ?>
+      </div>
+    </nav>

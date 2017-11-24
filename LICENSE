@@ -1,18 +1,13 @@
-This software is licensed for the exclusive use of Chester-le-Street ASC, a UK amateur sports club affilliated to the Amateur Swimming Association.
+The MIT License (MIT)
 
-Copyright (c) 2016-17 Chris Heppell/Chester-le-Street ASC
+Copyright (c) 2016 Chris Heppell
 
-This project is copyright protected.
-
-HTML/PHP
-You may reuse most of our HTML and PHP files. You must not reuse or reproduce any content held in heading (eg <h1>) tags or in paragraph (<p>) tags. You must not distribute any of our HTML or PHP.
-
-CSS and JS
-This project contains CSS and JS from the Bootstrap Project which is protected by copyright law.
-You may not reuse or distribute any of our own CSS and JS. Therefore in general, only the Bootstrap CSS abd JS can be reused.
-
-IMG and all other content
-All other content and images are the intellectual property of Chester-le-Street ASC unless stated.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.

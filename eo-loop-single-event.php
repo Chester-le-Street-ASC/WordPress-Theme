@@ -17,13 +17,9 @@
  */
 ?>
 
-<div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-primary">
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://data-vocabulary.org/Event">		
-		<h2>
-			<a href="<?php the_permalink(); ?>" itemprop="url">
-				<span itemprop="summary"><?php the_title() ?></span>
-			</a>
-		</h2>
+<div class="cell">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://data-vocabulary.org/Event">
+		<h2><a href="<?php the_permalink(); ?>" itemprop="url"><span itemprop="summary"><?php the_title() ?></span></a></h2>
 
 		<ul class="mb-0"><li><strong>Date:</strong> <?php echo eo_format_event_occurrence(); ?></li></ul>
 
