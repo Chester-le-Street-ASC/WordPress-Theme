@@ -148,16 +148,29 @@ function chester_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'chester_excerpt_more');
 
-add_filter( 'the_content_more_link', 'modify_read_more_link' );
 function modify_read_more_link() {
 return '<a class="btn btn-outline-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
 </a>';
 }
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
 /**
  * Include the TGM_Plugin_Activation class.
  */
 require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
+
+add_filter('body_class','add_category_to_single');
+function add_category_to_single($classes/*, $class*/) {
+  if (is_single() ) {
+    global $post;
+    foreach((get_the_category($post->ID)) as $category) {
+      // add category slug to the $classes array
+      $classes[] = $category->category_nicename;
+    }
+  }
+  // return the $classes array
+  return $classes;
+}
 
 function mbe_body_class($classes){
     if(is_user_logged_in()){

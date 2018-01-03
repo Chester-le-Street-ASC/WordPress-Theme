@@ -92,31 +92,26 @@
 
                       <div class="custom-controls-stacked">
                         <label for="inlineRadioOptions">Subject</label>
-                        <label class="custom-control custom-radio">
+                        <div class="custom-control custom-radio">
                           <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Galas" required>
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">Galas</span>
-                        </label>
-                        <label class="custom-control custom-radio">
+                          <label class="custom-control-label" for="inlineRadio1">Galas</label>
+                        </div>
+                        <div class="custom-control custom-radio">
                           <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Membership Enquiries" required>
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">Membership Enquiries</span>
-                        </label>
-                        <label class="custom-control custom-radio">
+                          <label class="custom-control-label" for="inlineRadio2">Membership Enquiries</label>
+                        </div>
+                        <div class="custom-control custom-radio">
                           <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="Welfare" required>
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">Welfare</span>
-                        </label>
-                        <label class="custom-control custom-radio">
+                          <label class="custom-control-label" for="inlineRadio5">Welfare</label>
+                        </div>
+                        <div class="custom-control custom-radio">
                           <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Website Comments" required>
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">Website Comments</span>
-                        </label>
-                        <label class="custom-control custom-radio">
+                          <label class="custom-control-label" for="inlineRadio4">Website Comments</label>
+                        </div>
+                        <div class="custom-control custom-radio">
                           <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Other Enquiries" required>
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">Other Enquiries</span>
-                        </label>
+                          <label class="custom-control-label" for="inlineRadio3">Other Enquiries</label>
+                        </div>
                       </div>
 
                       <div class="form-group">

@@ -7,18 +7,9 @@
     <a class="btn btn-primary" style="text-decoration:none" href="https://training.chesterlestreetasc.co.uk/">Show me the changes to training</a>
   </div>
 </div>-->
-<style>
-.frontpage-burnsmeet {
-    position: relative;
-    width: 100%;
-    overflow-y: hidden;
-    background: #0288d1;
-	color: #ffffff;
-}
-</style>
 <div class="homepage-main">
   <!--[if !IE]>
-  <div class="row"><div class="col-md-12"><hr><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a class="frontpage-link" href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> or <a class="frontpage-link" href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">install Google Chrome</a> to better experience this site.</p></div><hr></div></div><![endif]-->
+  <div class="row"><div class="col-md-12"><hr><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a class="frontpage-link" href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> to better experience this site.</p></div><hr></div></div><![endif]-->
   <div class="frontpage1">
     <div class="container">
       <div class="header-content">
@@ -41,7 +32,7 @@
 					</div>
 					<div class="col-md-5 col-lg-4 ml-md-auto">
             <div class="widget cell">
-              <h3>Latest News</h3>
+              <h2 class="h3">Latest News</h2>
               <ul class="mb-0">
                 <?php
                 $args = array(
@@ -55,10 +46,10 @@
                 	'meta_key' => '',
                 	'meta_value' =>'',
                 	'post_type' => 'post',
-                	'post_status' => 'publish, future, pending, private',
+                	'post_status' => 'publish',
                 	'suppress_filters' => true
                 );
-
+                /* post status, future, pending, private */
                 $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
                 	foreach( $recent_posts as $recent ){
                 		echo '<li><a class="frontpage-link" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
@@ -68,7 +59,7 @@
 							</ul>
 						</div>
 						<div class="widget cell mb-0">
-							<h3>Search our Site</h3>
+							<h2 class="h3">Search our Site</h2>
 							<form action="<?php bloginfo('siteurl'); ?>/" id="searchform" method="get">
 							<label for="s" class="sr-only">Search</label>
 							<div class="input-group">
@@ -104,65 +95,22 @@
       </div>-->
     </div>
 	</div>
-	<div class="frontpage-burnsmeet">
+  <style>
+  .frontpage-christmas{font-size:1rem;background:#005fbd;background-image:url("https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/christmas.png");color:#fff;text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  }
+  .frontpage-christmas h1{font-family: "Lobster", cursive; font-weight: 400;}
+  .frontpage-christmas a{color: #fff;font-weight: bold;text-decoration: underline;}
+  .frontpage-christmas a:hover, .frontpage-christmas a:active, .frontpage-christmas a:focus {color: #fff; text-decoration: underline;}
+  </style>
+  <div class="frontpage-christmas">
 		<div class="container">
 			<div class="row align-items-center justify-content-end header-content">
 				<div class="col">
-					<img src="/wp-content/themes/chester/img/promotions/burnsLogo.png" srcset="/wp-content/themes/chester/img/promotions/burnsLogo@2x.png 2x, /wp-content/themes/chester/img/promotions/burnsLogo@3x.png 3x" class="img-fluid" style="margin-bottom:1rem" alt="Burns Meet 2018">
-					<ul class="list-unstyled">
-						<li>Entry times and meet information for the 2018 Burns Meet are now available</li>
-						<li>Chester-le-Street swimmers are encouraged to enter this gala</li>
-					</ul>
-					<a class="btn btn-secondary mb-0" href="https://www.chesterlestreetasc.co.uk/competitions/galas/burns-meet-2018/" target="_blank">Burns Meet Details</a>
-				</div>
-				<div class="col-2 d-none d-md-flex">
-					<img class="img-fluid float-right" src="/wp-content/themes/chester/img/promotions/clsdascLogo.png" srcset="/wp-content/themes/chester/img/promotions/clsdascLogo@2x.png 2x, /wp-content/themes/chester/img/promotions/clsdascLogo@3x.png 3x" alt="Chester-le-Street ASC Icon">
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="frontpage-blue">
-		<div class="container">
-			<div class="row header-content align-items-center">
-				<div class="col-md-7">
-					<div class="header-content-inner">
-						<h2 class="h1">Training Sessions this Autumn</h2>
-						<p class="lead">There are changes to training this Autumn due to refurbishment work at Chester-le-Street Leisure Centre.</p>
-						<p>Please note that:</p>
-						<ul>
-							<li><?php
-							$date = date("m/d/Y");
-							$refDate = date("m/d/Y", strtotime("09/04/2017"));
-							if($date < $refDate) {
-								echo 'The temporary timetable takes effect on <strong>Monday 4 September</strong>';
-							}
-							elseif($date == $refDate) {
-								echo 'The temporary timetable <strong>takes effect today</strong>';
-							}
-							else {
-								echo 'The temporary timetable is now in effect';
-							} ?></li>
-							<li>For some squads, attendance requirements will be relaxed</li>
-							<li>Monthly fees will stay the same during this period as they are averaged over the course of the year and the club is incurring significant additional costs in order to ensure the continued delivery of training</li>
-							<li>Metafit is suspended during the disruption</li>
-							<li>Keep up to date on our website</a>.</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-5 col-lg-4 ml-md-auto">
-					<div class="cell mb-0">
-						<h3>Squad Timetables</h3>
-						<p>Select and Print your Squad Timetables</p>
-						<div class="btn-group-vertical btn-block mb-0">
-							<a class="btn btn-light" href="https://training.chesterlestreetasc.co.uk/squads/ab1">A and B1</a>
-							<a class="btn btn-light" href="https://training.chesterlestreetasc.co.uk/squads/b2">B2</a>
-							<a class="btn btn-light" href="https://training.chesterlestreetasc.co.uk/squads/b3">B3</a>
-							<a class="btn btn-light" href="https://training.chesterlestreetasc.co.uk/squads/c">C Squad</a>
-							<a class="btn btn-light" href="https://training.chesterlestreetasc.co.uk/squads/d">D Squad</a>
-							<a class="btn btn-light" href="https://training.chesterlestreetasc.co.uk/squads/e">E Squad</a>
-							<a class="btn btn-light" href="https://training.chesterlestreetasc.co.uk/squads/smallpool">Tadpoles, Frogs and Dolphins</a>
-						</div>
-					</div>
+          <!--<img src="/wp-content/themes/chester/img/promotions/merryChristmas.png" srcset="/wp-content/themes/chester/img/promotions/merryChristmas@2x.png 2x, /wp-content/themes/chester/img/promotions/merryChristmas@3x.png 3x" class="img-fluid" style="margin-bottom:0.5rem; margin-right:0.3rem;" alt="Merry Christmas from Chester-le-Street ASC">-->
+          <h1>Happy New Year from Chester-le-Street ASC</h1>
+          <p>Don't forget that there are changes to the usual timetable at Christmas</p>
+          <p>Get the <a class="" href="https://www.chesterlestreetasc.co.uk/2017/09/christmas-closures-2018/">Christmas Training Schedule</a> to make sure you're in the right place at the right time!</p>
+          <p class="mb-0">Remember that we'll be moving to a new timetable from the first weekend in January</p>
 				</div>
 			</div>
 		</div>
@@ -184,8 +132,8 @@
 						<?php
 							 $events = eo_get_events(array(
 								  'numberposts'=>8,
-								  'event_start_after'=>'today',
-								  'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
+								  'event_end_after'=>'today',
+                  'group_events_by'=>'series'
 							 ));
 
 							 if($events):
@@ -261,12 +209,13 @@
     </div>
   </div>
 </div>
-<div class="cls-global-footer cls-global-footer-body d-print-none" style="margin:0;background-color:#e7e7e7">
+<aside class="cls-global-footer cls-global-footer-body d-print-none bg-warning" style="margin:0;">
   <div class="container">
-    <h4>What should our homepage be for?</h4>
-    <p class="mb-0">We'd like to know how you use the homepage - or why you think it should be changed. <a href="mailto:websitefeedback@chesterlestreetasc.co.uk">Let us know what you think by sending us an email!</a>
+    <p class="h4">What should our homepage be for?</p>
+    <p>We'd like to know how you use the homepage - or why you think it should be changed.</p>
+    <a class="btn btn-light" href="mailto:websitefeedback@chesterlestreetasc.co.uk">Tell us by email</a>
   </div>
-</div>
+</aside>
 <!--<div class="container"><div class="row front-page-content"></div></div>-->
 <style>.cls-global-footer-sponsors{margin-top:0}</style>
 <?php get_footer(); ?>

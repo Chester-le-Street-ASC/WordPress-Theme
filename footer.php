@@ -50,6 +50,7 @@
                     <li><a title="Policies" target="_self" href="https://www.chesterlestreetasc.co.uk/policies">Policies</a></li>
                     <li><a target="_self" href="https://www.chesterlestreetasc.co.uk/policies/cookies/">Cookie Policy</a></li>
                     <li><a target="_self" href="https://www.chesterlestreetasc.co.uk/support">Website Support</a></li>
+                   </ul>
                 </div>
               </div>
             </div>
@@ -63,10 +64,11 @@
                     <li><i class="fa fa-file-pdf-o fa-fw"></i> <a title="Order Form" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2016/06/ClothingOrderFormAdult.pdf">Adult Kit Order Form</a></li>-->
                   </ul>
                   <ul class="list-unstyled cls-global-footer-link-spacer">
-                    <li><strong>Social Media</strong></li>
+                    <li><strong>Social Media and More</strong></li>
                     <li><i class="fa fa-twitter fa-fw" aria-hidden="true"></i> <a title="CLSASC on Twitter" target="_blank" href="https://twitter.com/CLSASC">Twitter</a></li>
                     <li><i class="fa fa-facebook fa-fw" aria-hidden="true"></i> <a title="CLSASC on Facebook" target="_blank" href="https://www.facebook.com/Chester-le-Street-ASC-349933305154137/">Facebook</a></li>
                     <li><i class="fa fa-google-plus fa-fw" aria-hidden="true"></i> <a title="CLSASC on Google Plus" target="_blank" href="https://plus.google.com/&#43;ChesterLeStreetASCUK">Google Plus</a></li>
+                    <li><i class="fa fa-github fa-fw" aria-hidden="true"></i> <a title="CLSASC on GitHub - A Home for our Software Development Projects" target="_blank" href="https://github.com/Chester-le-Street-ASC/">GitHub</a></li>
                   </ul>
                 </div>
                 <div class="col-sm-6 col-lg-6">
@@ -101,6 +103,7 @@
     <script defer src="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/js/popper.min.js"></script>
     <script defer src="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/js/bootstrap.min.js"></script>
     <script async src="https://static.chesterlestreetasc.co.uk/global/js/clscookies.js"></script>
+    <script async src="/wp-content/themes/chester/js/chester.js"></script>
 </footer>
   </body>
 </html>

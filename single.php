@@ -6,13 +6,16 @@
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
               <h1 class="entry entry-title"><?php the_title(); ?></h1>
-           		<p>
-                <span class="d-none">
-                  <span class="vcard author" rel="author">
-                    <?php the_author(); ?>
-                  </span> -
+              <p class="d-none mb-0" id="postAuthorDisplay">
+                <!--<i class="fa fa-fw fa-user-circle-o"></i> -->By
+                <span class="vcard author" rel="author" id="postAuthor">
+                  <?php the_author(); ?>
                 </span>
-                <time class="published blog-post-meta" datetime="<?php the_time( 'c' ); ?>"><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="dtOut"><noscript><?php the_time( 'j F Y' ); ?></noscript></span></time> - <?php the_category(', ');?>
+              </p>
+           		<p>
+                <time id="time" class="published blog-post-meta" datetime="<?php the_time( 'c' ); ?>"><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="dtOut"><noscript><?php the_time( 'j F Y' ); ?></noscript></span></time>
+                 -
+                 <?php the_category(', ');?>
               </p>
             <hr>
             <?php if ( has_post_thumbnail()) : ?>
@@ -39,47 +42,6 @@
               </div>
               <?php comments_template(); ?>
             </aside>
-            <script>
-              var datetime = new Date((<?php the_time( 'U' ); ?>)*1000);
-              console.log("DATETIME - " + datetime);
-              var today = new Date();
-              console.log("TODAY - " + today);
-              // var today = today.getTime();
-              // console.log("TODAY - " + today);
-              var test = parseInt(today-datetime);
-              console.log("TEST - " + test);
-              var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-              if ( test < 60000 ) {
-                var datetimeScreen = "Just Now";
-              }
-              else if ( test < 120000 ) {
-                var datetimeScreen = "1 minute ago";
-              }
-              else if ( test < 3600000 ) {
-                var datetimeScreen = parseInt(test/60000) + " minutes ago";
-              }
-              else if ( test < 7200000 ) {
-                var datetimeScreen = "1 hour ago";
-              }
-              else if ( test < 86400000 ) {
-                var datetimeScreen = parseInt(test/3600000) + " hours ago";
-              }
-              else if ( test < 172800000 && (today.getDate()-datetime.getDate() == 1) ) {
-                var datetimeScreen = "1 day ago";
-              }
-              else if ( test < 604800000 || (today.getDate()-datetime.getDate() >= 1 && today.getDate()-datetime.getDate() <= 7) ) {
-                var datetimeScreen = (today.getDate()-datetime.getDate()) + " days ago";
-              }
-              /* else if ( test < 604800000 ) {
-                var datetimeScreen = parseInt(test/86400000) + " days ago";
-              } */
-              else {
-                var datetimeScreen = datetime.getDate()+ " " + monthNames[datetime.getMonth()]+ " " + datetime.getFullYear();
-              }
-              var datetimeScreenOutput = document.getElementById('dtOut');
-              datetimeScreenOutput.textContent = datetimeScreen;
-            </script>
             <?php endwhile; endif; ?>
         </main><!-- /.blog-main -->
       <div class="col-lg-4">
