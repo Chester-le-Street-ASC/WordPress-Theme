@@ -19,9 +19,7 @@
     </script>
     <script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&text=Happy%20New%20Year%20from%20Chester-le-Street%20ASC" type="text/css">
-    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/chester.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.0.beta-3.css" type="text/css">
     <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="apple-touch-icon" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon.png">
@@ -30,7 +28,6 @@
     <link rel="apple-touch-icon" sizes="152x152" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon-ipad-retina.png">
     <link rel="mask-icon" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/chesterIcon.svg" color="#bd0000">
     <?php wp_head(); ?>
-    <style>#cookie-law{background-image:url("https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/christmas.png");}</style>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

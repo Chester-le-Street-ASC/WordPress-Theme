@@ -5,6 +5,8 @@
  * @package chesterlestreetasc
  */
 
+add_filter( 'wp_feed_cache_transient_lifetime',
+   create_function('$a', 'return 1800;') );
 
 add_filter('body_class', 'mbe_body_class');
 
@@ -94,7 +96,7 @@ function chester_scripts() {
 		//wp_enqueue_style( 'chester', 'chester.css', null, '0.0.1' );
 		//wp_enqueue_style( 'chester', 'https://static.chesterlestreetasc.co.uk/global/css/chester.min.css', null, '1.18' );
 
-		wp_enqueue_style( 'style', get_stylesheet_uri() );
+		//wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

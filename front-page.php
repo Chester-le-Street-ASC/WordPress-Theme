@@ -95,26 +95,6 @@
       </div>-->
     </div>
 	</div>
-  <style>
-  .frontpage-christmas{font-size:1rem;background:#005fbd;background-image:url("https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/christmas.png");color:#fff;text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-  }
-  .frontpage-christmas h1{font-family: "Lobster", cursive; font-weight: 400;}
-  .frontpage-christmas a{color: #fff;font-weight: bold;text-decoration: underline;}
-  .frontpage-christmas a:hover, .frontpage-christmas a:active, .frontpage-christmas a:focus {color: #fff; text-decoration: underline;}
-  </style>
-  <div class="frontpage-christmas">
-		<div class="container">
-			<div class="row align-items-center justify-content-end header-content">
-				<div class="col">
-          <!--<img src="/wp-content/themes/chester/img/promotions/merryChristmas.png" srcset="/wp-content/themes/chester/img/promotions/merryChristmas@2x.png 2x, /wp-content/themes/chester/img/promotions/merryChristmas@3x.png 3x" class="img-fluid" style="margin-bottom:0.5rem; margin-right:0.3rem;" alt="Merry Christmas from Chester-le-Street ASC">-->
-          <h1>Happy New Year from Chester-le-Street ASC</h1>
-          <p>Don't forget that there are changes to the usual timetable at Christmas</p>
-          <p>Get the <a class="" href="https://www.chesterlestreetasc.co.uk/2017/09/christmas-closures-2018/">Christmas Training Schedule</a> to make sure you're in the right place at the right time!</p>
-          <p class="mb-0">Remember that we'll be moving to a new timetable from the first weekend in January</p>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="frontpage-purple">
     <div class="container">
       <div class="row header-content align-items-center">
