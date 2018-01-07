@@ -2,10 +2,10 @@
   //response generation function
   $response = "";
   //function to generate response
-  function my_contact_form_generate_response($type, $message){
+  function my_contact_form_generate_response($type, $responseMessage){
   global $response;
-  if($type == "success") $response = "<div class='alert alert-success'>{$message}</div>";
-  else $response = "<div class='alert alert-warning'>{$message}</div>";
+  if($type == "success") $response = "<div class='alert alert-success'>{$responseMessage}</div>";
+  else $response = "<div class='alert alert-warning'>{$responseMessage}</div>";
   }
 
   //response messages
@@ -14,17 +14,41 @@
   $name = $_POST['message_name'];
   $email = $_POST['message_email'];
   $radioselect = $_POST['inlineRadioOptions'];
-  $message = $_POST['message_text'];
+  $messageText = $_POST['message_text'];
   $human = $_POST['message_human'];
 
   //php mailer variables
   $subject = $radioselect . " - From: " . $name . "\r\n";
-  if($radioselect == "Galas") $headers = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'To: Gala Coordinator <galas@chesterlestreetasc.co.uk>', 'CC: ' . $name . ' <' . $email . '>', 'Reply-To:  ' . $name . ' <' . $email . '>');
-  if($radioselect == "Membership Enquiries") $headers = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'To: Membership Secretary <membership@chesterlestreetasc.co.uk>', 'CC: ' . $name . ' <' . $email . '>', 'Reply-To:  ' . $name . ' <' . $email . '>');
-  if($radioselect == "Other Enquiries") $headers = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'To: Enquiries <enquiries@chesterlestreetasc.co.uk>', 'CC: ' . $name . ' <' . $email . '>', 'Reply-To:  ' . $name . ' <' . $email . '>');
-  if($radioselect == "Website Comments") $headers = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'To: Web Team <web@chesterlestreetasc.co.uk>', 'CC: ' . $name . ' <' . $email . '>', 'Reply-To:  ' . $name . ' <' . $email . '>');
-  if($radioselect == "Welfare") $headers = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'To: CLS ASC Welfare <welfare@chesterlestreetasc.co.uk>', 'CC: ' . $name . ' <' . $email . '>', 'Reply-To:  ' . $name . ' <' . $email . '>');
-
+  if ($radioselect == "Galas") {
+    $toUs = "Gala Coordinator <galas@chesterlestreetasc.co.uk>";
+    $toSender = '' . $name . ' <' . $email . '>';
+    $headersUs = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'Reply-To:  ' . $name . ' <' . $email . '>');
+    $headersSender = array('Content-Type: text/html; charset=UTF-8', 'From: Chester-le-Street ASC <noreply@chesterlestreetasc.co.uk>', 'Reply-To: Gala Coordinator <galas@chesterlestreetasc.co.uk>');
+  }
+  if ($radioselect == "Membership Enquiries") {
+    $toUs = "Membership Secretary <membership@chesterlestreetasc.co.uk>";
+    $toSender = '' . $name . ' <' . $email . '>';
+    $headersUs = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'Reply-To:  ' . $name . ' <' . $email . '>');
+    $headersSender = array('Content-Type: text/html; charset=UTF-8', 'From: Chester-le-Street ASC <noreply@chesterlestreetasc.co.uk>', 'Reply-To: Membership Secretary <membership@chesterlestreetasc.co.uk>');
+  }
+  if ($radioselect == "Other Enquiries") {
+    $toUs = "Enquiries <enquiries@chesterlestreetasc.co.uk>";
+    $toSender = '' . $name . ' <' . $email . '>';
+    $headersUs = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'Reply-To:  ' . $name . ' <' . $email . '>');
+    $headersSender = array('Content-Type: text/html; charset=UTF-8', 'From: Chester-le-Street ASC <noreply@chesterlestreetasc.co.uk>', 'Reply-To: Enquiries <enquiries@chesterlestreetasc.co.uk>');
+  }
+  if ($radioselect == "Website Comments") {
+    $toUs = "Web Team <web@chesterlestreetasc.co.uk>";
+    $toSender = '' . $name . ' <' . $email . '>';
+    $headersUs = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'Reply-To: ' . $name . ' <' . $email . '>');
+    $headersSender = array('Content-Type: text/html; charset=UTF-8', 'From: Chester-le-Street ASC <noreply@chesterlestreetasc.co.uk>', 'Reply-To: Web Team <web@chesterlestreetasc.co.uk>');
+  }
+  if ($radioselect == "Welfare") {
+    $toUs = "CLS ASC Welfare <welfare@chesterlestreetasc.co.uk>";
+    $toSender = '' . $name . ' <' . $email . '>';
+    $headersUs = array('Content-Type: text/html; charset=UTF-8', 'From: ' . $name . ' <noreply@chesterlestreetasc.co.uk>', 'Reply-To:  ' . $name . ' <' . $email . '>');
+    $headersSender = array('Content-Type: text/html; charset=UTF-8', 'From: Chester-le-Street ASC <noreply@chesterlestreetasc.co.uk>', 'Reply-To: CLS ASC Welfare <welfare@chesterlestreetasc.co.uk>');
+  }
 
   if(!$human == 0){
     if($human != 2) my_contact_form_generate_response("error", $not_human); //not human!
@@ -35,16 +59,14 @@
     else //email is valid
     {
     //validate presence of name and message
-    if(empty($name) || empty($radioselect) || empty($message)){
+    if(empty($name) || empty($radioselect) || empty($messageText)){
       my_contact_form_generate_response("error", $missing_content);
     }
     else //ready to go!
     {
-    $sent = wp_mail($to, $subject, $message = "
-    <img style=\"width:100%;max-width:200px;\" src=\"https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/chesterLogo.png\"  alt=\"Chester-le-Street ASC\">
-    <p style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">Message sent from the <a href=\"https://www.chesterlestreetasc.co.uk/contact\">Online Contact Form</a></p>
-    <p style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">" .  $message . "</p>
-    <ul style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">
+    $sentUs = wp_mail($toUs, $subject, $message = "
+    <p style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">" .  $messageText . "</p>
+    <ul style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;padding:0 0 0 1rem;\">
       <li>From " . $name . "</li>
       <li>Reply to <a href=\"mailto:" . $email . "\">" . $email . "</a></li>
     </ul>
@@ -52,8 +74,18 @@
     <p style=\"margin-bottom:0;font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">This email has been generated by the web contact form on our website. Several people may have recieved this email. There is no need to forward it on if you do not personally need to take action on it</p>
     <p style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">For support contact support@chesterlestreetasc.co.uk</p>
 
-        " . "\r\n\r\n", $headers);
-    if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
+        " . "\r\n\r\n", $headersUs);
+    $sentSender = wp_mail($toSender, $subject, $message = "
+    <img style=\"width:100%;max-width:200px;\" src=\"https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/chesterLogo.png\"  alt=\"Chester-le-Street ASC\">
+    <p style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">Thank you for getting in touch with us using the <a href=\"https://www.chesterlestreetasc.co.uk/contact\">Online Contact Form</a>.</p>
+    <p style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">Below is the message you sent to " . $radioselect . "</p>
+    <p style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">" .  $messageText . "</p>
+    <hr>
+    <p style=\"margin-bottom:0;font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">This email has been generated by the web contact form on our website. We'll be in touch soon. You don't need to take any further action.</p>
+    <p style=\"font-family:\"Open Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;\">For support contact support@chesterlestreetasc.co.uk</p>
+
+            " . "\r\n\r\n", $headersSender);
+    if($sentUs && $sentSender) my_contact_form_generate_response("success", $message_sent); //message sent!
     else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
     }
     }
@@ -68,7 +100,7 @@
       <div class="row">
         <main class="col-md-12 blog-main">
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
+          <div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?> >
             <h1 class="entry  entry-title"><?php the_title(); ?></h1>
             <div class="row">
               <div class="col-lg-5">

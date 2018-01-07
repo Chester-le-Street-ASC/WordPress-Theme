@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- 	Copyright Chris Heppell & Chester-le-Street ASC 2017. Bootstrap CSS and JavaScript is Copyright Twitter Inc, 2011-2017, jQuery v3.1.0 is Copyright jQuery Foundation 2016
-		Designed by Chris Heppell, www.heppellit.com
-        Yes! We built this in house. Not many clubs do. We don't cheat.	-->
+		  Designed by Chris Heppell, www.heppellit.com
+      Yes! We built this in house. Not many clubs do. We don't cheat.	-->
 <html <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -19,7 +19,7 @@
     </script>
     <script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" type="text/css">
-    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.0.beta-3.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.1.beta-3.css" type="text/css">
     <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="apple-touch-icon" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon.png">
