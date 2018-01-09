@@ -51,3 +51,7 @@ if (document.getElementById('postAuthor') != null) {
     document.getElementById('postAuthorDisplay').classList.remove("d-none");
   }
 }
+
+if (document.getElementsByClassName('rsswidget') != null) {
+  document.getElementsByClassName('rsswidget')[0].innerHTML = "<span class=\"fa fa-rss\"></span>";
+}

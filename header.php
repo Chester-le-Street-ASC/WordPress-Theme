@@ -19,7 +19,7 @@
     </script>
     <script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" type="text/css">
-    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.1.beta-3.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.3.beta-3.css" type="text/css">
     <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="apple-touch-icon" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon.png">
@@ -27,6 +27,13 @@
     <link rel="apple-touch-icon" sizes="120x120" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon-ipad-retina.png">
     <link rel="mask-icon" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/chesterIcon.svg" color="#bd0000">
+    <meta name="application-name" content="Chester-le-Street ASC"/>
+    <meta name="msapplication-square70x70logo" content="small.jpg"/>
+    <meta name="msapplication-square150x150logo" content="medium.jpg"/>
+    <meta name="msapplication-wide310x150logo" content="wide.jpg"/>
+    <meta name="msapplication-square310x310logo" content="large.jpg"/>
+    <meta name="msapplication-TileColor" content="#bd0000"/>
+    <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=5; cycle=1"/>
     <?php wp_head(); ?>
 
     <!--[if lt IE 9]>

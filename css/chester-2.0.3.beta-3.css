@@ -8086,11 +8086,24 @@ a {
   padding: 1rem; }
 
 /* Flagship Content - Covers /galahome pages */
+.galahome {
+  /*a {
+    color: #0288d1;
+  }
+
+  a:focus, a:hover, a:active {
+    color: #0273b0;
+  }*/ }
+  .galahome .chesterBlue {
+    color: #0288d1; }
+  .galahome .flex-panel-top-blue {
+    border-top: 3px solid #0288d1; }
+
 .flagship-content {
   padding: 48px 0;
   color: #FFF;
-  background-color: #303030;
-  background-image: url(./img/stylish/poolWaterBG.jpg);
+  background-color: #333;
+  background-image: url(../img/stylish/poolWaterBG.jpg);
   background-position: center center;
   background-blend-mode: overlay;
   background-repeat: repeat-y; }
@@ -8098,5 +8111,9 @@ a {
 .list-group-flagship-content {
   margin: 0; }
 
-.list-group-flagship-content a.list-group-item:focus, .list-group-flagship-content a.list-group-item:hover {
-  background-color: #005fbd; }
+.list-group-flagship-content a.list-group-item:focus, .list-group-flagship-content a.list-group-item:hover, .list-group-flagship-content a.list-group-item:active {
+  background-color: #0288d1;
+  color: #fff; }
+
+.list-group-flagship-content a.list-group-item {
+  color: #212529; }
