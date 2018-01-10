@@ -1,12 +1,12 @@
 # [Chester-le-Street ASC (Bootstrap 4)](http://www.heppellit.com/wordpress)
 
+Key Details
 * Author: Chris Heppell
 * Author URI: http://www.heppellit.com
 * Description: Chester le Street ASC (Bootstrap 4 for WordPress)
 * Tags: responsive-layout, white, custom-menu, right-sidebar, threaded-comments, red
 * Version: 2.0.0
 * Text Domain: chester
-
 * License: GNU General Public License v2.0
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
