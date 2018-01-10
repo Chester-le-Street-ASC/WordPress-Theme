@@ -7635,7 +7635,7 @@ h3#reply-title {
   font-size: 100px !important; }
 
 .tweet-embed {
-  margin: 0 -10px;
+  margin: 0 -10px -1rem -10px;
   width: auto !important; }
 
 @media print {
