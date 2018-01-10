@@ -50,7 +50,7 @@
     </div>
 
     <div class="col-xs-12 col-md-4">
-      <div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-blue flex-panel-link" style="padding-top:0;">
+      <div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-blue flex-panel-link" style="padding:0 1rem 1rem 1rem;">
         <!--<h3 class="entry">#BurnsMeet</h3>-->
         <div class="tweet-embed center-block">
           <a class="twitter-timeline text-center" data-link-color="#0288d1" href="https://twitter.com/hashtag/burnsmeet" data-widget-id="950739146666070017" data-tweet-limit="1" data-chrome="nofooter noborders noheader transparent">Loading Tweets<br>CLS ASC is not responsible for Tweet Content</a>
