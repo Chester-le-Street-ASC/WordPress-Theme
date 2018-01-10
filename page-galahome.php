@@ -73,7 +73,7 @@
 <div class="container galahome">
   <div class="row">
  	  <div class="col-md-7">
-      <h1>Welcome to Chester&#8209;le&#8209;Street&nbsp;ASC</h1>
+      <h1>Welcome to Chester-le-Street ASC</h1>
       <p class="lead">We're an Amateur Swimming Club offering the opportunity to participate in swimming as a competitive sport.</p>
       <p>Established in 1975, we've grown in size and stature over the years, boasting tremendously talented young athletes who have achieved significant success at the local, national and international level.</p>
       <p>Why not <a  href="https://www.chesterlestreetasc.co.uk/members/#membership" target="_self">join us</a> for your journey through swimming?</p>
