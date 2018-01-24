@@ -34,7 +34,7 @@
       </div>
     </div>
   </div>-->
-  <div class="row d-print-inline-block" style="margin-top:-50px">
+  <div class="row d-none d-print-inline-block" style="margin-top:-50px">
     <div class="col-6">
       <img class="img-fluid logo" src="<?php echo get_template_directory_uri();?>/img/chesterLogo.svg"  alt="Chester-le-Street ASC Logo">
     </div>
