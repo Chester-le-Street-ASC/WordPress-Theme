@@ -51,7 +51,7 @@
               <div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-blue flex-panel-link" style="padding:0 1rem 1rem 1rem;">
                 <!--<h3 class="entry">#BurnsMeet</h3>-->
                 <div class="tweet-embed center-block">
-                  <a class="twitter-timeline text-center text-white" data-link-color="#0288d1" href="https://twitter.com/hashtag/burnsmeet" data-widget-id="950739146666070017" data-tweet-limit="1" data-chrome="nofooter noborders noheader transparent" data-theme="dark">Loading Tweets<br>CLS ASC is not responsible for Tweet Content</a>
+                  <a class="twitter-timeline text-center text-white" data-link-color="#ffffff" data-dnt="true" data-show-replies="false" href="https://twitter.com/hashtag/burnsmeet" data-widget-id="950739146666070017" data-tweet-limit="1" data-chrome="nofooter noborders noheader noscrollbar transparent" data-theme="dark">Loading Tweets<br>CLS ASC is not responsible for Tweet Content</a>
                   <script>
                     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
                   </script>
