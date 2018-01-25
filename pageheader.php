@@ -1,11 +1,11 @@
 <header class="container">
-  <div class="row d-print-none" style="margin-top:0px">
+  <div class="row d-print-none align-items-center" style="margin-top:0px">
     <div class="col-md-8">
 	  <h1 class="mb-0">
       <a class="logo" alt="Chester-le-Street ASC" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a><span class="sr-only">"Chester&#8209;le&#8209;Street&nbsp;ASC</span>
     </h1>
 	</div>
-	<div class="col-md-4 d-none">
+	<div class="col-md-4 d-none d-md-block">
 	  <p class="slogan"><?php bloginfo( 'description' ); ?></p>
 	</div>
   </div>
