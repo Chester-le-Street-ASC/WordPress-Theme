@@ -17,7 +17,7 @@
             <div class="list-group list-group-flagship-content">
               <a href="https://www.chesterlestreetasc.co.uk/competitions/galas/burns-meet-2018/" class="list-group-item">Our Burns Meet Homepage</a>
               <a href="https://www.chesterlestreetasc.co.uk/wp-content/uploads/2018/01/2018finalprogramme.pdf" target="_blank" class="list-group-item">Gala Programme</a>
-              <a href="http://burnsmeet.org.uk/2018/" target="_blank" class="list-group-item">Live Results</a>
+              <a href="http://burnsmeet.org.uk/2018/" target="_blank" class="list-group-item">Live Results <i class="fa fa-external-link" aria-hidden="true"></i></a>
               <a href="https://www.chesterlestreetasc.co.uk/galahome/burnsmeetprogramme/" target="_blank" class="list-group-item">Programme of Events</a>
               <a href="https://siv.org.uk/ponds_forge/upcoming-ponds" class="list-group-item">Pool Information <i class="fa fa-external-link" aria-hidden="true"></i></a>
             </div>
