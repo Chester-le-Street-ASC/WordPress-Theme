@@ -59,7 +59,7 @@ function chester_register_menus() {
 }
 
 // Register Custom Navigation Walker
-require_once('wp_bootstrap_navwalker.php');
+require_once('class-wp-bootstrap-navwalker.php');
 
 // Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
 function chester_page_menu_args( $args ) {
