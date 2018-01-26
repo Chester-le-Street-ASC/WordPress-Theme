@@ -27,7 +27,7 @@
           <hr style="border-color:#fff;">
           <!-- Static Info -->
           <main class="row row-flex row-flex-wrap flex-panel-group flex-panel-link-group">
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-md-6">
               <a class="flex-panel flex-panel-default flex-panel-body flex-panel-top-blue flex-panel-link" href="https://www.chesterlestreetasc.co.uk/galahome/parkingcharges/">
                 <h3 class="entry">Car Parking Charges</h3>
                 <p>Find out about the current Car Parking Charges at Ponds Forge Leisure Centre</p>
@@ -37,17 +37,7 @@
               </a>
             </div>
 
-            <div class="col-xs-12 col-md-4">
-              <a class="flex-panel flex-panel-default flex-panel-body flex-panel-top-blue flex-panel-link" href="https://www.chesterlestreetasc.co.uk/galahome/galasponsors/">
-                <h3 class="entry">Content Here</h3>
-                <p>Content goes here</p>
-                <aside class="flex-panel-bottom-link">
-                  <i class="fa fa-2x fa-arrow-circle-right" aria-hidden="true"></i>
-                </aside>
-              </a>
-            </div>
-
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-md-6">
               <div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-blue flex-panel-link" style="padding:0 1rem 1rem 1rem;">
                 <!--<h3 class="entry">#BurnsMeet</h3>-->
                 <div class="tweet-embed center-block">
