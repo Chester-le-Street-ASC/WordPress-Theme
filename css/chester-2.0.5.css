@@ -2693,9 +2693,9 @@ tbody.collapse.show {
     text-decoration: none;
     background-color: #e9ecef; }
   .dropdown-item.active, .dropdown-item:active {
-    color: #fff;
+    color: #212529;
     text-decoration: none;
-    background-color: #bd0000; }
+    background-color: #dee2e6; }
   .dropdown-item.disabled, .dropdown-item:disabled {
     color: #868e96;
     background-color: transparent; }
@@ -7608,6 +7608,21 @@ a {
 
 .mono {
   font-family: "Roboto Monospace", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.bg-pink {
+  background: #e83e8c; }
+
+.bg-indigo {
+  background: #6610f2; }
+
+.bg-purple {
+  background: #6f42c1; }
+
+.bg-orange {
+  background: #fd7e14; }
+
+.bg-teal {
+  background: #20c997; }
 
 /* Bootstrap 4 and Navwalker Dropdown Fixes */
 .navbar-nav .active > .dropdown-item {
