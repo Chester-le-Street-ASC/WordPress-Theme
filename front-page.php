@@ -189,13 +189,6 @@
     </div>
   </div>
 </div>
-<aside class="cls-global-footer cls-global-footer-body d-print-none bg-warning" style="margin:0;">
-  <div class="container">
-    <p class="h4">What should our homepage be for?</p>
-    <p>We'd like to know how you use the homepage - or why you think it should be changed.</p>
-    <a class="btn btn-light" href="mailto:websitefeedback@chesterlestreetasc.co.uk">Tell us by email</a>
-  </div>
-</aside>
 <!--<div class="container"><div class="row front-page-content"></div></div>-->
 <style>.cls-global-footer-sponsors{margin-top:0}</style>
 <?php get_footer(); ?>
