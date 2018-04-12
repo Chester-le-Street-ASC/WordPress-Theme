@@ -2,24 +2,25 @@
     <!-- THE HEPPELL FOOTER -->
     <div class="cls-global-footer cls-global-footer-sponsors d-print-none">
       <div class="container">
-        <div class="row align-items-center text-center">
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+        <div class="row align-items-center text-center justify-content-center">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg">
             <a href="http://www.gblf.co.uk" target="_blank"><img class="img-responsive sponsor center-block" src="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/gblf.png" srcset="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/gblf@2x.png 2x, https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/gblf@3x.png 3x" alt="Gordon Brown Law Firm Logo" /></a>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg">
             <a href="http://www.ukmail.com" target="_blank"><img class="img-responsive sponsor center-block" src="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/ukmail.png" srcset="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/ukmail@2x.png 2x, https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/ukmail@3x.png 3x" alt="UK Mail Logo" /></a>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+          <!--<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
             <a href="http://www.wssrecruitment.co.uk" target="_blank"><img class="img-responsive sponsor center-block" src="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/wss.png" srcset="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/wss@2x.png 2x, https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/wss@3x.png 3x" alt="WSS Recruitment Logo" /></a>
           </div>
-          <div class="clearfix visible-sm"></div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="clearfix visible-sm"></div>-->
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg">
             <a href="http://www.nessswimwear.co.uk" target="_blank"><img class="img-responsive sponsor center-block" src="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/ness.png" srcset="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/ness@2x.png 2x, https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/ness@3x.png 3x" alt="NESS Swimwear Logo" /></a>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="clearfix visible-sm"></div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg">
             <a href="http://www.michaelenglishroofing.com" target="_blank"><img class="img-responsive sponsor center-block" src="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/menglish.png" srcset="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/menglish@2x.png 2x, https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/menglish@3x.png 3x" alt="Michael English Roofing Logo" /></a>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg">
             <a href="http://www.harlandsaccountants.co.uk" target="_blank"><img class="img-responsive sponsor center-block" src="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/harlands.png" srcset="https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/harlands@2x.png 2x, https://static.chesterlestreetasc.co.uk/global/img/sponsors/white/harlands@3x.png 3x" alt="Harlands Accountants Logo" /></a>
           </div>
         </div>
@@ -67,7 +68,7 @@
                     <li><strong>Social Media and More</strong></li>
                     <li><i class="fa fa-twitter fa-fw" aria-hidden="true"></i> <a title="CLSASC on Twitter" target="_blank" href="https://twitter.com/CLSASC">Twitter</a></li>
                     <li><i class="fa fa-facebook fa-fw" aria-hidden="true"></i> <a title="CLSASC on Facebook" target="_blank" href="https://www.facebook.com/Chester-le-Street-ASC-349933305154137/">Facebook</a></li>
-                    <li><i class="fa fa-google-plus fa-fw" aria-hidden="true"></i> <a title="CLSASC on Google Plus" target="_blank" href="https://plus.google.com/&#43;ChesterLeStreetASCUK">Google Plus</a></li>
+                    <li><i class="fa fa-google-plus fa-fw" aria-hidden="true"></i> <a title="CLSASC on Google Plus" target="_blank" href="https://plus.google.com/110024389189196283575">Google Plus</a></li>
                     <li><i class="fa fa-github fa-fw" aria-hidden="true"></i> <a title="CLSASC on GitHub - A Home for our Software Development Projects" target="_blank" href="https://github.com/Chester-le-Street-ASC/">GitHub</a></li>
                   </ul>
                 </div>

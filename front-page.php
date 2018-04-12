@@ -172,7 +172,7 @@
                 <p><a class="btn btn-light btn-block" href="https://www.twitter.com/CLSASC"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></p>
               </div>
 							<div class="col">
-                <p><a class="btn btn-light btn-block" href="https://plus.google.com/+ChesterLeStreetASCUK"><i class="fa fa-google-plus" aria-hidden="true"></i> Google Plus</a></p>
+                <p><a class="btn btn-light btn-block" href="https://plus.google.com/110024389189196283575"><i class="fa fa-google-plus" aria-hidden="true"></i> Google Plus</a></p>
               </div>
 						</div>
 					</div>
