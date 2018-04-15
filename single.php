@@ -13,7 +13,7 @@
                 </span>
               </p>
            		<p>
-                <time id="time" class="published blog-post-meta" datetime="<?php the_time( 'c' ); ?>"><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="dtOut"><noscript><?php the_time( 'j F Y' ); ?></noscript></span></time>
+                <time id="time" class="published blog-post-meta" datetime="<?php the_time( 'c' ); ?>"><i class="fa fa-clock-o" aria-hidden="true"></i> <abbr title="<?php the_time( 'c' ); ?>"><span id="dtOut"><noscript><?php the_time( 'j F Y' ); ?></noscript></span></abbr></time>
                  -
                  <?php the_category(', ');?>
               </p>
