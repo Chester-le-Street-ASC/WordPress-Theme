@@ -9,7 +9,9 @@
 
 if ( document.getElementById('time') != null ) {
   var datetime = new Date(document.getElementById('time').dateTime);
+  console.log(datetime);
   var today = new Date();
+  console.log(today);
   var datePublished = new Date(datetime.getFullYear(), datetime.getMonth(), datetime.getDate());
   var dateToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
   var test = parseInt(today-datetime);
