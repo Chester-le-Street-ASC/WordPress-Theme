@@ -54,6 +54,8 @@ if (document.getElementById('postAuthor') != null) {
   }
 }
 
-if (document.getElementsByClassName('rsswidget') != null) {
-  document.getElementsByClassName('rsswidget')[0].innerHTML = "<span class=\"fa fa-rss\"></span>";
-}
+/**if (document.getElementsByClassName('rsswidget') != null) {
+  for (i = 0; i<document.getElementsByClassName('rsswidget').length; i++) {
+    document.getElementsByClassName('rsswidget')[i].innerHTML = "<span class=\"fa fa-rss\"></span>";
+  }
+}*/
