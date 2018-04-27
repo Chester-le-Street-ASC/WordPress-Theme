@@ -160,7 +160,7 @@
 
                       <input type="hidden" name="submitted" value="1">
                       <div class="form-group">
-                        <button class="btn btn-success " type="submit">Submit</button>
+                        <button class="btn btn-success mb-0" type="submit">Submit</button>
                       </div>
                     </form>
                     <script>
