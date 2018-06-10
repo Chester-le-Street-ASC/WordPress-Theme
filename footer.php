@@ -58,12 +58,12 @@
             <div class="col-lg-6">
               <div class="row">
                 <div class="col-sm-6 col-lg-6">
-                  <ul class="list-unstyled cls-global-footer-link-spacer">
+                  <!--<ul class="list-unstyled cls-global-footer-link-spacer">
                     <li><strong>Downloads</strong></li>
                     <li><i class="fa fa-file-pdf-o fa-fw"></i> <a title="Entry Form" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2016/06/GalaEntryForm.pdf">Gala Entry Form</a></li>
-                    <!--<li><i class="fa fa-file-pdf-o fa-fw"></i> <a title="Order Form" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2016/06/ClothingOrderFormChild.pdf">Children's Kit Order Form</a></li>
-                    <li><i class="fa fa-file-pdf-o fa-fw"></i> <a title="Order Form" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2016/06/ClothingOrderFormAdult.pdf">Adult Kit Order Form</a></li>-->
-                  </ul>
+                    <li><i class="fa fa-file-pdf-o fa-fw"></i> <a title="Order Form" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2016/06/ClothingOrderFormChild.pdf">Children's Kit Order Form</a></li>
+                    <li><i class="fa fa-file-pdf-o fa-fw"></i> <a title="Order Form" target="_blank" href="http://www.chesterlestreetasc.co.uk/wp-content/uploads/2016/06/ClothingOrderFormAdult.pdf">Adult Kit Order Form</a></li>
+                  </ul>-->
                   <ul class="list-unstyled cls-global-footer-link-spacer">
                     <li><strong>Social Media and More</strong></li>
                     <li><i class="fa fa-twitter fa-fw" aria-hidden="true"></i> <a title="CLSASC on Twitter" target="_blank" href="https://twitter.com/CLSASC">Twitter</a></li>
