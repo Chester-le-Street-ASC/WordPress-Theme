@@ -9,6 +9,28 @@
 	  <p class="slogan"><?php bloginfo( 'description' ); ?></p>
 	</div>
   </div>
+
+  <hr>
+
+  <div class="row d-print-none justify-content-md-center d-none d-md-flex">
+	<div class="col-12 col-xl-10">
+		<div class="burnsheader">
+			<div class="row align-items-center justify-content-between">
+				<div class="col">
+					<img src="/wp-content/themes/chester/img/promotions/burnsLogo.png" srcset="/wp-content/themes/chester/img/promotions/burnsLogo@2x.png 2x, /wp-content/themes/chester/img/promotions/burnsLogo@3x.png 3x" class="img-fluid" style="margin-bottom:0.5rem" alt="Burns Meet 2019">
+					<br>Information for the 2019 Burns Meet on 26 and 27 January 2019 is now available
+				</div>
+				<div class="col-4 text-center">
+					<a class="btn btn-secondary" href="https://www.chesterlestreetasc.co.uk/competitions/galas/burns-meet-2019/" target="_blank">Burns Meet Details</a>
+				</div>
+				<div class="col-2">
+					<img class="img-fluid float-right" src="/wp-content/themes/chester/img/promotions/clsdascLogo.png" srcset="/wp-content/themes/chester/img/promotions/clsdascLogo@2x.png 2x, /wp-content/themes/chester/img/promotions/clsdascLogo@3x.png 3x" alt="Chester-le-Street ASC Icon">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
   <!--<style>.featureHeader{background:#005fbd;background-image:url("https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/christmas.png");background-size:100% auto;padding:1rem;color:#fff;text-shadow: 1px 1px 1px rgba(0,0,0,.5);
   }
   .featureHeader h1 {font-family:'Lobster', cursive;font-weight: 400;}

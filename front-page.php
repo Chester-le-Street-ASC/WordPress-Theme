@@ -1,13 +1,11 @@
 <?php get_header(); ?>
 
-<!--<div class="homepage-masthead homepage-alert d-print-none" style="margin-bottom:1.1rem">
+<div class="homepage-masthead homepage-alert d-print-none" style="margin-bottom:1.1rem">
   <div class="container">
-    <p class="h3">We're making changes to our website policies</p>
-    <p>We'll be changing the data we collect for <a class="frontpage-link" href="https://www.google.com/analytics/" target="_blank">analytic purposes</a> from 25 May 2018 in order to comply with the <a class="frontpage-link" href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN" target="_blank">General Data Protection Regulation</a>.</p>
-    <p class="mb-0">We'll be <a class="frontpage-link" href="/policies">updating our other data protection policies</a> at shortly.</p>
-    <a class="btn btn-primary" style="text-decoration:none" href="https://training.chesterlestreetasc.co.uk/">Show me the changes to training</a>
+    <p class="h3">The summer closure period starts on 18 August</p>
+    <a class="btn btn-primary" style="text-decoration:none" href="https://www.chesterlestreetasc.co.uk/2018/05/summer-closure-dates-for-2018/">Learn more</a>
   </div>
-</div>-->
+</div>
 <div class="homepage-main">
   <!--[if !IE]>
   <div class="row"><div class="col-md-12"><hr><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a class="frontpage-link" href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> to better experience this site.</p></div><hr></div></div><![endif]-->

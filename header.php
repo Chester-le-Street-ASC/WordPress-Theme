@@ -36,6 +36,13 @@
     <meta name="msapplication-TileColor" content="#bd0000"/>
     <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=https://www.chesterlestreetasc.co.uk/feed/atom/&amp;id=5; cycle=1"/>
     <?php wp_head(); ?>
+    <style>
+      .burnsheader {
+        background: #0288d1;
+        color: #fff;
+        padding: 1rem;
+      }
+    </style>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
