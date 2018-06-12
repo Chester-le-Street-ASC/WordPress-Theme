@@ -10,7 +10,7 @@
 	</div>
   </div>
 
-  <hr>
+  <hr class="d-print-none d-none d-md-flex">
 
   <div class="row d-print-none justify-content-md-center d-none d-md-flex">
 	<div class="col-12 col-xl-10">
