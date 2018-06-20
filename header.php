@@ -20,7 +20,7 @@
     </script>
     <script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" type="text/css">
-    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.9.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.11.css" type="text/css">
     <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="apple-touch-icon" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon.png">
