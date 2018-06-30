@@ -13,9 +13,7 @@
 	</div>-->
   </div>
 
-  <hr class="d-print-none d-none d-md-flex">
-
-  <div class="row d-print-none justify-content-md-center d-none d-md-flex">
+  <!--<div class="row d-print-none justify-content-md-center d-none d-md-flex">
 	<div class="col-12 col-xl-10">
 		<div class="burnsheader">
 			<div class="row align-items-center justify-content-between">
@@ -32,7 +30,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div>-->
 
   <!--<style>.featureHeader{background:#005fbd;background-image:url("https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/img/christmas.png");background-size:100% auto;padding:1rem;color:#fff;text-shadow: 1px 1px 1px rgba(0,0,0,.5);
   }
@@ -64,7 +62,7 @@
       <img class="img-fluid logo" src="<?php echo get_template_directory_uri();?>/img/chesterLogo.svg"  alt="Chester-le-Street ASC Logo">
     </div>
   </div>
-	<hr>
+  <hr>
     <!--[if !IE]><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a href="http://browsehappy.com/" class="alert-link" target="_blank">Upgrade your browser today <i class="fa fa-external-link" aria-hidden="true"></i> </a> or <a href="https://www.google.com/chrome/browser/desktop/index.html" class="alert-link" target="_blank">install Google Chrome <i class="fa fa-external-link" aria-hidden="true"></i> </a> to better experience this site.</p></div><hr><![endif]-->
     <noscript>
     <div class="alert alert-danger">

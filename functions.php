@@ -88,6 +88,17 @@ function chester_register_sidebars() {
 			'after_title' => '</h4>'
 		)
 	);
+  register_sidebar(
+		array(
+			'id' => 'servicestoclubs',
+			'name' => __( 'Services to Clubs Sidebar', 'chester' ),
+			'description' => __( 'The following widgets will appear in the Services to Clubs Sidebar.', 'chester' ),
+			'before_widget' => '<div id="%1$s" class="sidebar-module widget %2$s services-cell">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="sidebar-module-title">',
+			'after_title' => '</h4>'
+		)
+	);
 }
 
 function chester_scripts() {
