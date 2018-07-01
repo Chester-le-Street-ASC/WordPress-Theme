@@ -20,7 +20,7 @@
     </script>
     <script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" type="text/css">
-    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.11.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.12.css" type="text/css">
     <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="apple-touch-icon" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon.png">
@@ -52,7 +52,11 @@
   </head>
   <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
+    <? if (is_page_template("page_servicestoclubs.php")) { ?>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary justify-content-between">
+    <? } else { ?>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between">
+    <? } ?>
       <div class="container">
         <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#chesterNavbar" aria-controls="chesterNavbar" aria-expanded="false" aria-label="Toggle navigation">

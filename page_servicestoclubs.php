@@ -19,7 +19,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-lg-8">
-				<img class="img-fluid" src="/wp-content/themes/chester/img/ServicesToClubs.svg" alt="Services to Clubs Logo" style="max-height:4rem;">
+				<a href="https://www.chesterlestreetasc.co.uk/servicestoclubs/">
+					<img class="img-fluid"
+					src="/wp-content/themes/chester/img/ServicesToClubs.svg" alt="Services
+					to Clubs Logo" style="max-height:4rem;">
+				</a>
 			</div>
 		</div>
 	</div>
