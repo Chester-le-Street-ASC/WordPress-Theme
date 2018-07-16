@@ -19,11 +19,11 @@ Event Organiser META AREA (Top of Page)
 
 				<?php if ( $next ) : ?>
 					<!-- If the event is occurring again in the future, display the date -->
-					<?php printf( '<p>' . __( 'This event is running from %1$s until %2$s. It is next occurring on %3$s', 'eventorganiser' ) . '</p>', eo_get_schedule_start( 'j F Y' ), eo_get_schedule_last( 'j F Y' ), $next );?>
+					<?php printf( '<p>' . __( 'This gala is running from %1$s until %2$s. It is also running on %3$s', 'eventorganiser' ) . '</p>', eo_get_schedule_start( 'j F Y' ), eo_get_schedule_last( 'j F Y' ), $next );?>
 
 				<?php else : ?>
 					<!-- Otherwise the event has finished (no more occurrences) -->
-					<?php printf( '<p>' . __( 'This event finished on %s', 'eventorganiser' ) . '</p>', eo_get_schedule_last( 'd F Y', '' ) );?>
+					<?php printf( '<p>' . __( 'This gala finished on %s', 'eventorganiser' ) . '</p>', eo_get_schedule_last( 'd F Y', '' ) );?>
 				<?php endif; ?>
 			<?php endif; ?>
 			<ul>

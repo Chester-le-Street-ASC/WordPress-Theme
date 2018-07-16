@@ -31,49 +31,40 @@ get_header(); ?>
 <div class="container">
 
 <!--<div id="primary">
-	<div id="content" role="main">-->
-    
-    <div class="row">
+<div id="content" role="main">-->
+
+  <div class="row">
     <div class="col-lg-8">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<!-- Display event title -->
-				<h1 class="mb-0 entry-title"><?php the_title(); ?></h1>
+			<!-- Display event title -->
+			<h1 class="mb-0 entry-title"><?php the_title(); ?></h1>
 
-				<hr>
-	
-				<div class="entry-content">
-					<!-- Get event information, see template: event-meta-event-single.php -->
-					<?php eo_get_template_part( 'event-meta', 'event-single' ); ?>
+			<hr>
 
-					<!-- The content or the description of the event-->
-					<?php the_content(); ?>
-				</div><!-- .entry-content -->
+			<div class="entry-content">
+				<!-- Get event information, see template: event-meta-event-single.php -->
+				<?php eo_get_template_part( 'event-meta', 'event-single' ); ?>
 
-				<footer class="entry-meta">
+				<!-- The content or the description of the event-->
+				<?php the_content(); ?>
+			</div><!-- .entry-content -->
 
-				<?php edit_post_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
-				</footer><!-- .entry-meta -->
+		</article><!-- #post-<?php the_ID(); ?> -->
 
-				</article><!-- #post-<?php the_ID(); ?> -->
+    <div class="cls-post-footer d-print-none">
+      <?php get_template_part( 'sharing' ); ?>
+    </div>
 
-				<!-- If comments are enabled, show them -->
-				<div class="comments-template">
-				<?php comments_template(); ?>
-			</div>				
+  	<?php endwhile; // end of the loop. ?>
 
-		<?php endwhile; // end of the loop. ?>
-
-		</div>
-        
-        <div class="col-lg-4"><?php get_sidebar(); ?></div>
-        </div>
-	</div><!-- #content -->
-</div><!-- #primary -->
-</div><!-- /container -->
+    </div>
+    <div class="col-lg-4"><?php get_sidebar(); ?></div>
+  </div>
+</div><!-- #content -->
 
 <!-- Call template footer -->
 <?php get_footer();

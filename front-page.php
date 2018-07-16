@@ -1,12 +1,16 @@
 <?php get_header(); ?>
 
+<!--
 <div class="homepage-masthead homepage-alert d-print-none" style="margin-bottom:1.1rem">
   <div class="container">
-    <p class="h3">Take part in our Direct Debit Technical Trial</p>
-    <p>We're looking into introducing Direct Debit payments at the club and are currently carrying out technical tests.</p>
-    <a class="btn btn-primary" target="_blank" style="text-decoration:none" href="https://docs.google.com/forms/d/e/1FAIpQLSefBjc8y25Cfc80uS-U0IDM_C9ScRufGUoTBwV7TsSoyLbVuw/viewform?usp=sf_link">Register your interest</a>
+    <p class="h3">The Club Will Close for Summer on 17 August</p>
+    <p>Some sessions will finish earlier than this date.</p>
+    <a class="btn btn-primary" target="_blank" style="text-decoration:none" href="https://www.chesterlestreetasc.co.uk/2018/05/summer-closure-dates-for-2018/">
+      Get the details
+    </a>
   </div>
 </div>
+-->
 <div class="homepage-main">
   <!--[if !IE]>
   <div class="row"><div class="col-md-12"><hr><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a class="frontpage-link" href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> to better experience this site.</p></div><hr></div></div><![endif]-->

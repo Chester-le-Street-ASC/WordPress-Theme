@@ -6,7 +6,7 @@
 .services-header {
 	margin: -1rem 0 1rem 0;
 	background: #e4f2ff;
-	padding: 1rem 0;
+	padding: 1.5rem 0;
 }
 .services-cell {
 	margin: 0 0 1rem 0;

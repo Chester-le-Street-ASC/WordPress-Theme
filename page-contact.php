@@ -103,14 +103,14 @@
           <div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?> >
             <h1 class="entry  entry-title"><?php the_title(); ?></h1>
             <div class="row">
-              <div class="col-lg-5">
+              <div class="col-lg-7">
                 <div class="entry clearfix">
                   <?php the_content(); ?>
                 </div>
               </div>
-              <div class="col-lg-7">
+              <div class="col-lg-5">
                 <div class="well" id="respond">
-                  <?php echo $response; ?>
+                  <!--<?php echo $response; ?>
                     <form action="<?php the_permalink(); ?>" method="post" class="form-horizontal" id="contact-form-link">
                       <div class="form-group">
                         <label for="name">Name</label>
@@ -138,7 +138,7 @@
                         </div>
                         <div class="custom-control custom-radio">
                           <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Website Comments" required>
-                          <label class="custom-control-label" for="inlineRadio4">Website Comments</label>
+                          <label class="custom-control-label" for="inlineRadio4">Website Comments and Online Account Support</label>
                         </div>
                         <div class="custom-control custom-radio">
                           <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Other Enquiries" required>
@@ -159,20 +159,31 @@
                       </div>
 
                       <input type="hidden" name="submitted" value="1">
-                      <div class="form-group">
-                        <button class="btn btn-success mb-0" type="submit">Submit</button>
-                      </div>
+                      <p class="mb-0">
+                        <button class="btn btn-success " type="submit">Submit</button>
+                      </p>
                     </form>
-                    <script>
-                      /* function validateForm() {
-                        var name = document.forms["contact-form-link"]["message_name"].value;
-                        if (name == "") {
-                            alert("Name must be filled out");
-                            return false;
-                        }
-                      } */
-                      console.log("CLSASCWP: Client-side validation coming soon.");
-                    </script>
+                  -->
+                    <div class="p-3 bg-warning">
+                      <p class="mb-0">
+                        <strong>
+                          We're experiencing some technical problems with our
+                          Web Contact Form
+                        </strong>
+                      </p>
+                      <p>
+                        As a result, we've temporarily closed this service.
+                      </p>
+                      <p>
+                        In the meantime, you can contact us using the Email
+                        Addresses on this page, or via Facebook Messenger.
+                      </p>
+                      <p class="mb-0">
+                        To discuss joining the club, please contact <a
+                        class="text-dark"
+                        href="mailto:join@chesterlestreetasc.co.uk">join@chesterlestreetasc.co.uk</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
