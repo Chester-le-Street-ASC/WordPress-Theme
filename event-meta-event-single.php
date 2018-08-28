@@ -1,5 +1,5 @@
 <?php
-/**
+/*
 Event Organiser META AREA (Top of Page)
  */
 ?>
@@ -10,7 +10,7 @@ Event Organiser META AREA (Top of Page)
 		<div class="col">
 
 			<!-- Event details -->
-			<h4><?php _e( 'Gala Details', 'eventorganiser' ); ?></h4>
+			<h4><?php _e( 'About this gala', 'eventorganiser' ); ?></h4>
 
 			<!-- Is event recurring or a single event -->
 			<?php if ( eo_recurs() ) :?>
@@ -26,7 +26,7 @@ Event Organiser META AREA (Top of Page)
 					<?php printf( '<p>' . __( 'This gala finished on %s', 'eventorganiser' ) . '</p>', eo_get_schedule_last( 'd F Y', '' ) );?>
 				<?php endif; ?>
 			<?php endif; ?>
-			<ul>
+			<ul class="list-unstyled">
 
 				<?php if ( ! eo_recurs() ) { ?>
 					<!-- Single event -->
@@ -58,7 +58,7 @@ Event Organiser META AREA (Top of Page)
 
 						if ( $upcoming->have_posts() ) : ?>
 
-							<li><strong><?php _e( 'Upcoming Dates', 'eventorganiser' ); ?>:</strong>
+							<li><strong><?php _e( 'The Gala will be happening on', 'eventorganiser' ); ?>:</strong>
 								<ul class="eo-upcoming-dates">
 									<?php
 									while ( $upcoming->have_posts() ) {
@@ -80,6 +80,32 @@ Event Organiser META AREA (Top of Page)
 				<?php do_action( 'eventorganiser_additional_event_meta' ) ?>
 
 			</ul>
+
+      <? $address = eo_get_venue_address(eo_get_venue());
+      if ($address) { ?>
+      <address class="mb-0">
+        <? if ($address['address']) {
+          $addressLine = explode(",", $address['address']); ?>
+        <strong>
+          <? echo $addressLine[0]; ?><br>
+        </strong>
+        <? for ($i = 1; $i < sizeof($addressLine); $i++) {
+          echo $addressLine[$i]; ?><br>
+        <? } ?>
+        <? } ?>
+        <? if ($address['city']) { ?>
+        <? echo $address['city']; ?><br>
+        <? } ?>
+        <? if ($address['postcode']) { ?>
+        <? echo $address['postcode']; ?><br>
+        <? } ?>
+        <? if ($address['country']) { ?>
+        <? // echo $address['country']; ?>
+        <? } ?>
+      </address>
+      <? } ?>
+
+      <span class="d-block d-sm-none mb-3"></span>
 		</div>
 
 		<!-- Does the event have a venue? -->
