@@ -1,16 +1,16 @@
 <?php get_header(); ?>
 
-<!--
-<div class="homepage-masthead homepage-alert d-print-none" style="margin-bottom:1.1rem">
+
+<div class="homepage-masthead homepage-alert bg-primary d-print-none">
   <div class="container">
-    <p class="h3">The Club Will Close for Summer on 17 August</p>
-    <p>Some sessions will finish earlier than this date.</p>
-    <a class="btn btn-primary" target="_blank" style="text-decoration:none" href="https://www.chesterlestreetasc.co.uk/2018/05/summer-closure-dates-for-2018/">
-      Get the details
+    <p class="h3">Chester-le-Street Junior Meet 2018</p>
+    <p>Join us for our Junior Meet from 26 to 28 October, including 1500m, 800m, skins and more.</p>
+    <a class="btn btn-dark" target="_blank" style="text-decoration:none" href="https://www.chesterlestreetasc.co.uk/competitions/galas/chester-le-street-junior-meet-2018/">
+      Find out more
     </a>
   </div>
 </div>
--->
+
 <div class="homepage-main">
   <!--[if !IE]>
   <div class="row"><div class="col-md-12"><hr><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a class="frontpage-link" href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> to better experience this site.</p></div><hr></div></div><![endif]-->
@@ -39,7 +39,7 @@
               <h2 class="h3">Latest News</h2>
               <ul class="mb-0">
                 <?php
-                $args = array(
+                $args = [
                 	'numberposts' => 5,
                 	'offset' => 0,
                 	'category' => 0,
@@ -52,23 +52,23 @@
                 	'post_type' => 'post',
                 	'post_status' => 'publish',
                 	'suppress_filters' => true
-                );
+                ];
                 /* post status, future, pending, private */
-                $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
-                	foreach( $recent_posts as $recent ){
-                		echo '<li><a class="frontpage-link" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-                	}
-                	wp_reset_query();
+                $recent_posts = wp_get_recent_posts($args, ARRAY_A);
+              	foreach($recent_posts as $recent) {
+              		echo '<li><a class="frontpage-link" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+              	}
+              	wp_reset_query();
                 ?>
 							</ul>
 						</div>
 						<div class="widget cell mb-0">
 							<h2 class="h3">Search our Site</h2>
 							<form action="https://google.com/search" id="searchform" method="get">
-                <input type="hidden" name="sitesearch" value="https://www.chesterlestreetasc.co.uk" />
+                <input type="hidden" name="sitesearch" value="https://www.chesterlestreetasc.co.uk">
   							<label for="s" class="sr-only">Search</label>
   							<div class="input-group">
-  								<input type="search" class="form-control" id="q" name="q" placeholder="Search the site"<?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
+  								<input type="search" class="form-control" id="q" name="q" placeholder="Search the site"<?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?>>
   								<span class="input-group-btn">
   									<button type="submit" class="btn btn-light"><i class="fa fa-search"></i><span class="sr-only">Search</span></button>
   								</span>
@@ -164,6 +164,26 @@
 	<div class="frontpage-purple">
     <div class="container">
       <div class="row header-content align-items-center">
+        <div class="col">
+					<div class="header-content-inner">
+						<h2 class="h1">Help and Support</h2>
+						<p class="lead">We provide as much helpful information as possible to help you with our website and online systems.</p>
+						<p class="mb-0">Visit our <a class="frontpage-link" href="https://www.chesterlestreetasc.co.uk/support">Online Help and Support Portal</a> for help.</p>
+					</div>
+				</div>
+				<!--<div class="col-sm-4 col-sm-offset-1">
+					<div class="widget cell m-b-0">
+						<h3 class="m-t-0">Side Content Box</h3>
+              <p>Vestibulum nec lobortis sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent pellentesque lacinia elit semper consequat. Donec dictum laoreet ex eget mattis.</p>
+              <p>Nunc justo neque, scelerisque gravida porttitor vel, congue sed augue. Morbi fringilla at purus quis tristique. Duis volutpat iaculis libero, lacinia pharetra eros tincidunt et.</p>
+					</div>
+				</div>-->
+      </div>
+    </div>
+	</div>
+	<div class="frontpage-blue">
+    <div class="container">
+      <div class="row header-content align-items-center">
 				<div class="col-md-6 col-lg-7">
 					<div class="header-content-inner">
 						<h2 class="h1">Follow us on Social Media</h2>
@@ -186,7 +206,14 @@
 					<div class="widget cell mb-0">
 						<h3>Tweets from Chester-le-Street ASC</h3>
             <div class="tweet-embed">
-              <a class="twitter-timeline" data-link-color="#FFF" href="https://twitter.com/CLSASC" data-tweet-limit="1" data-theme="dark" data-show-replies="false" data-chrome="nofooter noborders noheader transparent" data-dnt="true">Tweets by CLSASC are loading now</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+              <a class="twitter-timeline" data-link-color="#FFF"
+              href="https://twitter.com/CLSASC" data-tweet-limit="1"
+              data-theme="dark" data-show-replies="false" data-chrome="nofooter
+              noborders noheader transparent" data-dnt="true">Tweets by CLSASC
+              are loading. Tracking Protection in Private Browsing may mean we
+              cannot display them.</a>
+              <script async src="//platform.twitter.com/widgets.js"
+              charset="utf-8"></script>
             </div>
           </div>
         </div>
