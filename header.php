@@ -20,7 +20,7 @@
     </script>
     <script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Merriweather:400,600" type="text/css">
-    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/css/chester-2.0.13.css" type="text/css">
+    <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chesterNew/css/chester-2.0.14.css" type="text/css">
     <link rel="stylesheet" href="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="apple-touch-icon" href="https://www.chesterlestreetasc.co.uk/apple-touch-icon.png">
@@ -45,6 +45,7 @@
       .serif h1, .serif h2, .serif h3, .serif h4, .serif h5, .serif h6, .serif p, .serif ul, .serif ol, blockquote {
         font-family: 'Merriweather', Georgia, serif;
       }
+
     </style>
 
     <!--[if lt IE 9]>
@@ -55,28 +56,78 @@
   </head>
   <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
-    <? if (is_page_template("page_servicestoclubs.php")) { ?>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary justify-content-between">
-    <? } else { ?>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between">
-    <? } ?>
-      <div class="container">
-        <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#chesterNavbar" aria-controls="chesterNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <?php
-          wp_nav_menu( array(
-            'menu'              => 'primary',
-            'theme_location'    => 'primary',
-            'depth'             => 2,
-            'container'         => 'div',
-            'container_class'   => 'collapse navbar-collapse',
-            'container_id'      => 'chesterNavbar',
-            'menu_class'        => 'nav navbar-nav mr-auto',
-            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'            => new WP_Bootstrap_Navwalker())
-          );
-        ?>
+    <div class="text-white py-2 top-bar" style="background:#990000;font-size:0.875rem;">
+      <div class="container d-flex">
+        <div class="mr-auto hide-a-underline">
+          <span class="mr-2">
+            <a href="https://www.twitter.com/CLSASC" target="_blank" class="text-white">
+              <i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
+            </a>
+          </span>
+
+          <span class="mr-2">
+            <a href="https://www.facebook.com/CLSASC" target="_blank" class="text-white">
+              <i class="fa fa-facebook fa-fw" aria-hidden="true"></i>
+            </a>
+          </span>
+
+          <span>
+            <a href="https://plus.google.com/110024389189196283575" target="_blank" class="text-white">
+              <i class="fa fa-google-plus fa-fw" aria-hidden="true"></i>
+            </a>
+          </span>
+        </div>
+
+        <div class="ml-2 top-bar">
+          <span>
+            <a href="https://www.chesterlestreetasc.co.uk" class="text-white">
+              Website
+            </a>
+          </span>
+        </div>
+
+        <div class="ml-2 top-bar">
+          <span>
+            <a href="https://account.chesterlestreetasc.co.uk" class="text-white">
+              My Account
+            </a>
+          </span>
+        </div>
       </div>
-    </nav>
+    </div>
+
+    <div class="text-white py-3 d-none d-lg-flex" style="background:#aa0000">
+      <div class="container">
+        <a class="logowhite" href="https://www.chesterlestreetasc.co.uk/"></a>
+      </div>
+    </div>
+
+    <div class="bg-primary">
+      <div class="container">
+        <? if (is_page_template("page_servicestoclubs.php")) { ?>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-between mb-3 px-0">
+        <? } else { ?>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between mb-3 px-0">
+        <? } ?>
+          <a class="navbar-brand d-lg-none" href="<?php echo home_url(); ?>">
+            <img src="https://account.chesterlestreetasc.co.uk/img/chesterIcon.svg" width="20" height="20"> <?php bloginfo('name'); ?>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#chesterNavbar" aria-controls="chesterNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <?php
+            wp_nav_menu( array(
+              'menu'              => 'primary',
+              'theme_location'    => 'primary',
+              'depth'             => 2,
+              'container'         => 'div',
+              'container_class'   => 'collapse navbar-collapse',
+              'container_id'      => 'chesterNavbar',
+              'menu_class'        => 'nav navbar-nav mr-auto',
+              'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+              'walker'            => new WP_Bootstrap_Navwalker())
+            );
+          ?>
+        </nav>
+      </div>
+    </div>

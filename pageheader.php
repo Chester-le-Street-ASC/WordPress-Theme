@@ -1,17 +1,17 @@
 <header class="container">
-  <div class="row d-print-none" style="margin-top:0px">
+  <!--<div class="row d-print-none" style="margin-top:0px">
     <div class="col-md-8">
 	  <h1 class="mb-0">
       <a class="logo" alt="Chester-le-Street ASC" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a><span class="sr-only">"Chester&#8209;le&#8209;Street&nbsp;ASC</span>
     </h1>
 	</div>
-	<!--<div class="col-md-4 d-none d-md-block">
+	<div class="col-md-4 d-none d-md-block">
 	  <p class="slogan"><?php bloginfo( 'description' ); ?></p>
     <div class="rounded-bottom bg-primary p-2 text-white ml-auto d-inline float-right" style="margin-top:-1rem;">
       <p class="mb-0 d-inline"><span id="Membership-UserName">Login</span></p>
     </div>
-	</div>-->
-  </div>
+	</div>
+</div>-->
 
   <!--<div class="row d-print-none justify-content-md-center d-none d-md-flex">
 	<div class="col-12 col-xl-10">
@@ -62,7 +62,7 @@
       <img class="img-fluid logo" src="<?php echo get_template_directory_uri();?>/img/chesterLogo.svg"  alt="Chester-le-Street ASC Logo">
     </div>
   </div>
-  <hr>
+  <!--<hr>-->
     <!--[if !IE]><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a href="http://browsehappy.com/" class="alert-link" target="_blank">Upgrade your browser today <i class="fa fa-external-link" aria-hidden="true"></i> </a> or <a href="https://www.google.com/chrome/browser/desktop/index.html" class="alert-link" target="_blank">install Google Chrome <i class="fa fa-external-link" aria-hidden="true"></i> </a> to better experience this site.</p></div><hr><![endif]-->
     <noscript>
     <div class="alert alert-danger">
@@ -89,3 +89,5 @@ function getName() {
 }
 getName();
 </script>
+
+<div class="pb-2"></div>

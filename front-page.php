@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="homepage-masthead homepage-alert bg-primary d-print-none">
+<!--<div class="homepage-masthead homepage-alert bg-primary d-print-none">
   <div class="container">
     <p class="h3">Chester-le-Street Junior Meet 2018</p>
     <p>Join us for our Junior Meet from 26 to 28 October, including 1500m, 800m, skins and more.</p>
@@ -9,12 +9,12 @@
       Find out more
     </a>
   </div>
-</div>
+</div>-->
 
 <div class="homepage-main">
   <!--[if !IE]>
   <div class="row"><div class="col-md-12"><hr><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a class="frontpage-link" href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> to better experience this site.</p></div><hr></div></div><![endif]-->
-  <div class="frontpage1">
+  <div class="frontpage-blue">
     <div class="container">
       <div class="header-content">
         <noscript>
@@ -25,9 +25,9 @@
           </div>
         </noscript>
         <div class="row">
-					<div class="col-md-7 front-page-drop-shadow">
+					<div class="col-md-7">
             <div class="header-content-inner">
-							<a class="logowhite" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
+							<!--<a class="logowhite" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>-->
               <h1 class="text-hide"><span class="sr-only">"Welcome to Chester&#8209;le&#8209;Street&nbsp;ASC</span></h1>
               <p class="lead">We're an Amateur Swimming Club offering the opportunity to participate in swimming as a competitive sport.</p>
               <p>Established in 1975, we've grown in size and stature over the years, boasting tremendously talented young athletes who have achieved significant success at the local, national and international level.</p>

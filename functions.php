@@ -196,11 +196,11 @@ function mbe_body_class($classes){
 
 function mbe_wp_head(){
     echo '<style>'.PHP_EOL;
-    echo 'body{ padding-top: 4.5rem !important; }'.PHP_EOL;
+    //echo 'body{ padding-top: 4.5rem !important; }'.PHP_EOL;
   //   Using custom CSS class name.
-    echo '@media (min-width:784px){body.body-logged-in .fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
+    //echo '@media (min-width:784px){body.body-logged-in .fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
     // Using WordPress default CSS class name.
-    echo '@media (min-width:784px){body.body-logged-in .fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
+    //echo '@media (min-width:784px){body.body-logged-in .fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
     echo '</style>'.PHP_EOL;
 }
 
