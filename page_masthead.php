@@ -8,13 +8,15 @@
 
 <div class="masthead">
  	<div class="container">
- 		<div class="row justify-content-center">
-      <div class="col-lg-8 col-md-10">
+ 		<div class="d-flex">
+      <div class="mr-auto"></div>
+      <div class="">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <h1 class="entry entry-title white"><?php the_title(); ?></h1>
-        <time id="time" class="blog-post-meta white mb-0" datetime="<?php the_modified_time( 'c' ); ?>">Last updated - <span id="dtOut"><noscript><?php the_modified_time( 'j F Y' ); ?></noscript></span></time>
+        <h1 class="d-block entry entry-title white"><?php the_title(); ?></h1>
+        <time id="time" class="d-block blog-post-meta white mb-0" datetime="<?php the_modified_time( 'c' ); ?>">Last updated - <span id="dtOut"><noscript><?php the_modified_time( 'j F Y' ); ?></noscript></span></time>
         <!--<time id="time" class="published blog-post-meta" datetime="<?php the_time( 'c' ); ?>"><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="dtOut"><noscript><?php the_time( 'j F Y' ); ?></noscript></span></time>-->
       </div>
+      <div class="ml-auto"></div>
     </div>
   </div>
 </div>

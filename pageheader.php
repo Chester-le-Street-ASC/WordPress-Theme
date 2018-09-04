@@ -57,10 +57,13 @@
       </div>
     </div>
   </div>-->
-  <div class="row d-none d-print-inline-block" style="margin-top:-50px">
-    <div class="col-6">
-      <img class="img-fluid logo" src="<?php echo get_template_directory_uri();?>/img/chesterLogo.svg"  alt="Chester-le-Street ASC Logo">
+  <div class="d-none d-print-block">
+    <div class="row">
+      <div class="col-6">
+        <img class="img-fluid logo" src="<?php echo get_template_directory_uri();?>/img/chesterLogo.svg"  alt="Chester-le-Street ASC Logo">
+      </div>
     </div>
+    <hr>
   </div>
   <!--<hr>-->
     <!--[if !IE]><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a href="http://browsehappy.com/" class="alert-link" target="_blank">Upgrade your browser today <i class="fa fa-external-link" aria-hidden="true"></i> </a> or <a href="https://www.google.com/chrome/browser/desktop/index.html" class="alert-link" target="_blank">install Google Chrome <i class="fa fa-external-link" aria-hidden="true"></i> </a> to better experience this site.</p></div><hr><![endif]-->
@@ -89,5 +92,3 @@ function getName() {
 }
 getName();
 </script>
-
-<div class="pb-2"></div>

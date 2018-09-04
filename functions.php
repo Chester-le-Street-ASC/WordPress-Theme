@@ -156,13 +156,13 @@ add_filter( 'excerpt_length', 'chester_excerpt_length', 200 );
 
 function chester_excerpt_more($more) {
        global $post;
-	return '...</p><a class="btn btn-outline-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
+	return '...</p><a class="btn btn-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
 </a>';
 }
 add_filter('excerpt_more', 'chester_excerpt_more');
 
 function modify_read_more_link() {
-return '<a class="btn btn-outline-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
+return '<a class="btn btn-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
 </a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );

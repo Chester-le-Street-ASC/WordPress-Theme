@@ -100,11 +100,11 @@
 
     <!-- Modals and Other Hidden HTML -->
     <?php wp_footer(); ?>
-    <script rel="preload" src="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/js/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/js/popper.min.js"></script>
-    <script src="https://www.chesterlestreetasc.co.uk/wp-content/themes/chester/js/bootstrap.min.js"></script>
-    <script async src="https://static.chesterlestreetasc.co.uk/global/js/clscookies.js"></script>
-    <script async src="/wp-content/themes/chester/js/chester.js"></script>
+    <script rel="preload" src="<?=get_template_directory_uri()?>/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="<?=get_template_directory_uri()?>/js/popper.min.js"></script>
+    <script src="<?=get_template_directory_uri()?>/js/bootstrap.min.js"></script>
+    <script async src="https://www.chesterlestreetasc.co.uk/static/global/js/clscookies.js"></script>
+    <script async src="<?=get_template_directory_uri()?>/js/chester.js"></script>
 </footer>
   </body>
 </html>

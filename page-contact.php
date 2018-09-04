@@ -103,14 +103,14 @@
           <div id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?> >
             <h1 class="entry  entry-title"><?php the_title(); ?></h1>
             <div class="row">
-              <div class="col-lg-7">
+              <div class="col-lg-6">
                 <div class="entry clearfix">
                   <?php the_content(); ?>
                 </div>
               </div>
-              <div class="col-lg-5">
+              <div class="col-lg-6">
                 <div class="well" id="respond">
-                  <!--<?php echo $response; ?>
+                  <?php echo $response; ?>
                     <form action="<?php the_permalink(); ?>" method="post" class="form-horizontal" id="contact-form-link">
                       <div class="form-group">
                         <label for="name">Name</label>
@@ -163,7 +163,7 @@
                         <button class="btn btn-success " type="submit">Submit</button>
                       </p>
                     </form>
-                  -->
+                  <!--
                     <div class="p-3 bg-warning">
                       <p class="mb-0">
                         <strong>
@@ -184,6 +184,7 @@
                         href="mailto:join@chesterlestreetasc.co.uk">join@chesterlestreetasc.co.uk</a>
                       </p>
                     </div>
+                  -->
                   </div>
                 </div>
               </div>
