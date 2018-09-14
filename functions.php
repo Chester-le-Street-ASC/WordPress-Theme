@@ -5,12 +5,30 @@
  * @package chesterlestreetasc
  */
 
+ add_action('send_headers', 'strict_transport_security');
+ /**
+  * Enables the HTTP Strict Transport Security (HSTS) header.
+  *
+  * @since 1.0.0
+  */
+function strict_transport_security() {
+  //header('Strict-Transport-Security: max-age=10886400');
+  header('Referrer-Policy: strict-origin-when-cross-origin');
+  header("Feature-Policy: fullscreen 'self' https://youtube.com");
+  //header("Content-Security-Policy: default-src https:; style-src https: 'unsafe-inline'");
+  header("Content-Security-Policy: ");
+  header('Server: Chester-le-Magic');
+}
+
+// REMOVE WP EMOJI
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
 add_filter( 'wp_feed_cache_transient_lifetime',
    create_function('$a', 'return 1800;') );
-
-add_filter('body_class', 'mbe_body_class');
-
-add_action('wp_head', 'mbe_wp_head');
 
 add_action( 'after_setup_theme', 'chester_theme_setup' );
 function chester_theme_setup() {
@@ -33,6 +51,28 @@ function chester_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'big-thumb', 753, 9999);
 }
+
+function cls_list_child_pages() {
+  global $post;
+  $args = array(
+    'parent' => $post->ID,
+    'post_type' => 'page',
+    'post_status' => 'publish'
+  );
+  $pages = get_pages($args);
+  $list = '<ul class="list-unstyled">';
+  foreach( $pages as $page ) {
+    $list .= ' <li>
+      <a href="' .  get_permalink($page->ID) . '" rel="bookmark" title="' . $page->post_title . '">
+      ' . $page->post_title . '
+      </a>
+  </li>';
+  }
+   $list .= '</ul>';
+   return $list;
+}
+
+add_shortcode('list_children', 'cls_list_child_pages');
 
 register_nav_menu('primary', __('Primary Menu'));
 
@@ -88,36 +128,18 @@ function chester_register_sidebars() {
 			'after_title' => '</h4>'
 		)
 	);
-  register_sidebar(
-		array(
-			'id' => 'servicestoclubs',
-			'name' => __( 'Services to Clubs Sidebar', 'chester' ),
-			'description' => __( 'The following widgets will appear in the Services to Clubs Sidebar.', 'chester' ),
-			'before_widget' => '<div id="%1$s" class="sidebar-module widget %2$s services-cell">',
-			'after_widget' => '</div>',
-			'before_title' => '<h4 class="sidebar-module-title">',
-			'after_title' => '</h4>'
-		)
-	);
 }
 
 function chester_scripts() {
-
- 		//wp_enqueue_style( 'bootstrap', 'css/bootstrap.css', null, '4.0.0' );
-		//wp_enqueue_style( 'chester', 'chester.css', null, '0.0.1' );
-		//wp_enqueue_style( 'chester', 'https://static.chesterlestreetasc.co.uk/global/css/chester.min.css', null, '1.18' );
-
-		//wp_enqueue_style( 'style', get_stylesheet_uri() );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
-function remove_devicepx() {
-    wp_dequeue_script( 'devicepx' );
+/*function remove_devicepx() {
+  wp_dequeue_script( 'devicepx' );
 }
-add_action( 'wp_enqueue_scripts', 'remove_devicepx' );
+add_action( 'wp_enqueue_scripts', 'remove_devicepx' );*/
 
 add_action( 'wp_enqueue_scripts', 'chester_scripts' );
 
@@ -152,17 +174,17 @@ add_filter( 'wp_title', 'chester_wp_title', 10, 2 );
 function chester_excerpt_length( $length ) {
 	return 40;
 }
-add_filter( 'excerpt_length', 'chester_excerpt_length', 200 );
+add_filter( 'excerpt_length', 'chester_excerpt_length', 150 );
 
 function chester_excerpt_more($more) {
        global $post;
-	return '...</p><a class="btn btn-outline-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
+	return '...</p><a class="btn btn-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
 </a>';
 }
 add_filter('excerpt_more', 'chester_excerpt_more');
 
 function modify_read_more_link() {
-return '<a class="btn btn-outline-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
+return '<a class="btn btn-primary" href="' . get_permalink() . '">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i>
 </a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
@@ -183,25 +205,6 @@ function add_category_to_single($classes/*, $class*/) {
   }
   // return the $classes array
   return $classes;
-}
-
-function mbe_body_class($classes){
-    if(is_user_logged_in()){
-        $classes[] = 'body-logged-in';
-    } else{
-        $classes[] = 'body-logged-out';
-    }
-    return $classes;
-}
-
-function mbe_wp_head(){
-    echo '<style>'.PHP_EOL;
-    echo 'body{ padding-top: 4.5rem !important; }'.PHP_EOL;
-  //   Using custom CSS class name.
-    echo '@media (min-width:784px){body.body-logged-in .fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
-    // Using WordPress default CSS class name.
-    echo '@media (min-width:784px){body.body-logged-in .fixed-top{ top: 32px !important; }}@media (max-width:783px){body.body-logged-in .fixed-top{ top: 46px !important;} #wpadminbar{position:fixed !important;}'.PHP_EOL;
-    echo '</style>'.PHP_EOL;
 }
 
 // Accelerated Mobile Pages
@@ -647,10 +650,9 @@ function smallenvelop_login_message( $message ) {
 add_filter( 'login_message', 'smallenvelop_login_message' );
 
 function my_login_stylesheet() {
-    wp_enqueue_style( 'custom-login', '/wp-content/themes/chester/css/bootstrap.css' );
-    wp_enqueue_style( 'custom-login2', '/wp-content/themes/chester/chester.css' );
-    wp_enqueue_script( 'custom-login3', 'https://static.chesterlestreetasc.co.uk/global/js/jquery.min.js' );
-    wp_enqueue_script( 'custom-login4', '/wp-content/themes/chester/js/popper.min.js' );
-    wp_enqueue_script( 'custom-login5', '/wp-content/themes/chester/js/bootstrap.min.js' );
+  wp_enqueue_style('custom-login', '/wp-content/themes/chester/css/chester-2.0.17.css');
+  wp_enqueue_script( 'custom-login3', 'https://static.chesterlestreetasc.co.uk/global/js/jquery.min.js' );
+  wp_enqueue_script( 'custom-login4', '/wp-content/themes/chester/js/popper.min.js' );
+  wp_enqueue_script( 'custom-login5', '/wp-content/themes/chester/js/bootstrap.min.js' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );

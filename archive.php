@@ -43,7 +43,7 @@
         <hr>
 
         <?php while (have_posts()) : the_post(); ?>
-          <div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-primary">
+          <div class="cell">
             <h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
            	<div class="blog-post-meta mb-2">
               <?php the_time( 'j F Y' ); ?> - <?php the_category(', ');?>

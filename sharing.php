@@ -19,7 +19,7 @@
             </div>
 
             <div class="col">
-            <a target="_blank" class="btn btn-whatsapp btn-block" href="whatsapp://send?text=<?php rawurlencode(the_permalink()); ?>.chat-apps.in-app-msg.whatsapp.trial.link1_.auin" data-action="share/whatsapp/share"><i class="fa fa-whatsapp" aria-hidden="true"></i><span class="sr-only sr-only-focusable">Share with Whatsapp</span></a>
+            <a target="_blank" class="btn btn-whatsapp btn-block" href="https://wa.me/?text=<?php rawurlencode(the_permalink()); ?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp" aria-hidden="true"></i><span class="sr-only sr-only-focusable">Share with Whatsapp</span></a>
             </div>
 
             <div class="col">
