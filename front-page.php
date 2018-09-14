@@ -23,9 +23,27 @@
     </noscript>
     <div class="row mb-4">
 			<div class="col-md-9">
+        <? if (!isset($_COOKIE['CLSASC_AutoLogin']) && !isset($_COOKIE['CLSASC_UserInformation'])) { ?>
         <h1>Welcome to Chester&#8209;le&#8209;Street ASC</h1>
         <p class="lead">We're an Amateur Swimming Club offering the opportunity to participate in swimming as a competitive sport.</p>
-        <p class="mb-0">Established in 1975, we've grown in size and stature over the years, boasting tremendously talented young athletes who have achieved significant success at the local, national and international level.</p>
+        <p>Established in 1975, we've grown in size and stature over the years, boasting tremendously talented young athletes who have achieved significant success at the local, national and international level.</p>
+        <p class="mb-0">Why not <a href="https://www.chesterlestreetasc.co.uk/members/#membership" target="_self">join us</a> for your journey through swimming?</p>
+        <? } else {
+          if (isset($_COOKIE['CLSASC_UserInformation'])) {
+            $user = json_decode(stripcslashes($_COOKIE['CLSASC_UserInformation']));
+            $forename = $user->Forename;
+            if (isset($_SESSION['CLSASC_UserInformation-Forename'])) {
+              $forename = $_SESSION['CLSASC_UserInformation-Forename'];
+            } else {
+              $_SESSION['CLSASC_UserInformation-Forename'] = $forename;
+            } ?>
+            <h1>Hello <?=htmlspecialchars($forename)?></h1>
+            <p class="lead mb-0">Here's the latest from our club</p>
+          <? } else { ?>
+            <h1>Welcome to Chester&#8209;le&#8209;Street ASC</h1>
+            <p class="lead mb-0">Here's the latest from our club</p>
+          <? }
+        } ?>
 			</div>
     </div>
     <div class="mb-4">
@@ -66,7 +84,8 @@
         $events = eo_get_events([
 				  'numberposts'       => 6,
 				  'event_end_after'   => 'today',
-          'group_events_by'   => 'series'
+          'group_events_by'   => 'series',
+          'event-category'    => 'galas'
 				]);
       	foreach($events as $event) {
           $format = (eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format').' '.get_option('time_format'));

@@ -1,16 +1,5 @@
-<!--<style>
-.blog-sidebar {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  grid-column-gap: 20px;
-}
-</style>-->
-
 <hr class="d-lg-none d-xl-none">
-
 <div class="blog-sidebar d-print-none">
-
 	<?php if ( ! dynamic_sidebar( 'primary' ) ) : ?>
 
 	<div id="search" class="sidebar-module"><?php get_search_form(); ?></div>

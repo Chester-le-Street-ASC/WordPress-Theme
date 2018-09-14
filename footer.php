@@ -1,3 +1,7 @@
+<?
+global $wp;
+$current_url = urlencode(home_url(add_query_arg(array(), $wp->request)));
+?>
 <footer>
     <!-- THE HEPPELL FOOTER -->
     <div class="cls-global-footer cls-global-footer-sponsors d-print-none">
@@ -40,7 +44,8 @@
                     DH3 3QH
                   </address>
                   <p><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> <a href="mailto:enquiries@chesterlestreetasc.co.uk" target="new">E-Mail Us</a></p>
-                  <p><i class="fa fa-commenting fa-fw" aria-hidden="true"></i> <a target="new" href="mailto:websitefeedback@chesterlestreetasc.co.uk">Website Feedback</a></p>
+                  <p class="mb-0"><i class="fa fa-commenting fa-fw" aria-hidden="true"></i> <a target="new" href="mailto:websitefeedback@chesterlestreetasc.co.uk">Website Feedback</a></p>
+                  <p><i class="fa fa-flag fa-fw" aria-hidden="true"></i> <a href="https://account.chesterlestreetasc.co.uk/reportanissue?url=<?=$current_url?>">Report an issue with this page</a></p>
                 </div>
                 <div class="col-sm-6 col-lg-6">
                   <ul class="list-unstyled cls-global-footer-link-spacer">
@@ -77,8 +82,8 @@
                     <li><strong>Related Sites</strong></li>
                     <li><a title="British Swimming" target="_blank" href="http://www.swimming.org/britishswimming/">British Swimming</a></li>
                     <li><a title="the Amateur Swimming Association" target="_blank" href="http://www.swimming.org/swimengland/">Swim England</a></li>
-                    <li><a title="Swim England North East Region" target="_blank" href="http://asaner.org.uk/swim/">Swim England - North East</a></li>
-                    <li><a title="N&amp;D Swimming" target="_blank" href="http://asaner.org.uk/northumberland-durham-swimming-association/">N&amp;D Swimming</a></li>
+                    <li><a title="Swim England North East Region" target="_blank" href="http://asaner.org.uk/">Swim England - North East</a></li>
+                    <li><a title="Northumberland and Durham Swimming" target="_blank" href="http://asaner.org.uk/northumberland-durham-swimming-association/">Northumberland &amp; Durham Swimming</a></li>
                   </ul>
 
                   <p><strong>Committee Services</strong><br><a title="Login to G Suite" target="_blank" href="http://mail.chesterlestreetasc.co.uk/">G Suite Login</a></p>
@@ -100,11 +105,12 @@
 
     <!-- Modals and Other Hidden HTML -->
     <?php wp_footer(); ?>
-    <script rel="preload" src="<?=get_template_directory_uri()?>/js/jquery-3.3.1.slim.min.js"></script>
-    <script src="<?=get_template_directory_uri()?>/js/popper.min.js"></script>
-    <script src="<?=get_template_directory_uri()?>/js/bootstrap.min.js"></script>
+    <? $theme_dir = get_template_directory_uri(); ?>
+    <script rel="preload" src="<?=$theme_dir?>/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="<?=$theme_dir?>/js/popper.min.js"></script>
+    <script src="<?=$theme_dir?>/js/bootstrap.min.js"></script>
     <script async src="https://www.chesterlestreetasc.co.uk/static/global/js/clscookies.js"></script>
-    <script async src="<?=get_template_directory_uri()?>/js/chester.js"></script>
+    <script async src="<?=$theme_dir?>/js/chester.js"></script>
 </footer>
   </body>
 </html>

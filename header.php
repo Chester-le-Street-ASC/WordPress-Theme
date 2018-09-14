@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set('Europe/London');
 $search_terms = htmlspecialchars($_GET["s"]);
+$theme_dir = get_template_directory_uri();
 ?>
 <!DOCTYPE html>
 <!--
@@ -17,6 +18,7 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-title" content="CLS ASC">
     <meta name="format-detection" content="telephone=no">
+    <? if (!getallheaders()['Dnt']) { ?>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -25,16 +27,17 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
       ga('create', 'UA-78812259-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>
+    <? } ?>
+    <!--<script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Merriweather:400,600" type="text/css">
-    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/css/chester-2.0.15.css" type="text/css">
-    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/font-awesome/css/font-awesome.min.css" type="text/css">
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="apple-touch-icon" href="<?=get_template_directory_uri()?>/img/apple/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?=get_template_directory_uri()?>/img/apple/apple-touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?=get_template_directory_uri()?>/img/apple/apple-touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?=get_template_directory_uri()?>/img/apple/img/apple/apple-touch-icon-ipad-retina.png">
-    <link rel="mask-icon" href="<?=get_template_directory_uri()?>/img/apple/chesterIcon.svg" color="#bd0000">
+    <link rel="stylesheet" href="<?=$theme_dir?>/css/chester-2.0.17.css" type="text/css">
+    <link rel="stylesheet" href="<?=$theme_dir?>/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <link rel="apple-touch-icon" href="<?=$theme_dir?>/img/apple/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?=$theme_dir?>/img/apple/apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?=$theme_dir?>/img/apple/apple-touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?=$theme_dir?>/img/apple/img/apple/apple-touch-icon-ipad-retina.png">
+    <link rel="mask-icon" href="<?=$theme_dir?>/img/apple/chesterIcon.svg" color="#bd0000">
     <meta name="application-name" content="Chester-le-Street ASC"/>
     <meta name="msapplication-square70x70logo" content="small.jpg"/>
     <meta name="msapplication-square150x150logo" content="medium.jpg"/>
@@ -58,7 +61,7 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
 
     <div class="d-print-none">
 
-      <div class="text-white py-2 top-bar" style="background:#990000;font-size:0.875rem;">
+      <div class="text-white py-2 top-bar bg-primary-dark" style="font-size:0.875rem;">
         <div class="container d-flex">
           <div class="mr-auto hide-a-underline">
             <span class="mr-2">
@@ -91,6 +94,7 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
             </span>
           </div>
 
+          <? if (isset($_COOKIE['CLSASC_AutoLogin'])) { ?>
           <div class="ml-2 top-bar">
             <span>
               <a href="https://account.chesterlestreetasc.co.uk" class="text-white" title="Your Club Membership Account">
@@ -98,6 +102,15 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
               </a>
             </span>
           </div>
+          <? } else { ?>
+          <div class="ml-2 top-bar">
+            <span>
+              <a href="https://account.chesterlestreetasc.co.uk" class="text-white" title="Sign in to your Club Membership Account">
+                Sign in
+              </a>
+            </span>
+          </div>
+          <? } ?>
 
           <div class="ml-2 top-bar d-lg-none">
             <span>
@@ -109,8 +122,8 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
         </div>
       </div>
 
-      <div class="collapse" id="mobSearch">
-        <div class="text-white py-3 d-lg-none" style="background:#aa0000">
+      <div class="collapse <?if($search_terms!=""){echo "show";}?>" id="mobSearch">
+        <div class="text-white py-3 d-lg-none bg-primary-darker">
           <form class="container" action="<?=esc_url(home_url('/'))?>" id="head-search" method="get">
             <label for="s" class="sr-only">Search</label>
             <div class="input-group">
@@ -128,7 +141,7 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
         </div>
       </div>
 
-      <div class="text-white py-3 d-none d-lg-flex" style="background:#aa0000">
+      <div class="text-white py-3 d-none d-lg-flex bg-primary-darker">
         <div class="container">
           <div class="row align-items-center">
             <div class="col">
@@ -162,7 +175,7 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
               <img src="https://account.chesterlestreetasc.co.uk/img/chesterIcon.svg" width="20" height="20"> <?php bloginfo('name'); ?>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#chesterNavbar" aria-controls="chesterNavbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
             <?php
               wp_nav_menu( array(
