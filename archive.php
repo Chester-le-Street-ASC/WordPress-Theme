@@ -17,28 +17,28 @@
   			<?php _e( 'Posts Tagged:', 'chester' ); ?> <?php single_tag_title(); ?>
 
   		<?php } elseif (is_day()) { ?>
-  			<?php _e( 'Publications from', 'chester' ); ?> <?php echo get_the_date(); ?>
+  			<?php _e( 'Posts from', 'chester' ); ?> <?php echo get_the_date(); ?>
 
   		<?php } elseif (is_month()) { ?>
-  			<?php _e( 'Publications from', 'chester' ); ?> <?php echo get_the_date( _x( 'F Y', 'monthly archives date format', 'chester' ) ) ?>
+  			<?php _e( 'Posts from', 'chester' ); ?> <?php echo get_the_date( _x( 'F Y', 'monthly archives date format', 'chester' ) ) ?>
 
   		<?php } elseif (is_year()) { ?>
-  			<?php _e( 'Publications from', 'chester' ); ?> <?php echo get_the_date( _x( 'Y', 'yearly archives date format', 'chester' ) ) ?>
+  			<?php _e( 'Posts from', 'chester' ); ?> <?php echo get_the_date( _x( 'Y', 'yearly archives date format', 'chester' ) ) ?>
 
   		<?php } elseif (is_search()) { ?>
-  			<?php _e( 'Search Results', 'chester' ); ?>
+  			<?php _e( 'Your Search Results', 'chester' ); ?>
 
   		<?php } elseif (is_author()) { ?>
-  			<?php _e( 'Publications by Author', 'chester' ); ?>
+  			<?php _e( 'Posts by Author', 'chester' ); ?>
 
   		<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-  			<?php _e( 'Publications', 'chester' ); ?>
+  			<?php _e( 'Posts', 'chester' ); ?>
 
   		<?php } ?>
 
   			</h1>
   			<?php
-  			the_archive_description( '<div class="lead">', '</div>' );
+  			the_archive_description('<div class="lead">', '</div>');
   			?>
         <hr>
 

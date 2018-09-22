@@ -10,9 +10,20 @@
   </div>
 </div>-->
 
-<div class="front-page">
+<?
+$fp_img;
+if (!isset($_COOKIE['CLSASC_AutoLogin']) && !isset($_COOKIE['CLSASC_UserInformation'])) {
+  $fp_img = "front-page-image";
+} ?>
+
+<div class="front-page pt-0 <?=$fp_img?>">
   <!--[if !IE]>
   <div class="row"><div class="col-md-12"><hr><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a  href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> to better experience this site.</p></div><hr></div></div><![endif]-->
+
+  <? if (!isset($_COOKIE['CLSASC_AutoLogin']) && !isset($_COOKIE['CLSASC_UserInformation'])) { ?>
+  <img class="img-fluid img-fp" title="Group Photo. Login to hide this photo." src="https://chesterlestreetasc.co.uk/wp-content/themes/chesterOriginal/img/stylish/frontpageheader.jpg" alt="Team Photo">
+  <? } ?>
+
   <div class="container">
     <noscript>
       <div class="alert alert-danger">
@@ -24,7 +35,7 @@
     <div class="row mb-4">
 			<div class="col-md-9">
         <? if (!isset($_COOKIE['CLSASC_AutoLogin']) && !isset($_COOKIE['CLSASC_UserInformation'])) { ?>
-        <h1>Welcome to Chester&#8209;le&#8209;Street ASC</h1>
+        <h1 class="mt-3">Welcome to Chester&#8209;le&#8209;Street ASC</h1>
         <p class="lead">We're an Amateur Swimming Club offering the opportunity to participate in swimming as a competitive sport.</p>
         <p>Established in 1975, we've grown in size and stature over the years, boasting tremendously talented young athletes who have achieved significant success at the local, national and international level.</p>
         <p class="mb-0">Why not <a href="https://www.chesterlestreetasc.co.uk/members/#membership" target="_self">join us</a> for your journey through swimming?</p>
@@ -37,10 +48,10 @@
             } else {
               $_SESSION['CLSASC_UserInformation-Forename'] = $forename;
             } ?>
-            <h1>Hello <?=htmlspecialchars($forename)?></h1>
+            <h1 class="mt-3">Hello <?=htmlspecialchars($forename)?></h1>
             <p class="lead mb-0">Here's the latest from our club</p>
           <? } else { ?>
-            <h1>Welcome to Chester&#8209;le&#8209;Street ASC</h1>
+            <h1 class="mt-3">Welcome to Chester&#8209;le&#8209;Street ASC</h1>
             <p class="lead mb-0">Here's the latest from our club</p>
           <? }
         } ?>
