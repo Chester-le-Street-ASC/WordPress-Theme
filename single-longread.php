@@ -5,7 +5,7 @@
       <div class="col-lg-8 col-md-10">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           <h1 class="entry entry-title"><?php the_title(); ?></h1>
-          <p class="blog-post-meta mb-0"><?php the_time( 'F j, Y' ); ?> - <?php the_category(', ');?></p>
+          <p class="blog-post-meta mb-0 text-white"><?php the_time( 'F j, Y' ); ?><!-- - <?php the_category(', ');?>--></p>
         </div>
       </div>
     </div>

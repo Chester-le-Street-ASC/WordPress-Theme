@@ -12,7 +12,7 @@
   * @since 1.0.0
   */
 function strict_transport_security() {
-  //header('Strict-Transport-Security: max-age=10886400');
+  //header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload');
   header('Referrer-Policy: strict-origin-when-cross-origin');
   header("Feature-Policy: fullscreen 'self' https://youtube.com");
   //header("Content-Security-Policy: default-src https:; style-src https: 'unsafe-inline'");

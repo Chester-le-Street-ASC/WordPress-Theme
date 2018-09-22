@@ -95,7 +95,7 @@ $current_url = urlencode(home_url(add_query_arg(array(), $wp->request)));
         </div>
         <div class="row">
           <div class="col source-org vcard copyright">
-            <hr style="border-color:#FFF">
+            <hr class="mt-0" style="border-color:#FFF">
             <p class="hidden-print">Designed and Built by Chester&#8209;le&#8209;Street ASC</p>
             <p class="mb-0" style="margin-bottom:0">&copy; <?php echo date( 'Y' ); ?> <span class="org fn">Chester&#8209;le&#8209;Street ASC</span>. CLS ASC is not responsible for the content of external sites.</p>
           </div>

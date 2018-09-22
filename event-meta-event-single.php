@@ -58,7 +58,7 @@ Event Organiser META AREA (Top of Page)
 
 						if ( $upcoming->have_posts() ) : ?>
 
-							<li><strong><?php _e( 'The Gala will be happening on', 'eventorganiser' ); ?>:</strong>
+							<li><strong><?php _e( 'The gala is running on', 'eventorganiser' ); ?>:</strong>
 								<ul class="eo-upcoming-dates">
 									<?php
 									while ( $upcoming->have_posts() ) {
