@@ -1,252 +1,182 @@
 <?php get_header(); ?>
-<!--<img style="margin-top:-21px" src="https://static.chesterlestreetasc.co.uk/global/img/burnsmeet/PondsForgeBurnsBG.jpg" class="img-responsive">-->
-<!-- Gala Special Page Flagship Content -->
-<div class="homepage-main text-white">
-  <div class="pondsForgeBG">
-    <div class="container">
-      <div class="header-content align-bottom">
-        <div class="row align-items-center">
-          <div class="col-md-8 front-page-drop-shadow">
-            <img src="https://chesterlestreetasc.co.uk/wp-content/themes/chester/img/stylish/burnsmeetWeb.svg" class="img-fluid" style="max-width:250px;width:100%;height:auto">
-            <hr style="border-color:#fff;">
-            <p class="lead">Welcome to the 2018 Burns Meet</p>
-            <p><strong>Tweet about today:</strong> Use #BurnsMeet</p>
-            <p><strong>Burns Meet is hosted by:</strong> Chester-le-Street ASC and Derwentside ASC</p>
-          </div>
-          <div class="col-md-4">
-            <div class="list-group list-group-flagship-content">
-              <a href="https://www.chesterlestreetasc.co.uk/competitions/galas/burns-meet-2018/" class="list-group-item">Our Burns Meet Homepage</a>
-              <a href="https://www.chesterlestreetasc.co.uk/wp-content/uploads/2018/01/2018finalprogramme.pdf" target="_blank" class="list-group-item">Gala Programme</a>
-              <a href="http://swimnortheast.org.uk/results/2018/BMMeet18/index.htm" target="_blank" class="list-group-item">Live Results <i class="fa fa-external-link" aria-hidden="true"></i></a>
-              <a href="https://www.chesterlestreetasc.co.uk/galahome/burnsmeetprogramme/" target="_blank" class="list-group-item">Programme of Events</a>
-              <a href="https://siv.org.uk/ponds_forge/upcoming-ponds" class="list-group-item">Pool Information <i class="fa fa-external-link" aria-hidden="true"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="galahome">
-          <hr style="border-color:#fff;">
-          <!-- Static Info -->
-          <main class="row row-flex row-flex-wrap flex-panel-group flex-panel-link-group">
-            <div class="col-xs-12 col-md-6">
-              <a class="flex-panel flex-panel-default flex-panel-body flex-panel-top-blue flex-panel-link" href="https://www.chesterlestreetasc.co.uk/galahome/parkingcharges/">
-                <h3 class="entry">Car Parking Charges</h3>
-                <p>Find out about the current Car Parking Charges at Ponds Forge Leisure Centre</p>
-                <aside class="flex-panel-bottom-link">
-                  <i class="fa fa-2x fa-arrow-circle-right" aria-hidden="true"></i>
-                </aside>
-              </a>
-            </div>
 
-            <div class="col-xs-12 col-md-6">
-              <div class="flex-panel flex-panel-default flex-panel-body flex-panel-top-blue flex-panel-link" style="padding:0 1rem 1rem 1rem;">
-                <!--<h3 class="entry">#BurnsMeet</h3>-->
-                <div class="tweet-embed center-block">
-                  <a class="twitter-timeline text-center text-white" data-link-color="#ffffff" data-dnt="true" data-show-replies="false" href="https://twitter.com/hashtag/burnsmeet" data-widget-id="950739146666070017" data-tweet-limit="1" data-chrome="nofooter noborders noheader noscrollbar transparent" data-theme="dark">Loading Tweets<br>CLS ASC is not responsible for Tweet Content</a>
-                  <script>
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-                  </script>
-
-                  <!--<a class="twitter-timeline"  href="https://twitter.com/hashtag/burnsmeet" data-widget-id="950739146666070017">#burnsmeet Tweets</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                  -->
-                </div>
-                <aside class="flex-panel-bottom-link fa-2x">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </aside>
-              </div>
-            </div>
-          </main>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div class="frontpage1" style="min-height:0;">
-    <div class="container">
-      <div class="header-content">
-        <noscript>
-          <div class="alert alert-danger">
-            <p class="mb-0"><strong>JavaScript is disabled or not supported</strong>
-            <br>
-            It looks like you've got JavaScript disabled or your browser does not support it. JavaScript is essential for our website to function properly, so we recommend you enable it or upgrade to a browser which supports it as soon as possible. <a href="http://browsehappy.com/" class="alert-link" target="_blank">Upgrade your browser today <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
-          </div>
-        </noscript>
-        <div class="row">
-          <div class="col-md-7 front-page-drop-shadow">
-            <div class="header-content-inner">
-              <a class="logowhite" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
-              <h1 class="text-hide"><span class="sr-only">"Welcome to Chester&#8209;le&#8209;Street&nbsp;ASC</span></h1>
-              <p class="lead">We're an Amateur Swimming Club offering the opportunity to participate in swimming as a competitive sport.</p>
-              <p>Established in 1975, we've grown in size and stature over the years, boasting tremendously talented young athletes who have achieved significant success at the local, national and international level.</p>
-              <p>Why not <a class="frontpage-link" href="https://www.chesterlestreetasc.co.uk/members/#membership" target="_self">join us</a> for your journey through swimming?</p>
-            </div>
-          </div>
-          <div class="col-md-5 col-lg-4 ml-md-auto">
-            <div class="widget cell">
-              <h2 class="h3">Latest News</h2>
-              <ul class="mb-0">
-                <?php
-                $args = array(
-                  'numberposts' => 5,
-                  'offset' => 0,
-                  'category' => 0,
-                  'orderby' => 'post_date',
-                  'order' => 'DESC',
-                  'include' => '',
-                  'exclude' => '',
-                  'meta_key' => '',
-                  'meta_value' =>'',
-                  'post_type' => 'post',
-                  'post_status' => 'publish',
-                  'suppress_filters' => true
-                );
-                /* post status, future, pending, private */
-                $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
-                  foreach( $recent_posts as $recent ){
-                    echo '<li><a class="frontpage-link" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-                  }
-                  wp_reset_query();
-                ?>
-              </ul>
-            </div>
-            <div class="widget cell mb-0">
-              <h2 class="h3">Search our Site</h2>
-              <form action="<?php bloginfo('siteurl'); ?>/" id="searchform" method="get">
-              <label for="s" class="sr-only">Search</label>
-              <div class="input-group">
-                <input type="search" class="form-control" id="s" name="s" placeholder="Search the site"<?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
-                <span class="input-group-btn">
-                  <button type="submit" class="btn btn-light"><i class="fa fa-search"></i><span class="sr-only">Search</span></button>
-                </span>
-              </div> <!-- .input-group -->
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--<div class="row row-flex row-flex-wrap">
-        <div class="col-sm-4 col-xs-12">
-          <div class="cell">
-            <h3 class="m-t-0">Title</h3>
-            <p>Blah</p>
-          </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-          <div class="cell">
-            <h3 class="m-t-0">Title</h3>
-            <p>Blah</p>
-          </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-          <div class="cell">
-            <h3 class="m-t-0">Title</h3>
-            <p>Blah</p>
-          </div>
-        </div>
-      </div>-->
-    </div>
-  </div>
-  <div class="frontpage-purple">
-    <div class="container">
-      <div class="row header-content align-items-center">
-        <div class="col-md-7">
-          <div class="header-content-inner">
-            <h2 class="h1">Competitions and Events</h2>
-            <p class="lead">We compete at many competitions across the county, region and country throughout the year.</p>
-            <p>Competitions range from the smallest galas for our youngest swimmers, running all the way up to Nationals and British Championships for our oldest and fastest swimmers.</p>
-            <p>Swimmers can compete in some galas from the age of eight, and most galas from the age of nine. All swimmers can take part in our annual Club Championships at Christmas.</p>
-          </div>
-        </div>
-        <div class="col-md-5 col-lg-4 ml-md-auto">
-          <div class="widget cell mb-0">
-            <h3>Upcoming Competitions</h3>
-            <?php
-               $events = eo_get_events(array(
-                  'numberposts'=>8,
-                  'event_end_after'=>'today',
-                  'group_events_by'=>'series'
-               ));
-
-               if($events):
-                  echo '<ul>';
-                  foreach ($events as $event):
-                     //Check if all day, set format accordingly
-                     $format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format').' '.get_option('time_format') );
-                     printf(
-                      '<li><a class="frontpage-link" href="%s"> %s </a></li>',
-                      get_permalink($event->ID),
-                      get_the_title($event->ID),
-                      eo_get_the_start($format, $event->ID,null,$event->occurrence_id)
-                     );
-                  endforeach;
-                  echo '</ul>';
-               endif;
-             ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="frontpage-blue">
-    <div class="container">
-      <div class="row header-content align-items-center">
-        <div class="col">
-          <div class="header-content-inner">
-            <h2 class="h1">New to Swimming and Galas?</h2>
-            <p class="lead">We've got a fantastic guide for new parents and swimmers.</p>
-            <p class="mb-0">If you don't know your <abbr title="Personal Bests">PBs</abbr> from your <abbr title="Disqualifications">DQs</abbr>, <a class="frontpage-link" href="https://www.chesterlestreetasc.co.uk/newtoswimming">we can help</a>.</p>
-          </div>
-        </div>
-        <!--<div class="col-sm-4 col-sm-offset-1">
-          <div class="widget cell m-b-0">
-            <h3 class="m-t-0">Side Content Box</h3>
-              <p>Vestibulum nec lobortis sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent pellentesque lacinia elit semper consequat. Donec dictum laoreet ex eget mattis.</p>
-              <p>Nunc justo neque, scelerisque gravida porttitor vel, congue sed augue. Morbi fringilla at purus quis tristique. Duis volutpat iaculis libero, lacinia pharetra eros tincidunt et.</p>
-          </div>
-        </div>-->
-      </div>
-    </div>
-  </div>
-  <div class="frontpage-purple">
-    <div class="container">
-      <div class="row header-content align-items-center">
-        <div class="col-md-6 col-lg-7">
-          <div class="header-content-inner">
-            <h2 class="h1">Follow us on Social Media</h2>
-            <p class="lead">We're on Facebook, Twitter and Google Plus</p>
-            <p>Following us on social media is a fantastic way to stay up to date with all the latest news and notices about changes to training, galas and more</p>
-            <div class="row">
-              <div class="col">
-                <p><a class="btn btn-light btn-block" href="https://www.facebook.com/Chester-le-Street-ASC-349933305154137/"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></p>
-              </div>
-              <div class="col">
-                <p><a class="btn btn-light btn-block" href="https://www.twitter.com/CLSASC"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></p>
-              </div>
-              <div class="col">
-                <p><a class="btn btn-light btn-block" href="https://plus.google.com/+ChesterLeStreetASCUK"><i class="fa fa-google-plus" aria-hidden="true"></i> Google Plus</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 ml-md-auto">
-          <div class="widget cell mb-0">
-            <h3>Tweets from Chester-le-Street ASC</h3>
-            <div class="tweet-embed">
-              <a class="twitter-timeline" data-link-color="#FFF" href="https://twitter.com/CLSASC" data-tweet-limit="1" data-theme="dark" data-show-replies="false" data-chrome="nofooter noborders noheader transparent" data-dnt="true">Tweets by CLSASC are loading now</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="cls-global-footer cls-global-footer-body d-print-none" style="margin:0;background:#efefef;">
+<!--<div class="homepage-masthead homepage-alert bg-primary d-print-none">
   <div class="container">
-    <p>Our <strong>Normal Homepage</strong> will return on Monday 29 January</p>
-    <p>Spectator Gallery Capacity Limitations Apply - CLS ASC is not responsible for Twitter content on this page</p>
-    <p class="mb-0">Burns Meet is jointly hosted by Chester-le-Street ASC and Derwentside ASC</p>
+    <p class="h3">Chester-le-Street Junior Meet 2018</p>
+    <p>Join us for our Junior Meet from 26 to 28 October, including 1500m, 800m, skins and more.</p>
+    <a class="btn btn-dark" target="_blank" style="text-decoration:none" href="https://www.chesterlestreetasc.co.uk/competitions/galas/chester-le-street-junior-meet-2018/">
+      Find out more
+    </a>
+  </div>
+</div>-->
+
+<?
+$fp_img;
+if (!isset($_COOKIE['CLSASC_AutoLogin']) && !isset($_COOKIE['CLSASC_UserInformation'])) {
+  $fp_img = "front-page-image";
+} ?>
+
+<div class="front-page pt-0 <?=$fp_img?>">
+  <!--[if !IE]>
+  <div class="row"><div class="col-md-12"><hr><div class="alert alert-danger"><strong>Unsupported Browser</strong><br>You're using an unsupported browser and this website may not work properly with it. <a  href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> to better experience this site.</p></div><hr></div></div><![endif]-->
+
+  <div class="container">
+    <noscript>
+      <div class="alert alert-danger">
+        <p class=""><strong>JavaScript is disabled or not supported</strong>
+  		  <br>
+  		  It looks like you've got JavaScript disabled or your browser does not support it. JavaScript is essential for our website to function properly, so we recommend you enable it or upgrade to a browser which supports it as soon as possible. <a href="http://browsehappy.com/" class="alert-link" target="_blank">Upgrade your browser today <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+      </div>
+    </noscript>
+  </div>
+  <div class="bg-secondary">
+    <div class="container">
+      <div class="row mb-4 text-white">
+  			<div class="col-md-9">
+
+          <h1 class="mt-3">Welcome to our 2018 Junior Meet</h1>
+          <p class="mb-0"><strong>Tweet about today</strong> Use #CLSJuniorMeet</p>
+
+        </div>
+      </div>
+
+      <div class="row pb-4 mb-4">
+        <div class="col">
+
+          <div class="news-grid">
+            <a href="/downloads/galas/juniormeet18/">
+              <span class="title">Live Results</span>
+              <span class="category text-secondary">SPORTSYSTEMS</span>
+            </a>
+
+            <a href="#">
+              <span class="title">Programme of Events</span>
+              <span class="category text-secondary"><abbr title="PDF Files may be harder to view on mobile phones">PDF</title></span>
+            </a>
+
+            <a href="/galahome/whats-on">
+              <span class="title">What's on this weekend?</span>
+              <span class="category text-secondary">Fundraising</span>
+            </a>
+
+            <a href="/galahome/parkingcharges">
+              <span class="title">Parking at Chester-le-Street Leisure Centre</span>
+              <span class="category text-secondary">Help and Support</span>
+            </a>
+
+            <a href="https://account.chesterlestreetasc.co.uk/timeconverter">
+              <span class="title">Online Swim Time Converter</span>
+              <span class="category text-secondary">Useful Tools from CLS ASC</span>
+            </a>
+
+            <a href="/competitions/galas/chester-le-street-junior-meet-2018/">
+              <span class="title">Junior Meet Gala Page</span>
+              <span class="category text-secondary">Galas</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="row mb-4">
+			<div class="col-md-9">
+
+        <? if (!isset($_COOKIE['CLSASC_AutoLogin']) && !isset($_COOKIE['CLSASC_UserInformation'])) { ?>
+        <h1 class="">Welcome to Chester&#8209;le&#8209;Street ASC</h1>
+        <p class="lead">We're an Amateur Swimming Club offering the opportunity to participate in swimming as a competitive sport.</p>
+        <p>Established in 1975, we've grown in size and stature over the years, boasting tremendously talented young athletes who have achieved significant success at the local, national and international level.</p>
+        <p class="mb-0">Why not <a href="https://www.chesterlestreetasc.co.uk/members/#membership" target="_self">join us</a> for your journey through swimming?</p>
+        <? } else {
+          if (isset($_COOKIE['CLSASC_UserInformation'])) {
+            $user = json_decode(stripcslashes($_COOKIE['CLSASC_UserInformation']));
+            $forename = $user->Forename;
+            if (isset($_SESSION['CLSASC_UserInformation-Forename'])) {
+              $forename = $_SESSION['CLSASC_UserInformation-Forename'];
+            } else {
+              $_SESSION['CLSASC_UserInformation-Forename'] = $forename;
+            } ?>
+            <h1 class="">Hello <?=htmlspecialchars($forename)?></h1>
+            <p class="lead mb-0">Here's the latest from our club</p>
+          <? } else { ?>
+            <h1 class="">Welcome to Chester&#8209;le&#8209;Street ASC</h1>
+            <p class="lead mb-0">Here's the latest from our club</p>
+          <? }
+        } ?>
+			</div>
+    </div>
+    <div class="mb-4">
+      <h2 class="mb-4">Latest News</h2>
+      <div class="news-grid">
+        <?php
+        $args = [
+        	'numberposts' => 6,
+        	'offset' => 0,
+        	'category' => 0,
+        	'orderby' => 'post_date',
+        	'order' => 'DESC',
+        	'include' => '',
+        	'exclude' => '',
+        	'meta_key' => '',
+        	'meta_value' =>'',
+        	'post_type' => 'post',
+        	'post_status' => 'publish',
+        	'suppress_filters' => true
+        ];
+        /* post status, future, pending, private */
+        $recent_posts = wp_get_recent_posts($args, ARRAY_A);
+      	foreach($recent_posts as $recent) { ?>
+      	<a href="<?=get_permalink($recent["ID"])?>">
+          <span class="title"><?=$recent["post_title"]?></span>
+          <span class="category"><?=get_the_category($recent["ID"])[0]->name?></span>
+        </a>
+      	<? }
+      	wp_reset_query();
+        ?>
+			</div>
+		</div>
+
+    <div class="mb-4">
+      <h2 class="mb-4">Upcoming Galas</h2>
+      <div class="news-grid">
+        <?php
+        $events = eo_get_events([
+				  'numberposts'       => 6,
+				  'event_end_after'   => 'today',
+          'group_events_by'   => 'series',
+          'event-category'    => 'galas'
+				]);
+      	foreach($events as $event) {
+          $format = (eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format').' '.get_option('time_format'));
+          ?>
+      	<a href="<?=get_permalink($event->ID)?>">
+          <div>
+            <span class="title mb-0"><?=get_the_title($event->ID)?></span>
+            <span class="d-flex mb-3"><?=eo_get_venue_name(eo_get_venue($event->ID))?></span>
+          </div>
+          <span class="category"><?=eo_get_the_start($format, $event->ID, null, $event->occurrence_id)?></span>
+        </a>
+      	<? }
+      	wp_reset_query();
+        ?>
+			</div>
+		</div>
+
+    <p class="mb-0">
+      <strong>
+        Chester-le-Street Junior Meet 2018
+      </strong>
+    </p>
+    <p>
+      Spectator Gallery Limitations Apply. Chester-le-Street ASC reserves the
+      right to refuse entry or to withdraw the Live Results service at any time.
+    </p>
   </div>
 </div>
-<style>.cls-global-footer-sponsors{margin: 0}</style>
+
+<!--<div class="container"><div class="row front-page-content"></div></div>-->
+<style>.cls-global-footer-sponsors{margin-top:0}</style>
 <?php get_footer(); ?>

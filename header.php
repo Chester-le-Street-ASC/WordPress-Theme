@@ -18,7 +18,6 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-title" content="CLS ASC">
     <meta name="format-detection" content="telephone=no">
-    <? if (!getallheaders()['Dnt']) { ?>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,7 +26,6 @@ Yes! We built this in house. Not many clubs do. We don't cheat.
       ga('create', 'UA-78812259-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <? } ?>
     <!--<script>var shiftWindow = function() { scrollBy(0, -100) }; if (location.hash) shiftWindow(); window.addEventListener("hashchange", shiftWindow);</script>-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Merriweather:400,600" type="text/css">
     <link rel="stylesheet" href="<?=$theme_dir?>/css/chester-2.0.17.css" type="text/css">
