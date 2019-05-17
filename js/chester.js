@@ -7,19 +7,20 @@
 
 /* Show the pretty time */
 
-if ( document.getElementById('time') != null ) {
+function prettyTime() {
   var datetime = new Date(document.getElementById('time').dateTime);
-  console.log(datetime);
   var today = new Date();
-  console.log(today);
   var datePublished = new Date(datetime.getFullYear(), datetime.getMonth(), datetime.getDate());
   var dateToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
   var test = parseInt(today-datetime);
   var testDays = parseInt(dateToday-datePublished);
   var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-  if ( test < 60000 ) {
-    var datetimeScreen = "Just Now";
+  if ( test < 0 ) {
+    var datetimeScreen = "just now";
+  }
+  else if ( test < 60000 ) {
+    var datetimeScreen = Math.floor(test/1000) + " seconds ago";
   }
   else if ( test < 120000 ) {
     var datetimeScreen = "1 minute ago";
@@ -46,6 +47,10 @@ if ( document.getElementById('time') != null ) {
   datetimeScreenOutput.textContent = datetimeScreen;
 }
 
+if (document.getElementById('time') != null) {
+  var intervalID = window.setInterval(prettyTime, 1000);
+}
+
 /* If author != Christopher Heppell, show their name */
 if (document.getElementById('postAuthor') != null) {
   var author = document.getElementById('postAuthor').textContent;
@@ -53,6 +58,8 @@ if (document.getElementById('postAuthor') != null) {
     document.getElementById('postAuthorDisplay').classList.remove("d-none");
   }
 }
+
+console.log(document.cookie);
 
 /**if (document.getElementsByClassName('rsswidget') != null) {
   for (i = 0; i<document.getElementsByClassName('rsswidget').length; i++) {

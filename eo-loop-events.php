@@ -21,12 +21,12 @@
 
 	<?php
 	while ( have_posts() ) : the_post();
-		eo_get_template_part( 'eo-loop-single-event' );
+		eo_get_template_part('eo-loop-single-event');
 	endwhile;
 	?>
 
     <?php
-	  if ( function_exists('wp_bootstrap_pagination') )
+	  if (function_exists('wp_bootstrap_pagination'))
 		wp_bootstrap_pagination();
 	?>
 
@@ -35,7 +35,7 @@
 	<!-- If there are no events -->
 	<article id="post-0" class="post no-results not-found">
 		<header class="entry-header">
-			<h1 class="entry-title"><?php _e( 'No Galas Found', 'eventorganiser' ); ?></h1>
+			<h1 class="entry-title"><?php _e( 'No galas Found', 'eventorganiser' ); ?></h1>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">

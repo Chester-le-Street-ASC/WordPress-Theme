@@ -40,7 +40,7 @@ get_header(); ?>
         ?>
       </h1>
       <hr>
-      <?php eo_get_template_part( 'eo-loop-events' ); //Lists the events ?>
+      <?php eo_get_template_part('eo-loop-events'); //Lists the events ?>
     </div>
     <div class="col-lg-4">
       <?php get_sidebar(); ?>

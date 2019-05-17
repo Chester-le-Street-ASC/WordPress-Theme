@@ -2,31 +2,33 @@
   <?php get_template_part( 'pageheader' ); ?>
     <div class="container">
       <div class="row">
-        <main class="col-lg-8 blog-main">
+        <main class="col-lg-8">
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
-              <h1 class="entry entry-title"><?php the_title(); ?></h1>
-              <p class="d-none mb-0" id="postAuthorDisplay">
-                <!--<i class="fa fa-fw fa-user-circle-o"></i> -->By
-                <span class="vcard author" rel="author" id="postAuthor">
-                  <?php the_author(); ?>
-                </span>
-              </p>
-           		<p>
-                <time id="time" class="published blog-post-meta" datetime="<?php the_time( 'c' ); ?>"><i class="fa fa-clock-o" aria-hidden="true"></i> <abbr title="<?php the_time( 'c' ); ?>"><span id="dtOut"><noscript><?php the_time( 'j F Y' ); ?></noscript></span></abbr></time>
-                 -
-                 <?php the_category(', ');?>
-              </p>
-            <hr>
-            <?php if ( has_post_thumbnail()) : ?>
-              <div class="post-thumb">
-                <?php the_post_thumbnail('big-thumb'); ?>
-              </div>
-               <?php endif; ?>
-              <div class="entry entry-content clearfix">
-                <?php the_content(); ?>
-              </div>
-            </article>
+            <div class="blog-main">
+              <article id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
+                <h1 class="entry entry-title"><?php the_title(); ?></h1>
+                <p class="d-none mb-0" id="postAuthorDisplay">
+                  <!--<i class="fa fa-fw fa-user-circle-o"></i> -->By
+                  <span class="vcard author" rel="author" id="postAuthor">
+                    <?php the_author(); ?>
+                  </span>
+                </p>
+             		<p>
+                  <time id="time" class="published blog-post-meta" datetime="<?php the_time( 'c' ); ?>"><i class="fa fa-clock-o" aria-hidden="true"></i> <abbr title="<?php the_time( 'c' ); ?>"><span id="dtOut"><noscript><?php the_time( 'j F Y' ); ?></noscript></span></abbr></time>
+                   -
+                   <?php the_category(', ');?>
+                </p>
+              <hr>
+              <?php if ( has_post_thumbnail()) : ?>
+                <div class="post-thumb">
+                  <?php the_post_thumbnail('big-thumb'); ?>
+                </div>
+                 <?php endif; ?>
+                <div class="entry entry-content clearfix">
+                  <?php the_content(); ?>
+                </div>
+              </article>
+            </div>
 
             <aside class="d-print-none"><?php wp_link_pages(); ?>
               <p class="p-tags"><?php the_tags(); ?></p>
