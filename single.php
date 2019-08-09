@@ -8,9 +8,20 @@
         <div class="blog-main">
           <article id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
             <div class="mb-4">
-              <?php if (get_the_time('U') < strtotime('-3 months')) { ?>
-                <div class="d-inline-block p-2 mb-3 bg-warning">
-                  <i class="fa fa-clock-o" aria-hidden="true"></i> This post is more than <strong><?=htmlspecialchars(human_time_diff(get_the_time('U')))?> old</strong>
+            <?php if (get_the_time('U') < strtotime('-3 months')) { ?>
+              <?php
+                $timezone = new DateTimeZone(get_option('timezone_string'));
+                $timeNow = new DateTime('now');
+                $timeNow->setTimezone($timezone);
+                $timeOfPost = new DateTime('@' . get_the_time('U'));
+                $timeOfPost->setTimezone($timezone);
+
+                $interval = $timeOfPost->diff($timeNow);
+                $years = (int) $interval->format('%y');
+                $months = (int) $interval->format('%m');
+              ?>
+                <div class="d-inline-block p-2 mb-3 bg-warning rounded">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i> This post is more than <strong><?php if ($years > 0) { ?><?=$years?> year<?php if ($years > 1) { ?>s<?php } ?><?php } else { ?><?=$months?> month<?php if ($months > 1) { ?>s<?php } ?><?php } ?> old</strong>
                 </div>
               <?php } ?>
               <h1 class="entry entry-title"><?php the_title(); ?></h1>
